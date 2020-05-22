@@ -261,3 +261,5 @@ My only caveat here is that we should still implement bug fixes. I think that wa
 **btmills:** 👋 take care of yourselves
 
 **nzakas:** Thanks everyone, stay safe and healthy!
+
+**btmills:** Meeting notes PR: https://github.com/eslint/tsc-meetings/pull/179
