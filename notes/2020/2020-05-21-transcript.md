@@ -1,4 +1,4 @@
-# 5/21/2020 ESLint TSC Meeting Transcript
+# 2020-May-21 ESLint TSC Meeting Transcript
 
 **kaicataldo:** Hello 👋
 
