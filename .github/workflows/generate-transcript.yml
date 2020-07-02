@@ -1,0 +1,35 @@
+name: Generate TSC Meeting Transcript
+on:
+  issues:
+    types: [closed]
+jobs:
+  generate-trancript:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, "tsc meeting")
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Generate transcript
+        run: 'npm run generate-transcript'
+        env:
+          TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+      - name: Configure Git identity
+        run: |
+          git config user.email "eslint[bot]@users.noreply.github.com"
+          git config user.name "ESLint Bot"
+      - name: Commit generated transcript (if changed)
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changed files. Skipping commit."
+          else
+            echo "Files changed."
+            git add .
+            git commit -m 'Add ${{ github.event.issue.title }} transcript'
+            git push "https://$GH_TOKEN@github.com/eslint/tsc-meetings.git" master
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
