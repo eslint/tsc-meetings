@@ -32,7 +32,16 @@ jobs:
             echo "Files changed."
             git add .
             git commit -m 'Add ${{ github.event.issue.title }} transcript'
-            git push "https://$GH_TOKEN@github.com/eslint/tsc-meetings.git" master
+            echo "::set-env name=TRANSCRIPT_GENERATED::true"
           fi
+      - name: Create Pull Request
+        if: env.TRANSCRIPT_GENERATED == 'true'
+        uses: peter-evans/create-pull-request@v2
+        with:
+          commit-message: Add ${{ github.event.issue.title }} transcript
+          branch: generate-meeting-transcript  
+          branch-suffix: timestamp  
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+
