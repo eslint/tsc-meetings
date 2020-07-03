@@ -42,7 +42,7 @@ jobs:
           title: Add ${{ github.event.issue.title }} transcript
           branch: generate-meeting-transcript  
           branch-suffix: timestamp  
-          author: ESLint Bot <eslint[bot]@users.noreply.github.com>:  
+          author: ESLint Bot <eslint[bot]@users.noreply.github.com>
           committer: ESLint Bot <eslint[bot]@users.noreply.github.com>
           body: |
              Add ${{ github.event.issue.title }} transcript. 
