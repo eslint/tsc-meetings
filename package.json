@@ -1,0 +1,26 @@
+{
+  "name": "tsc-meetings",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Technical Steering Committee meeting notes, proposals, and related information",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "generate-transcript": "node ./scripts/generate-transcript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eslint/tsc-meetings.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "discord-transcript-generator": "^1.0.3",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-eslint": "^6.0.0",
+    "eslint-plugin-jsdoc": "^28.6.1",
+    "eslint-plugin-node": "^11.1.0"
+  }
+}
