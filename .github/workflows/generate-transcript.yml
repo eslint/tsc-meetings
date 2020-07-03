@@ -5,7 +5,7 @@ on:
 jobs:
   generate-trancript:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.labels.*.name, "tsc meeting")
+    if: contains(github.event.issue.labels.*.name, 'tsc meeting')
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js
