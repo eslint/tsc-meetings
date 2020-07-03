@@ -27,7 +27,7 @@ function extractDateString(issueTitle) {
  * @returns {string} The formatted date string.
  */
 function formatDate(dateString) {
-    return moment(new Date(dateString)).format("MM/DD/YYYY");
+    return moment(dateString, “DD-MMMM-YYYY”).format(“MM/DD/YYYY”);
 }
 
 /**
