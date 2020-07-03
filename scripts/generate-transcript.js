@@ -12,8 +12,7 @@ const { TOKEN, ID, ISSUE_TITLE } = process.env;
  * @returns {string} The extracted date string.
  */
 function extractDateString(issueTitle) {
-
-    const [, dateString = null] = /(\d\d-.+-\d\d\d\d)$/u.exec(issueTitle);
+    const [, dateString = null] = /(\d\d-.+-\d\d\d\d)$/u.exec(issueTitle) || [];
 
     if (!dateString) {
         throw new Error("PR title has incorrect format.");
