@@ -53,8 +53,6 @@ function generateOutputPath(dateString) {
         });
     } catch (e) {
         console.error(`Transcript generation failed with the following error:\n${e.message}`);
-
-        // eslint-disable-next-line no-process-exit
-        process.exit(1);
+        process.exitCode = 1;
     }
 }());
