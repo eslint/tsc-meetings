@@ -27,7 +27,7 @@ function extractDateString(issueTitle) {
  * @returns {string} The formatted date string.
  */
 function formatDate(dateString) {
-    return moment(dateString, “DD-MMMM-YYYY”).format(“MM/DD/YYYY”);
+    return moment(dateString, "DD-MMMM-YYYY").format("MM/DD/YYYY");
 }
 
 /**
@@ -36,7 +36,9 @@ function formatDate(dateString) {
  * @returns {string} The path in which to output the transcript.
  */
 function generateOutputPath(dateString) {
-    return `./notes/${moment(new Date(dateString)).format("YYYY-MM-DD")}-transcript.md`;
+    const date = moment(dateString, "MM/DD/YYYY");
+
+    return `./notes/${date.year()}/${date.format("YYYY-MM-DD")}-transcript.md`;
 }
 
 (async function() {
