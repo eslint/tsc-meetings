@@ -15,7 +15,7 @@ function extractDateString(issueTitle) {
     const [, dateString = null] = /(\d\d-.+-\d\d\d\d)$/u.exec(issueTitle) || [];
 
     if (!dateString) {
-        throw new Error("PR title has incorrect format.");
+        throw new Error("Can't extract date from issue title. Expecting format \"TSC meeting DD-MMMM-YYYY\".");
     }
 
     return dateString;
