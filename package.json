@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "discord-transcript-generator": "^1.0.3",
+    "discord-transcript-generator": "^1.1.0",
     "moment": "^2.27.0"
   },
   "devDependencies": {

@@ -3,6 +3,7 @@
 **nzakas:** Hi everyone!
 
 **mdjermanovic:** Hi
+ * 👋 @kaicataldo
 
 **nzakas:** Welcome Milos! 🎉
 
@@ -33,6 +34,7 @@
 **kaicataldo:** Hi all 👋
 
 **nzakas:** Welcome @kaicataldo!
+ * ☺️ @kaicataldo
 
 **nzakas:** All right, let's get started
 
@@ -115,6 +117,7 @@
 **mdjermanovic:** 👍
 
 **nzakas:** Looks like @mysticatea just signed on
+ * 🤞 @btmills
 
 **nzakas:** @mysticatea if you're around, we are deciding on closing the remaining open config-related RFCs now that the simple config RFC has been merged.
 
@@ -173,6 +176,7 @@
 **nzakas:** Sure, we can do that
 
 **btmills:** At some point, I'd suggest that you shadow one of us on a release @mdjermanovic so you see how the process works, whenever's convenient
+ * 👍 @mysticatea, @kaicataldo, @mdjermanovic
 
 **kaicataldo:** I'm available to run the release. Related to this, one thing I'd like to get on the same page about is https://github.com/eslint/eslint/pull/13416. What further work needs to be done before we can land this?
 
@@ -181,6 +185,7 @@
 **mysticatea:** The remaining step is, releasing espree and updating package.json.
 
 **kaicataldo:** Okay, great. In that case, I can commit to reviewing that tonight and doing that work as part of the release.
+ * 👍 @mysticatea
 
 **nzakas:** Awesome, thanks @mysticatea and @kaicataldo . In the future, can we try to do smaller pull requests? The more files touched, the harder it is to merge.
 
