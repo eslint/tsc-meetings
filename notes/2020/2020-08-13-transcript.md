@@ -19,7 +19,7 @@
 
 **kaicataldo:** Quick note: we should get reactions recorded in our transcripts now
  * 👏 @btmills
-* 🎉 @nzakas, @mdjermanovic
+ * 🎉 @nzakas, @mdjermanovic
 
 **nzakas:** Nice work on that
 
