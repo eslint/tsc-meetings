@@ -32,7 +32,7 @@ jobs:
             echo "Files changed."
             git add .
             git commit -m 'Add ${{ github.event.issue.title }} transcript'
-            echo "::set-env name=TRANSCRIPT_GENERATED::true"
+            echo "TRANSCRIPT_GENERATED=true" >> $GITHUB_ENV
           fi
       - name: Create Pull Request
         if: env.TRANSCRIPT_GENERATED == 'true'
