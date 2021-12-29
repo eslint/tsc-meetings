@@ -7,7 +7,7 @@ const { TOKEN, ID, ISSUE_TITLE } = process.env;
 /**
  * Extract a date string from an automatically generated TSC Meeting issue title.
  * Issue title is formatted as "TSC meeting DD-MMMM-YYYY".
- * https://github.com/eslint/eslint-github-bot/blob/master/src/plugins/recurring-issues/index.js#L202
+ * https://github.com/eslint/eslint-github-bot/blob/460d2653de44eafa0c15c361a294f5ecf5d05840/src/plugins/recurring-issues/index.js#L235
  * @param {string} issueTitle The issue title from which to extract the date string.
  * @returns {string} The extracted date string.
  */
