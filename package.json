@@ -8,10 +8,8 @@
     "lint:fix": "npm run lint -- --fix",
     "generate-transcript": "node ./scripts/generate-transcript"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eslint/tsc-meetings.git"
-  },
+  "repository": "eslint/tsc-meetings",
+  "funding": "https://opencollective.com/eslint",
   "license": "MIT",
   "dependencies": {
     "discord-transcript-generator": "^1.1.1",
