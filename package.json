@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "discord-transcript-generator": "^1.1.1",
-    "moment": "^2.29.2"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "eslint": "^7.3.1",
