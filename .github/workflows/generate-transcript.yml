@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate transcript
-        run: npm run generate-transcript
+        run: npm run generate:transcript
         env:
           TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           ID: ${{ secrets.DISCORD_CHANNEL_ID }}

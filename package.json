@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "generate-transcript": "node ./scripts/generate-transcript"
+    "generate:transcript": "node ./scripts/generate-transcript"
   },
   "repository": "eslint/tsc-meetings",
   "funding": "https://opencollective.com/eslint",
