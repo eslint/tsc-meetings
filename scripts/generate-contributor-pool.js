@@ -155,8 +155,6 @@ async function fetchGitHubSearchResults() {
  */
 async function fetchModelResponse(grouped) {
 
-    fs.writeFileSync("./test.txt", JSON.stringify(grouped, null, 2), "utf8");
-
     const response = await fetch(AI_URL, {
         method: "POST",
         headers: {
@@ -167,8 +165,6 @@ async function fetchModelResponse(grouped) {
             model: AI_MODEL,
             messages: [
                 { role: "system", content: PROMPT },
-
-                // { role: "system", content: `IMPORTANT: Ensure all ${results.length} pull requests are present in the report. The report MUST contain all of these URLs: ${results.map(pr => pr.html_url).join(",")}` },
                 { role: "user", content: JSON.stringify(grouped) }
             ],
             temperature: 0.7
@@ -200,6 +196,10 @@ function generateOutputPath(dateString) {
 
     return `./notes/${date.year()}/${date.format("YYYY-MM-DD")}-contributor-pool.md`;
 }
+
+//-----------------------------------------------------------------------------
+// Main
+//-----------------------------------------------------------------------------
 
 (async () => {
 
