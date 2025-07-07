@@ -47,7 +47,7 @@ const query = `org:eslint type:pr label:"contributor pool" merged:${firstDayOfPr
 async function fetchGitHubSearchResults() {
     const headers = {
         Accept: "application/vnd.github.v3+json",
-        // Authorization: `token ${GITHUB_TOKEN}`
+        Authorization: `token ${GITHUB_TOKEN}`
     };
 
     console.log(`Fetching PRs from GitHub API with query:\n${query}\n`);
