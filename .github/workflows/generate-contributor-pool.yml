@@ -8,13 +8,11 @@ jobs:
   generate-contributor-pool:
     
     permissions:
-      models: read
       contents: write
       pull-requests: write
       
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     
     runs-on: ubuntu-latest
     steps:
