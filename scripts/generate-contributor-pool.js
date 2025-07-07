@@ -23,8 +23,8 @@ const now = moment();
 const firstDayOfPreviousMonth = now.clone().subtract(1, "month").startOf("month");
 const lastDayOfPreviousMonth = firstDayOfPreviousMonth.clone().endOf("month");
 
-const AI_URL = "https://models.github.ai/inference/chat/completions";
-const AI_MODEL = "openai/gpt-4o-mini";
+const AI_URL = "https://api.openai.com/v1/chat/completions";
+const AI_MODEL = "gpt-4o-mini";
 
 const PROMPT = `You will be given a JSON object where the keys are GitHub
 usernames and the values are arrays of pull request objects that were 
