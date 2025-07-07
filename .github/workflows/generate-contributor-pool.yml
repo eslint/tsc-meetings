@@ -31,8 +31,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: Add contributor pool report
-          title: Add contributor pool report
+          commit-message: "chore: Add contributor pool report"
+          title: "chore: Add contributor pool report"
           branch: generate-contributor-pool-report
           branch-suffix: timestamp
           body: |
