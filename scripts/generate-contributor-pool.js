@@ -18,13 +18,13 @@ const fs = require("fs");
 // Data
 //-----------------------------------------------------------------------------
 
-const { GITHUB_TOKEN } = process.env;
+const { GITHUB_TOKEN, OPENAI_API_KEY } = process.env;
 const now = moment();
 const firstDayOfPreviousMonth = now.clone().subtract(1, "month").startOf("month");
 const lastDayOfPreviousMonth = firstDayOfPreviousMonth.clone().endOf("month");
 
 const AI_URL = "https://models.github.ai/inference/chat/completions";
-const AI_MODEL = "openai/gpt-4o";
+const AI_MODEL = "openai/gpt-4o-mini";
 
 const PROMPT = `You will be given a JSON object where the keys are GitHub
 usernames and the values are arrays of pull request objects that were 
@@ -159,7 +159,7 @@ async function fetchModelResponse(grouped) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${GITHUB_TOKEN}`
+            Authorization: `Bearer ${OPENAI_API_KEY}`
         },
         body: JSON.stringify({
             model: AI_MODEL,
