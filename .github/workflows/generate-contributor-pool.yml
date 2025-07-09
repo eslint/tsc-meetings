@@ -8,13 +8,11 @@ jobs:
   generate-contributor-pool:
     
     permissions:
-      models: read
       contents: write
       pull-requests: write
       
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     
     runs-on: ubuntu-latest
     steps:
@@ -33,8 +31,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: Add contributor pool report
-          title: Add contributor pool report
+          commit-message: "chore: Add contributor pool report"
+          title: "chore: Add contributor pool report"
           branch: generate-contributor-pool-report
           branch-suffix: timestamp
           body: |

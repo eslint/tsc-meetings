@@ -18,55 +18,10 @@ const fs = require("fs");
 // Data
 //-----------------------------------------------------------------------------
 
-const { GITHUB_TOKEN, OPENAI_API_KEY } = process.env;
+const { GITHUB_TOKEN } = process.env;
 const now = moment();
 const firstDayOfPreviousMonth = now.clone().subtract(1, "month").startOf("month");
 const lastDayOfPreviousMonth = firstDayOfPreviousMonth.clone().endOf("month");
-
-const AI_URL = "https://api.openai.com/v1/chat/completions";
-const AI_MODEL = "gpt-4o-mini";
-
-const PROMPT = `You will be given a JSON object where the keys are GitHub
-usernames and the values are arrays of pull request objects that were 
-written by the user. Your task is to create a Markdown report of this
-activity.
-
-For each user, create a heading like this:
-
-<example>
-## GitHub username (pull request count)
-</example>
-
-Under each heading, list each pull request in the following format:
-
-<example>
-1. Pull request title linked to the PR URL
-  A three-sentence summary of the pull request description ('body' field in the PR object).
-  * **Time to merge:** X days, Y hours
-  * **Effort Estimate:** X
-</example>
-
-The effort estimate is the amount of effort it took for the author to complete the PR
-on a scale of 1 (not much work, very easy) to 5 (a lot of work). This should be
-based on the complexity of the changes, the amount of review comments, the overall
-size of the PR, the number of reactions, and the time taken to complete it.
-
-The format of the JSON pull request object is as follows:
-
-- user: The GitHub username of the pull request author
-- title: The pull request title
-- body: The pull request description in Markdown
-- html_url: The URL of the pull request
-- created_at: The date the pull request was created
-- closed_at: The date the pull request was merged
-- reactions: The total number of reactions on the pull request
-- comments: The total number of comments on the pull request
-
-The title of the report should be "Contributor Pool Report for [Month] [Year]".
-
-IMPORTANT: Every pull request in the JSON array must be included in the report.
-`;
-
 const prKeys = new Set([
     "html_url",
     "title",
@@ -130,7 +85,6 @@ async function fetchGitHubSearchResults() {
     console.log(`Fetched ${allItems.length} PRs total\n`);
 
     return allItems
-        .filter(pr => pr.author_association !== "MEMBER")
         .map(pr => {
             const smallPr = {};
 
@@ -149,42 +103,34 @@ async function fetchGitHubSearchResults() {
 }
 
 /**
- * Fetches the AI model response based on the provided results.
- * @param {Object} grouped The array of PRs to be processed by the AI model.
- * @returns {Promise<string>} A promise that resolves to the AI-generated report.
+ * Generates a report based on the grouped PRs.
+ * @param {Object} grouped The grouped PRs by user.
+ * @returns {string} The formatted report.
  */
-async function fetchModelResponse(grouped) {
+function generateReport(grouped) {
 
-    const response = await fetch(AI_URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_API_KEY}`
-        },
-        body: JSON.stringify({
-            model: AI_MODEL,
-            messages: [
-                { role: "system", content: PROMPT },
-                { role: "user", content: JSON.stringify(grouped) }
-            ],
-            temperature: 0.7
-        })
-    });
+    return `
+# Contributor Pool Report (${firstDayOfPreviousMonth.format("MM/DD/YYYY")} - ${lastDayOfPreviousMonth.format("MM/DD/YYYY")})
 
-    if (!response.ok) {
-        console.log(await response.text());
-        throw new Error(`AI model request failed with status ${response.status}`);
-    }
+${
+    Object.entries(grouped).sort((a, b) => b[1].length - a[1].length).map(([user, prs]) => {
 
-    const data = await response.json();
+        const prList = prs.map(pr => {
+            const createdAt = moment(pr.created_at);
+            const closedAt = moment(pr.closed_at);
+            const duration = moment.duration(closedAt.diff(createdAt));
+            const days = Math.floor(duration.asDays());
+            const hours = duration.hours();
 
-    if (!data.choices || data.choices.length === 0) {
-        throw new Error("No response from AI model");
-    }
+            return `1. [${pr.title}](${pr.html_url}) (💬 ${pr.comments} 😐 ${pr.reactions})  \n    Time to merge: ${days} days, ${hours} hours`;
+        }).join("\n\n");
 
-    return data.choices[0].message.content;
+        return `## ${user} (${prs.length})\n\n${prList}`;
+    }).join("\n\n")
 }
+`.trimStart();
 
+}
 
 /**
  * Generates the transcript file output path.
@@ -208,7 +154,7 @@ function generateOutputPath(dateString) {
 
     console.log(`Found ${results.length} contributor PRs merged.`);
 
-    const report = `${await fetchModelResponse(grouped)}\n\n---\n\nGitHub search URL: https://github.com/issues?q=${encodeURIComponent(query)}\n\nTotal PRs: ${results.length}\n\nDate of report generation: ${now.format("MM/DD/YYYY")}`;
+    const report = `${generateReport(grouped)}\n\n---\n\nGitHub search URL: https://github.com/issues?q=${encodeURIComponent(query)}\n\nTotal PRs: ${results.length}\n\nDate of report generation: ${now.format("MM/DD/YYYY")}`;
     const dateString = now.clone().startOf("month").format("MM/DD/YYYY");
     const outputPath = generateOutputPath(dateString);
 
