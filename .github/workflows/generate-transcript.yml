@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'tsc meeting')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 'lts/*'
       - name: Install dependencies
         run: npm install
       - name: Generate transcript
@@ -36,7 +36,7 @@ jobs:
           fi
       - name: Create Pull Request
         if: env.TRANSCRIPT_GENERATED == 'true'
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: Add ${{ github.event.issue.title }} transcript
           title: Add ${{ github.event.issue.title }} transcript
