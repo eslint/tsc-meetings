@@ -34,6 +34,7 @@ const prKeys = new Set([
 ]);
 
 const query = `org:eslint type:pr label:"contributor pool" merged:${firstDayOfPreviousMonth.format("YYYY-MM-DD")}..${lastDayOfPreviousMonth.format("YYYY-MM-DD")}`;
+const CONTRIBUTOR_POOL_DIVISOR = 10;
 
 //-----------------------------------------------------------------------------
 // Helpers
@@ -56,6 +57,10 @@ async function fetchMonthlyDonations() {
     }
 
     const data = await response.json();
+
+    if (!data || !data.totals || typeof data.totals.monthlyDonations !== "number") {
+        throw new Error("Invalid sponsors data structure: missing totals.monthlyDonations");
+    }
 
     return data.totals.monthlyDonations;
 }
@@ -183,7 +188,7 @@ function generateOutputPath(dateString) {
     console.log(`Found ${results.length} contributor PRs merged.`);
 
     // Calculate contributor pool funds: monthly donations / 10, truncated to 2 decimal places
-    const contributorPoolFunds = Math.floor((monthlyDonations / 10) * 100) / 100;
+    const contributorPoolFunds = Math.floor((monthlyDonations / CONTRIBUTOR_POOL_DIVISOR) * 100) / 100;
 
     console.log(`Monthly donations: $${monthlyDonations.toFixed(2)}`);
     console.log(`Contributor pool funds: $${contributorPoolFunds.toFixed(2)}\n`);
