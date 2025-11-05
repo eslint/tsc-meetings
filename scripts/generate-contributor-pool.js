@@ -34,10 +34,36 @@ const prKeys = new Set([
 ]);
 
 const query = `org:eslint type:pr label:"contributor pool" merged:${firstDayOfPreviousMonth.format("YYYY-MM-DD")}..${lastDayOfPreviousMonth.format("YYYY-MM-DD")}`;
+const CONTRIBUTOR_POOL_DIVISOR = 10;
 
 //-----------------------------------------------------------------------------
 // Helpers
 //-----------------------------------------------------------------------------
+
+/**
+ * Fetches monthly donations from the ESLint sponsors data.
+ * @returns {Promise<number>} A promise that resolves to the monthly donation amount.
+ */
+async function fetchMonthlyDonations() {
+    const url = "https://raw.githubusercontent.com/eslint/eslint.org/refs/heads/main/src/_data/sponsors.json";
+
+    console.log(`Fetching monthly donations from ${url}\n`);
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        console.error("Error fetching sponsors data:", await response.text());
+        throw new Error(`Failed to fetch sponsors data with status ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data || !data.totals || typeof data.totals.monthlyDonations !== "number") {
+        throw new Error("Invalid sponsors data structure: missing totals.monthlyDonations");
+    }
+
+    return data.totals.monthlyDonations;
+}
 
 /**
  * Uses the GitHub API to fetch PRs that match the given search query. The
@@ -105,12 +131,15 @@ async function fetchGitHubSearchResults() {
 /**
  * Generates a report based on the grouped PRs.
  * @param {Object} grouped The grouped PRs by user.
+ * @param {number} contributorPoolFunds The calculated contributor pool funds.
  * @returns {string} The formatted report.
  */
-function generateReport(grouped) {
+function generateReport(grouped, contributorPoolFunds) {
 
     return `
 # Contributor Pool Report (${firstDayOfPreviousMonth.format("MM/DD/YYYY")} - ${lastDayOfPreviousMonth.format("MM/DD/YYYY")})
+
+Contributor Pool Funds: $${contributorPoolFunds.toFixed(2)}
 
 ${
     Object.entries(grouped).sort((a, b) => b[1].length - a[1].length).map(([user, prs]) => {
@@ -149,12 +178,22 @@ function generateOutputPath(dateString) {
 
 (async () => {
 
-    const results = await fetchGitHubSearchResults();
+    const [results, monthlyDonations] = await Promise.all([
+        fetchGitHubSearchResults(),
+        fetchMonthlyDonations()
+    ]);
+
     const grouped = Object.groupBy(results, pr => pr.user);
 
     console.log(`Found ${results.length} contributor PRs merged.`);
 
-    const report = `${generateReport(grouped)}\n\n---\n\nGitHub search URL: https://github.com/issues?q=${encodeURIComponent(query)}\n\nTotal PRs: ${results.length}\n\nDate of report generation: ${now.format("MM/DD/YYYY")}`;
+    // Calculate contributor pool funds: monthly donations / 10, truncated to 2 decimal places
+    const contributorPoolFunds = Math.floor((monthlyDonations / CONTRIBUTOR_POOL_DIVISOR) * 100) / 100;
+
+    console.log(`Monthly donations: $${monthlyDonations.toFixed(2)}`);
+    console.log(`Contributor pool funds: $${contributorPoolFunds.toFixed(2)}\n`);
+
+    const report = `${generateReport(grouped, contributorPoolFunds)}\n\n---\n\nGitHub search URL: https://github.com/issues?q=${encodeURIComponent(query)}\n\nTotal PRs: ${results.length}\n\nDate of report generation: ${now.format("MM/DD/YYYY")}`;
     const dateString = now.clone().startOf("month").format("MM/DD/YYYY");
     const outputPath = generateOutputPath(dateString);
 
