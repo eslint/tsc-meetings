@@ -1,7 +1,7 @@
 "use strict";
 
 const { defineConfig } = require("eslint/config");
-const eslintConfigESLint = require("eslint-config-eslint/cjs")
+const eslintConfigESLint = require("eslint-config-eslint/cjs");
 
 module.exports = defineConfig([
     eslintConfigESLint,
