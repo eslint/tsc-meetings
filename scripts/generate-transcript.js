@@ -13,13 +13,15 @@ const { TOKEN, ID, ISSUE_TITLE } = process.env;
  * @throws {Error} If the date string cannot be extracted from the issue title.
  */
 function extractDateString(issueTitle) {
-    const [, dateString = null] = /(\d\d-.+-\d\d\d\d)$/u.exec(issueTitle) || [];
+	const [, dateString = null] = /(\d\d-.+-\d\d\d\d)$/u.exec(issueTitle) || [];
 
-    if (!dateString) {
-        throw new Error("Can't extract date from issue title. Expecting format \"TSC meeting DD-MMMM-YYYY\".");
-    }
+	if (!dateString) {
+		throw new Error(
+			'Can\'t extract date from issue title. Expecting format "TSC meeting DD-MMMM-YYYY".',
+		);
+	}
 
-    return dateString;
+	return dateString;
 }
 
 /**
@@ -28,7 +30,7 @@ function extractDateString(issueTitle) {
  * @returns {string} The formatted date string.
  */
 function formatDate(dateString) {
-    return moment(dateString, "DD-MMMM-YYYY").format("MM/DD/YYYY");
+	return moment(dateString, "DD-MMMM-YYYY").format("MM/DD/YYYY");
 }
 
 /**
@@ -37,25 +39,27 @@ function formatDate(dateString) {
  * @returns {string} The path in which to output the transcript.
  */
 function generateOutputPath(dateString) {
-    const date = moment(dateString, "MM/DD/YYYY");
+	const date = moment(dateString, "MM/DD/YYYY");
 
-    return `./notes/${date.year()}/${date.format("YYYY-MM-DD")}-transcript.md`;
+	return `./notes/${date.year()}/${date.format("YYYY-MM-DD")}-transcript.md`;
 }
 
-(async function() {
-    try {
-        const date = formatDate(extractDateString(ISSUE_TITLE));
-        const output = generateOutputPath(date);
+(async function () {
+	try {
+		const date = formatDate(extractDateString(ISSUE_TITLE));
+		const output = generateOutputPath(date);
 
-        await generateTranscript({
-            token: TOKEN,
-            id: ID,
-            date,
-            output,
-            name: "ESLint TSC Meeting"
-        });
-    } catch (e) {
-        console.error(`Transcript generation failed with the following error:\n${e.message}`);
-        process.exitCode = 1;
-    }
-}());
+		await generateTranscript({
+			token: TOKEN,
+			id: ID,
+			date,
+			output,
+			name: "ESLint TSC Meeting",
+		});
+	} catch (e) {
+		console.error(
+			`Transcript generation failed with the following error:\n${e.message}`,
+		);
+		process.exitCode = 1;
+	}
+})();
