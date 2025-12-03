@@ -10,6 +10,7 @@ const { TOKEN, ID, ISSUE_TITLE } = process.env;
  * https://github.com/eslint/eslint-github-bot/blob/460d2653de44eafa0c15c361a294f5ecf5d05840/src/plugins/recurring-issues/index.js#L235
  * @param {string} issueTitle The issue title from which to extract the date string.
  * @returns {string} The extracted date string.
+ * @throws {Error} If the date string cannot be extracted from the issue title.
  */
 function extractDateString(issueTitle) {
     const [, dateString = null] = /(\d\d-.+-\d\d\d\d)$/u.exec(issueTitle) || [];

@@ -4,22 +4,23 @@
   "version": "1.0.0",
   "description": "Technical Steering Committee meeting notes, proposals, and related information",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "generate:transcript": "node ./scripts/generate-transcript.js",
     "generate:contributor-pool": "node ./scripts/generate-contributor-pool.js"
   },
   "repository": "eslint/tsc-meetings",
   "funding": "https://opencollective.com/eslint",
   "license": "MIT",
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
   "dependencies": {
     "discord-transcript-generator": "^1.1.1",
     "moment": "^2.29.4"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
-    "eslint-config-eslint": "^7.0.0",
-    "eslint-plugin-jsdoc": "^28.6.1",
-    "eslint-plugin-node": "^11.1.0"
+    "eslint": "^9.39.1",
+    "eslint-config-eslint": "^13.0.0"
   }
 }
