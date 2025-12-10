@@ -1,7 +1,7 @@
 "use strict";
 
 const moment = require("moment");
-const generateTranscript = require("discord-transcript-generator");
+const generateTranscript = require("./discord-transcript-generator.js");
 const { TOKEN, ID, ISSUE_TITLE } = process.env;
 
 /**
