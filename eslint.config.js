@@ -10,5 +10,7 @@ module.exports = defineConfig([
         rules: {
             "no-console": "off",
         }
+    }, {
+        ignores: ["scripts/discord-transcript-generator.js"] // Adopted file
     }
 ]);
