@@ -6,6 +6,8 @@
   "scripts": {
     "lint": "eslint",
     "lint:fix": "eslint --fix",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
     "generate:transcript": "node ./scripts/generate-transcript.js",
     "generate:contributor-pool": "node ./scripts/generate-contributor-pool.js"
   },
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "^9.39.1",
-    "eslint-config-eslint": "^13.0.0"
+    "eslint-config-eslint": "^13.0.0",
+    "prettier": "^3.7.4"
   }
 }
