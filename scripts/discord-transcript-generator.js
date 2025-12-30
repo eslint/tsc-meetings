@@ -5,12 +5,20 @@
  */
 'use strict';
 
-const fs = require('fs').promises;
-const path = require('path');
+/** @import { Message, Channel } from "discord.js" */
+
+const fs = require('node:fs').promises;
+const path = require('node:path');
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
 
+/**
+ * Converts a date string representation to an UTC date offset.
+ * @param {string} dateString String representation of the string
+ * @returns {number} UTC date offset
+ */
 function getUTCDate(dateString) {
   const dateInstance = new Date(dateString);
+
   return Date.UTC(
     dateInstance.getYear(),
     dateInstance.getMonth(),
@@ -18,11 +26,24 @@ function getUTCDate(dateString) {
   );
 }
 
+/**
+ * Returns true for messages created at the given date.
+ * @param {Message} message Discord message
+ * @param {Date} date Date to compare to
+ * @returns {boolean} True iff message created on date
+ */
 function messageMatchesDate(message, date) {
   // Ensure that comparisons are done using UTC.
   return getUTCDate(date) === getUTCDate(message.createdTimestamp);
 }
 
+/**
+ * Generates a transcript based on the given channel messages for a given date.
+ * @param {Message[]} messages Channel messages
+ * @param {Date} date Date of the messages
+ * @param {string} name Name of the transcript
+ * @returns {Promise<string>} Generated transcript
+ */
 async function generateContent(messages, date, name) {
   const generatedMessages = (
     await Promise.all(
@@ -52,16 +73,28 @@ async function generateContent(messages, date, name) {
   ).join('\n\n');
 
   return `# ${date} ${
-    name ? name + ' ' : ''
+    name ? `${name} ` : ''
   }Transcript\n\n${generatedMessages}\n`;
 }
 
+/**
+ * Returns sorted messages of the given date.
+ * @param {Message[]} messages Channel messages
+ * @param {Date} date Date of the messages
+ * @returns {Message[]} Sorted by created timestamp
+ */
 function getTranscriptMessages(messages, date) {
   return messages
     .filter(message => messageMatchesDate(message, date))
     .sort((a, b) => a.createdTimestamp - b.createdTimestamp);
 }
 
+/**
+ * Fetches messages of the channel of the given date.
+ * @param {Channel} channel Channel to get the messages from
+ * @param {Date} date Date of the messages
+ * @returns {Promise<Message[]>} Fetched messages
+ */
 async function fetchMessages(channel, date) {
   let messages = [];
 
@@ -70,7 +103,7 @@ async function fetchMessages(channel, date) {
   while (true) {
     const batch = Array.from(
       await channel.messages.fetch(
-        messages.length ? { before: messages[0].id } : undefined,
+        messages.length ? { before: messages[0].id } : void 0,
       )
     );
 
@@ -80,20 +113,31 @@ async function fetchMessages(channel, date) {
 
     messages = [...getTranscriptMessages(batch, date), ...messages];
 
-    if (!messageMatchesDate(batch[batch.length - 1], date)) {
+    if (!messageMatchesDate(batch.at(-1), date)) {
       break;
     }
   }
 
   return messages.map(message => {
     message.content = message.content.replace(
-      /<@!?(\d+)>/g,
+      /<@!?(\d+)>/gu,
       (match, p1) => `@${channel.client.users.cache.get(p1).username}`,
     );
     return message;
   });
 }
 
+/**
+ * Generates a transcript file of a discord channel on the given date.
+ * @throws {Error} Discord API errors
+ * @param {Object} options Configuration options
+ * @param {string} options.token Discord token
+ * @param {string} options.id ID of the channel
+ * @param {string} options.date Date of the messages
+ * @param {string} options.output Name of the output file
+ * @param {?string} [options.name] Name of the transcript
+ * @returns {Promise<void>}
+ */
 module.exports = async function generateTranscript({
   token,
   id,
