@@ -18,7 +18,7 @@
     "node": "^22.13.0 || >=24"
   },
   "dependencies": {
-    "discord-transcript-generator": "^1.1.1",
+    "discord.js": "^14.25.1",
     "moment": "^2.29.4"
   },
   "devDependencies": {
