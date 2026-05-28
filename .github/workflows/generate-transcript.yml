@@ -28,13 +28,15 @@ jobs:
                   git config user.email "eslint[bot]@users.noreply.github.com"
                   git config user.name "ESLint Bot"
             - name: Commit generated transcript (if changed)
+              env:
+                  ISSUE_TITLE: ${{ github.event.issue.title }}
               run: |
                   if [ -z "$(git status --porcelain)" ]; then
                     echo "No changed files. Skipping commit."
                   else
                     echo "Files changed."
                     git add .
-                    git commit -m 'Add ${{ github.event.issue.title }} transcript'
+                    git commit -m "Add $ISSUE_TITLE transcript"
                     echo "TRANSCRIPT_GENERATED=true" >> $GITHUB_ENV
                   fi
             - name: Create Pull Request
