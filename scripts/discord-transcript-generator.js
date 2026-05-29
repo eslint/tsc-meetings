@@ -165,7 +165,9 @@ module.exports = async function generateTranscript({
 						const channel = await client.channels.fetch(id);
 						const messages = await fetchMessages(channel, date);
 						if (messages.length === 0) {
-							throw new Error('There were no messages at the specified date');
+							throw new Error(
+								"There were no messages at the specified date",
+							);
 						}
 
 						await fs.writeFile(
