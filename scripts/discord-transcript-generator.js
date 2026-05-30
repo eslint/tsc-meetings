@@ -99,13 +99,14 @@ function getTranscriptMessages(messages, date) {
  */
 async function fetchMessages(channel, date) {
 	let messages = [];
+	let lastId = null; // Needed if there are no matching messages in the batch (-> "messages" still empty)
 
 	// Discord's API limits fetching messages to 50 at a time. Continue requesting batches
 	// until we either have no messages or find a message from a previous date.
 	while (true) {
 		const batch = Array.from(
 			await channel.messages.fetch(
-				messages.length ? { before: messages[0].id } : void 0,
+				lastId !== null ? { before: lastId } : void 0,
 			),
 			([, message]) => message,
 		);
@@ -114,9 +115,10 @@ async function fetchMessages(channel, date) {
 			break;
 		}
 
+		lastId = batch.at(-1).id;
 		messages = [...getTranscriptMessages(batch, date), ...messages];
 
-		if (!messageMatchesDate(batch.at(-1), date)) {
+		if (getUTCDate(batch.at(-1).createdTimestamp) < getUTCDate(date)) {
 			break;
 		}
 	}
