@@ -81,13 +81,12 @@ async function generateContent(messages, date, name) {
 
 /**
  * Returns sorted messages of the given date.
- * @param {Array<number, Message>} messages Channel messages
+ * @param {Array<Message>} messages Channel messages
  * @param {string} date Calendar date of the wanted messages
  * @returns {Message[]} Sorted by created timestamp
  */
 function getTranscriptMessages(messages, date) {
 	return messages
-		.map(([, message]) => message)
 		.filter(message => messageMatchesDate(message, date))
 		.sort((a, b) => a.createdTimestamp - b.createdTimestamp);
 }
@@ -108,6 +107,7 @@ async function fetchMessages(channel, date) {
 			await channel.messages.fetch(
 				messages.length ? { before: messages[0].id } : void 0,
 			),
+			([, message]) => message,
 		);
 
 		if (!batch.length) {
