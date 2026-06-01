@@ -12,12 +12,12 @@ const path = require("node:path");
 const { Client, GatewayIntentBits, Partials } = require("discord.js");
 
 /**
- * Converts a date string representation to an UTC date offset.
- * @param {string} dateString String representation of the string
+ * Converts a date representation to an UTC date offset.
+ * @param {string | number} dateSpecifier Calendar date from issue title or UNIX timestamp from message
  * @returns {number} UTC date offset
  */
-function getUTCDate(dateString) {
-	const dateInstance = new Date(dateString);
+function getUTCDate(dateSpecifier) {
+	const dateInstance = new Date(dateSpecifier);
 
 	return Date.UTC(
 		dateInstance.getYear(),
@@ -29,7 +29,7 @@ function getUTCDate(dateString) {
 /**
  * Returns true for messages created at the given date.
  * @param {Message} message Discord message
- * @param {Date} date Date to compare to
+ * @param {string} date Calendar date of the wanted messages
  * @returns {boolean} True iff message created on date
  */
 function messageMatchesDate(message, date) {
@@ -40,7 +40,7 @@ function messageMatchesDate(message, date) {
 /**
  * Generates a transcript based on the given channel messages for a given date.
  * @param {Message[]} messages Channel messages
- * @param {Date} date Date of the messages
+ * @param {string} date Calendar date of the wanted messages
  * @param {string} name Name of the transcript
  * @returns {Promise<string>} Generated transcript
  */
@@ -81,8 +81,8 @@ async function generateContent(messages, date, name) {
 
 /**
  * Returns sorted messages of the given date.
- * @param {Message[]} messages Channel messages
- * @param {Date} date Date of the messages
+ * @param {Array<Message>} messages Channel messages
+ * @param {string} date Calendar date of the wanted messages
  * @returns {Message[]} Sorted by created timestamp
  */
 function getTranscriptMessages(messages, date) {
@@ -94,28 +94,31 @@ function getTranscriptMessages(messages, date) {
 /**
  * Fetches messages of the channel of the given date.
  * @param {Channel} channel Channel to get the messages from
- * @param {Date} date Date of the messages
+ * @param {string} date Calendar date of the wanted messages
  * @returns {Promise<Message[]>} Fetched messages
  */
 async function fetchMessages(channel, date) {
 	let messages = [];
+	let lastId = null; // Needed if there are no matching messages in the batch (-> "messages" still empty)
 
 	// Discord's API limits fetching messages to 50 at a time. Continue requesting batches
 	// until we either have no messages or find a message from a previous date.
 	while (true) {
 		const batch = Array.from(
 			await channel.messages.fetch(
-				messages.length ? { before: messages[0].id } : void 0,
+				lastId !== null ? { before: lastId } : void 0,
 			),
+			([, message]) => message,
 		);
 
 		if (!batch.length) {
 			break;
 		}
 
+		lastId = batch.at(-1).id;
 		messages = [...getTranscriptMessages(batch, date), ...messages];
 
-		if (!messageMatchesDate(batch.at(-1), date)) {
+		if (getUTCDate(batch.at(-1).createdTimestamp) < getUTCDate(date)) {
 			break;
 		}
 	}
@@ -163,6 +166,11 @@ module.exports = async function generateTranscript({
 					try {
 						const channel = await client.channels.fetch(id);
 						const messages = await fetchMessages(channel, date);
+						if (messages.length === 0) {
+							throw new Error(
+								"There were no messages at the specified date",
+							);
+						}
 
 						await fs.writeFile(
 							transcriptPath,
