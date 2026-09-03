@@ -24,6 +24,15 @@ following the exact structure and conventions below. If the transcript isn't
 already saved as `notes/<year>/<YYYY-MM-DD>-transcript.md`, save it there first
 (verbatim, unedited) before writing the notes file.
 
+**Summary-only requests are different from note-generation requests.** If the
+user only asks for a spoken/chat summary of a transcript (not a notes file),
+do not write or modify any files in `notes/` — just reply with the summary
+directly in the conversation. Only save the verbatim transcript and write the
+`notes/<year>/<YYYY-MM-DD>.md` file when the user is explicitly asking for
+meeting notes to be generated (per this skill's contract). This avoids
+unintentionally committing unedited, pasted transcript text to the repository
+when the user only wanted a quick summary.
+
 ## Step-by-step process
 
 1. **Determine the date and year** from the transcript filename or its first
@@ -37,13 +46,19 @@ already saved as `notes/<year>/<YYYY-MM-DD>-transcript.md`, save it there first
    found in prior notes, use just `@handle` and flag it for the user to
    confirm rather than guessing a full name.
 
-3. **Identify who moderated and who took notes.** This is usually stated
-   explicitly near the top of the transcript (e.g., "can you take notes?" /
-   "yep") or implied by who is driving the agenda (moderator is almost always
-   @nzakas unless the transcript says otherwise). If a third person is
-   mentioned taking notes without attending/speaking (e.g., "(Thanks
-   @sam3k_ for the notes.)"), do NOT list them under "Attending" — instead
-   attribute note-taking to them in the sentence below the attendee list.
+3. **Identify who moderated and who took notes.** Only attribute the
+   moderator role based on explicit evidence in the transcript — e.g., someone
+   asking "can you take notes?", visibly driving the agenda (asking the
+   opening/status questions, introducing each topic, calling for
+   resolutions), or an explicit statement of who's moderating. Do not default
+   to attributing moderation to any particular person (including @nzakas)
+   just because they're a frequent moderator in past meetings. If the
+   transcript is genuinely ambiguous about who moderated, omit the
+   moderator attribution sentence entirely (or ask the user to confirm)
+   rather than guessing. If a third person is mentioned taking notes without
+   attending/speaking (e.g., "(Thanks @sam3k_ for the notes.)"), do NOT list
+   them under "Attending" — instead attribute note-taking to them in the
+   sentence below the attendee list.
 
 4. **Note absences.** If the transcript explicitly says a known TSC member is
    absent (e.g., "@nzakas is absent so it'll just be us today"), add a line:
@@ -62,9 +77,12 @@ already saved as `notes/<year>/<YYYY-MM-DD>-transcript.md`, save it there first
 
    Give each topic section a heading (`###`) using a short descriptive title.
    If the topic centers on a specific GitHub issue/PR, link its title:
-   `### [Issue or PR title](https://github.com/.../issues/123)`. Reuse the
-   actual issue/PR title from GitHub if the transcript link only shows a URL
-   (fetch the page or infer from context if not obtainable).
+   `### [Issue or PR title](https://github.com/.../issues/123)`. Use the
+   actual issue/PR title from GitHub (fetch the page to confirm it) whenever
+   possible. Never invent or infer a plausible-sounding title — if the title
+   can't be confirmed (e.g., GitHub is unreachable), use a neutral heading
+   that includes the raw URL instead (e.g., `### Discussion: <url>`), or ask
+   the user to confirm the correct title before using it.
 
 6. **Write each topic section** using these conventions:
    - Summarize the discussion in third person as concise bullet points or
@@ -85,7 +103,7 @@ already saved as `notes/<year>/<YYYY-MM-DD>-transcript.md`, save it there first
      notes.
    - If a topic produces concrete follow-up work, add an
      `**Action Items:**` bullet list grouped by owner handle, e.g.:
-     ```
+     ```markdown
      **Action Items:**
      - @handle will:
        - Do the release
@@ -142,7 +160,7 @@ already saved as `notes/<year>/<YYYY-MM-DD>-transcript.md`, save it there first
 8. **Verify before finishing:**
    - Every attendee in the transcript's speaker list appears in "Attending"
      (or is explicitly credited as note-taker/absent, not silently dropped).
-   - Every `### ` topic maps to a real, distinct portion of the transcript —
+   - Every `###` topic maps to a real, distinct portion of the transcript —
      don't invent topics that weren't discussed.
    - All GitHub links from the transcript appear somewhere in the notes.
    - Run a quick diff-read against 2-3 existing notes files (e.g.
