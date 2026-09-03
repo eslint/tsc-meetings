@@ -73,6 +73,9 @@ when the user only wanted a quick summary.
    - Specific issues/PRs discussed (one topic section per issue/PR, usually
      introduced via a linked GitHub URL)
    - Scheduling topics (meeting cadence, holidays, RFC duty rotation)
+   - Contributor pool (recurring topic in the first meeting of a month; see
+     the naming note under step 7 below — it's easy to get the covered month
+     wrong)
    - The scheduled release for that cycle (almost always the last topic)
 
    Give each topic section a heading (`###`) using a short descriptive title.
@@ -156,6 +159,17 @@ when the user only wanted a quick summary.
      bullet style and match it.
    - Always end with the scheduled-release topic if the transcript discusses
      one, since this matches the established pattern.
+   - The contributor pool topic is named after the month the linked
+     `notes/<year>/<YYYY-MM-01>-contributor-pool.md` report *covers*, not the
+     month the meeting takes place in. Since this report is generated on the
+     1st of the month and typically discussed in that month's first TSC
+     meeting, it always covers the *previous* calendar month (e.g., a report
+     linked as `2026-06-01-contributor-pool.md` and discussed at the June 11
+     meeting covers May 2026 activity, so the heading should read
+     `### Contributor Pool for May 2026`). Open the linked report and check
+     its date range in the title (e.g., `(05/01/2026 - 05/31/2026)`) to
+     confirm the correct month before naming this heading — it's easy to get
+     wrong.
 
 8. **Verify before finishing:**
    - Every attendee in the transcript's speaker list appears in "Attending"
