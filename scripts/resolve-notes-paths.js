@@ -31,7 +31,15 @@ function extractDateString(issueTitle) {
  */
 (function main() {
 	try {
-		const date = moment(extractDateString(ISSUE_TITLE), "DD-MMMM-YYYY");
+		const dateString = extractDateString(ISSUE_TITLE);
+		const date = moment(dateString, "DD-MMMM-YYYY", true);
+
+		if (!date.isValid()) {
+			throw new Error(
+				`"${dateString}" is not a valid date. Expecting format "DD-MMMM-YYYY".`,
+			);
+		}
+
 		const isoDate = date.format("YYYY-MM-DD");
 		const year = date.format("YYYY");
 
