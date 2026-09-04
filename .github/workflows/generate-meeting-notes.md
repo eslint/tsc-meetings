@@ -56,6 +56,13 @@ safe-outputs:
     target-repo: "*"
     allowed-repos: ["eslint/*"]
     github-token: ${{ secrets.ESLINT_ORG_TOKEN }}
+  remove-labels:
+    allowed: ["tsc agenda","tsc waiting"]
+    target: "*"
+    max: 20
+    target-repo: "*"
+    allowed-repos: ["eslint/*"]
+    github-token: ${{ secrets.ESLINT_ORG_TOKEN }}
   close-issue:
     target: "*"
     max: 20
@@ -109,9 +116,9 @@ order:
 2. If, and only if, the Resolution states that the TSC decided to **accept**
    the issue/PR, add the `accepted` label to it and leave it open — do not
    close it.
-3. Otherwise (the TSC did not decide to accept it — including cases where the
-   resolution explicitly says to close, reject, or decline it), close the
-   issue or pull request, unless it is already closed.
+3. Remove the `tsc agenda` and `tsc waiting` labels if present. 
+3. Otherwise if the resolution explicitly says to close, reject, or decline,
+   close the issue or pull request, unless it is already closed.
 
 Skip any topic with no clear Resolution line, and skip any link that is not
 under the `eslint` GitHub org. When targeting an issue/PR outside this
