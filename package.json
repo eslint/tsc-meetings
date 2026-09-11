@@ -9,6 +9,7 @@
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "generate:transcript": "node ./scripts/generate-transcript.js",
+    "resolve:notes-paths": "node ./scripts/resolve-notes-paths.js",
     "generate:contributor-pool": "node ./scripts/generate-contributor-pool.js"
   },
   "repository": "eslint/tsc-meetings",
