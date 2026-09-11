@@ -29,7 +29,7 @@ steps:
     id: paths
     run: |
       mkdir -p /tmp/gh-aw/agent
-      npm run resolve:notes-paths | tee /tmp/gh-aw/agent/meeting-paths.env >> "$GITHUB_OUTPUT"
+      node ./scripts/resolve-notes-paths.js | tee /tmp/gh-aw/agent/meeting-paths.env >> "$GITHUB_OUTPUT"
     env:
       ISSUE_TITLE: ${{ github.event.issue.title }}
 tools:
