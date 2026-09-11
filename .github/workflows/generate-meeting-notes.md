@@ -10,7 +10,6 @@ permissions:
   contents: read
   issues: read
   pull-requests: read
-  copilot-requests: write
 engine: copilot
 steps:
   - name: Setup Node.js
