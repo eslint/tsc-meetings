@@ -492,7 +492,7 @@ jobs:
         name: Resolve transcript/notes paths
         run: |-
           mkdir -p /tmp/gh-aw/agent
-          npm run resolve:notes-paths | tee /tmp/gh-aw/agent/meeting-paths.env >> "$GITHUB_OUTPUT"
+          node ./scripts/resolve-notes-paths.js | tee /tmp/gh-aw/agent/meeting-paths.env >> "$GITHUB_OUTPUT"
 
       - name: Configure Git credentials
         env:
