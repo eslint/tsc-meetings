@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "discord.js": "^14.27.0",
-    "moment": "^2.30.1"
+    "moment": "^2.31.0"
   },
   "devDependencies": {
     "eslint": "^10.11.0",
