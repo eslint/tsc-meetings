@@ -104,11 +104,6 @@ Use the **meeting-notes-generator** skill
 exactly. Use your best judgement for any ambiguous attendee names or topics;
 do not ask for clarification.
 
-The GitHub tools available to you (such as `issue_read` and
-`pull_request_read`) work for any repository in the `eslint` org. Use them to
-look up the actual title of every issue or pull request you link in a `###`
-topic heading, as the skill requires.
-
 Once you have written both the transcript file and the notes file to disk, a
 pull request will automatically be opened with your changes — you do not need
 to commit, push, or open a pull request yourself.

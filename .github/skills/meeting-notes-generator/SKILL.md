@@ -84,11 +84,11 @@ when the user only wanted a quick summary.
    text must be the issue/PR's actual title exactly as it appears on GitHub.
    Always look the title up using whatever GitHub access is available (GitHub
    MCP tools such as `issue_read` / `pull_request_read`, the `gh` CLI, or
-   fetching the page) rather than deriving it from the transcript. Never
-   invent or infer a plausible-sounding title — if the title can't be
-   confirmed (e.g., GitHub is unreachable), use a neutral heading that
-   includes the raw URL instead (e.g., `### Discussion: <url>`), or ask the
-   user to confirm the correct title before using it.
+   fetching the page if network access is available) rather than deriving it
+   from the transcript. Never invent or infer a plausible-sounding title — if
+   the title can't be confirmed (e.g., GitHub is unreachable), use a neutral
+   heading that includes the raw URL instead (e.g., `### Discussion: <url>`),
+   or ask the user to confirm the correct title before using it.
 
 6. **Write each topic section** using these conventions:
    - Summarize the discussion in third person as concise bullet points or
@@ -180,8 +180,9 @@ when the user only wanted a quick summary.
    - Every `###` topic maps to a real, distinct portion of the transcript —
      don't invent topics that weren't discussed.
    - All GitHub links from the transcript appear somewhere in the notes.
-   - Every `###` heading that links to an issue/PR uses the title looked up
-     from GitHub as its link text, not a label you wrote yourself.
+   - Every `###` heading that links to an issue/PR uses the actual issue/PR
+     title retrieved from GitHub as its link text, not a label you wrote
+     yourself.
    - Run a quick diff-read against 2-3 existing notes files (e.g.
      `notes/2025/2025-12-11.md`, `notes/2023/2023-01-12.md`) to confirm
      formatting/tone consistency before presenting the final file to the
