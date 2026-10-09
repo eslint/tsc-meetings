@@ -106,7 +106,8 @@ https://github.com/eslint/eslint/issues/21113
 
 **nzakas:** This was added to the agenda by a contributor
 
-**nzakas:** ```js
+**nzakas:**
+```js
 /* eslint array-callback-return: "error" */
 const grouped = Object.groupBy(inventory, ({ type }) => {
     if (type === "fruit") {
