@@ -11,4 +11,10 @@ module.exports = defineConfig([
 			"no-console": "off",
 		},
 	},
+	{
+		files: [".flue/**/*.mjs"],
+		languageOptions: {
+			sourceType: "module",
+		},
+	},
 ]);
