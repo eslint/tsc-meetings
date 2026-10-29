@@ -4,11 +4,10 @@ name: Generate Meeting Notes (Flue)
 # pull request with them, then applies the meeting's resolutions to any eslint
 # org issues/PRs discussed.
 #
-# Runs automatically when a "tsc meeting" issue is closed. To run it manually,
-# use "Run workflow" on the Actions tab and enter the meeting issue's number.
+# Run it manually using "Run workflow" on the Actions tab and entering the
+# meeting issue's number. The existing workflow handles issue closures during
+# the transition.
 on:
-    issues:
-        types: [closed]
     workflow_dispatch:
         inputs:
             issue_number:
@@ -113,14 +112,14 @@ jobs:
             - name: Check agent output
               env:
                   NOTES_PATH: ${{ steps.paths.outputs.notes_path }}
-                  MEETING_ACTIONS_PATH: ${{ runner.temp }}/meeting-actions.json
+                  ACTIONS_PATH: ${{ runner.temp }}/meeting-actions.json
               run: |
                   if ! grep -q "^## Topics" "$NOTES_PATH" 2>/dev/null; then
                       echo "::error::Meeting notes were not written to $NOTES_PATH"
                       exit 1
                   fi
-                  if ! node -e "if (!Array.isArray(require(process.argv[1]))) process.exit(1)" "$MEETING_ACTIONS_PATH"; then
-                      echo "::error::The agent did not record the meeting actions"
+                  if ! node ./scripts/apply-meeting-resolutions.js --validate; then
+                      echo "::error::The agent did not record valid actions for every resolved topic"
                       exit 1
                   fi
                   echo "Recorded actions:"

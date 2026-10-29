@@ -9,12 +9,12 @@ All meetings take place in [Discord](https://eslint.org/chat).
 ## Meeting Notes Workflow (Flue)
 
 [`.github/workflows/generate-meeting-notes-flue.yml`](.github/workflows/generate-meeting-notes-flue.yml)
-generates the transcript and notes for each meeting and applies the meeting's
-resolutions to the issues/PRs discussed. It runs automatically when a "tsc
-meeting" issue is closed, and can also be run manually from the Actions tab
-("Run workflow") by entering the meeting issue's number. Check "dry run" to
-generate the notes and log the intended issue/PR updates without opening a PR
-or changing anything.
+generates the transcript and notes for a meeting and applies the meeting's
+resolutions to the issues/PRs discussed. During the transition, it can be run
+manually from the Actions tab ("Run workflow") by entering the meeting issue's
+number; the existing Agentic Workflow continues to handle issue closures.
+Check "dry run" to generate the notes and log the intended issue/PR updates
+without opening a PR or changing anything.
 
 The workflow has two jobs:
 
@@ -87,4 +87,3 @@ The workflow requires the following repository secrets: `DISCORD_BOT_TOKEN`,
 token with read/write access to issues and pull requests across the `eslint`
 org, used to comment on, close, and label the issues/PRs discussed in each
 meeting).
-

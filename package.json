@@ -16,7 +16,7 @@
   "funding": "https://opencollective.com/eslint",
   "license": "MIT",
   "engines": {
-    "node": "^22.13.0 || >=24"
+    "node": ">=22.19.0"
   },
   "dependencies": {
     "@flue/runtime": "^2.3.0",

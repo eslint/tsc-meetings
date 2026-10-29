@@ -26,7 +26,7 @@ const dryRun = DRY_RUN === "true";
 const LABELS_TO_REMOVE = ["tsc agenda", "tsc waiting"];
 const VALID_ACTIONS = new Set(["accept", "close", "none"]);
 const TOPIC_HEADING =
-	/^### \[.*\]\((https:\/\/github\.com\/eslint\/([\w.-]+)\/(issues|pull)\/(\d+))\/?(?:[?#][^)]*)?\)\s*$/u;
+	/^### \[.*\]\((https:\/\/github\.com\/eslint\/([\w.-]+)\/(issues|pull)\/([1-9]\d{0,14}))\/?(?:[?#][^)]*)?\)\s*$/u;
 const RESOLUTION_PREFIX = /^\*\*Resolution:?\*\*:?\s*/u;
 
 /**
@@ -100,6 +100,29 @@ function readActions(filePath) {
 	}
 
 	return actions;
+}
+
+/**
+ * Ensures every topic with a resolution has a corresponding agent action.
+ * @param {Array<{url: string, resolution: string|null}>} topics The parsed topics.
+ * @param {Map<string, string>} actions The agent's actions.
+ * @returns {void} Nothing.
+ * @throws {Error} If a resolved topic has no corresponding action.
+ */
+function validateActions(topics, actions) {
+	const missing = [
+		...new Set(
+			topics
+				.filter(topic => topic.resolution && !actions.has(topic.url))
+				.map(topic => topic.url),
+		),
+	];
+
+	if (missing.length > 0) {
+		throw new Error(
+			`Missing actions for resolved topics: ${missing.join(", ")}`,
+		);
+	}
 }
 
 /**
@@ -225,22 +248,31 @@ async function applyTopic(topic, action) {
 
 (async function main() {
 	try {
+		const validateOnly = process.argv.includes("--validate");
+
 		for (const [name, value] of Object.entries({
 			NOTES_PATH,
-			NOTES_DATE,
 			ACTIONS_PATH,
+			...(!validateOnly && { NOTES_DATE }),
 		})) {
 			if (!value) {
 				throw new Error(`${name} is not set.`);
 			}
 		}
 
+		const topics = parseTopics(fs.readFileSync(NOTES_PATH, "utf8"));
+		const actions = readActions(ACTIONS_PATH);
+		validateActions(topics, actions);
+
+		if (validateOnly) {
+			console.log("Meeting actions validated.");
+			return;
+		}
+
 		if (!GITHUB_TOKEN && !dryRun) {
 			throw new Error("GITHUB_TOKEN is not set.");
 		}
 
-		const topics = parseTopics(fs.readFileSync(NOTES_PATH, "utf8"));
-		const actions = readActions(ACTIONS_PATH);
 		const seen = new Set();
 		let failures = 0;
 
