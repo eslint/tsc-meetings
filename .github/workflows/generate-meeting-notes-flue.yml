@@ -4,10 +4,11 @@ name: Generate Meeting Notes (Flue)
 # pull request with them, then applies the meeting's resolutions to any eslint
 # org issues/PRs discussed.
 #
-# Run it manually using "Run workflow" on the Actions tab and entering the
-# meeting issue's number. The existing workflow handles issue closures during
-# the transition.
+# Runs automatically when a "tsc meeting" issue is closed. To run it manually,
+# use "Run workflow" on the Actions tab and enter the meeting issue's number.
 on:
+    issues:
+        types: [closed]
     workflow_dispatch:
         inputs:
             issue_number:
