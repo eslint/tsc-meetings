@@ -123,7 +123,7 @@ jobs:
                       exit 1
                   fi
                   echo "Recorded actions:"
-                  cat "$MEETING_ACTIONS_PATH"
+                  cat "$ACTIONS_PATH"
             - name: Collect output files
               env:
                   OUTPUT_DIR: ${{ runner.temp }}/meeting-output
