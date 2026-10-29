@@ -11,4 +11,11 @@ module.exports = defineConfig([
 			"no-console": "off",
 		},
 	},
+	{
+		// eslint-config-eslint/cjs sets `sourceType: "commonjs"` for all files
+		files: ["**/*.mjs"],
+		languageOptions: {
+			sourceType: "module",
+		},
+	},
 ]);

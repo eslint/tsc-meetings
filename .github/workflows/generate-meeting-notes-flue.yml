@@ -1,0 +1,192 @@
+name: Generate Meeting Notes (Flue)
+
+# Generates the ESLint TSC meeting transcript and notes from Discord, opens a
+# pull request with them, then applies the meeting's resolutions to any eslint
+# org issues/PRs discussed.
+#
+# Runs automatically when a "tsc meeting" issue is closed. To run it manually,
+# use "Run workflow" on the Actions tab and enter the meeting issue's number.
+on:
+    issues:
+        types: [closed]
+    workflow_dispatch:
+        inputs:
+            issue_number:
+                description: Number of the "TSC meeting" issue in this repository
+                required: true
+                type: string
+            dry_run:
+                description: Generate the notes, but don't open a PR or update any issues/PRs
+                required: false
+                type: boolean
+                default: false
+
+permissions:
+    contents: read
+
+concurrency:
+    group: meeting-notes-${{ github.event.issue.number || inputs.issue_number }}
+    cancel-in-progress: false
+
+jobs:
+    generate:
+        name: Generate transcript and notes
+        if: github.event_name == 'workflow_dispatch' || contains(github.event.issue.labels.*.name, 'tsc meeting')
+        runs-on: ubuntu-latest
+        timeout-minutes: 30
+        permissions:
+            contents: read
+            issues: read
+        outputs:
+            issue_number: ${{ steps.issue.outputs.number }}
+            transcript_path: ${{ steps.paths.outputs.transcript_path }}
+            notes_path: ${{ steps.paths.outputs.notes_path }}
+            notes_date: ${{ steps.paths.outputs.notes_date }}
+        steps:
+            - uses: actions/checkout@v7
+              with:
+                  persist-credentials: false
+            - name: Setup Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version: "lts/*"
+            - name: Install dependencies
+              run: npm ci
+            - name: Resolve meeting issue
+              id: issue
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
+                  EVENT_ISSUE_TITLE: ${{ github.event.issue.title }}
+                  INPUT_ISSUE_NUMBER: ${{ inputs.issue_number }}
+              run: |
+                  if [ -n "$EVENT_ISSUE_NUMBER" ]; then
+                      number="$EVENT_ISSUE_NUMBER"
+                      title="$EVENT_ISSUE_TITLE"
+                  else
+                      number="$INPUT_ISSUE_NUMBER"
+                      title=$(gh issue view "$number" --repo "$GITHUB_REPOSITORY" --json title --jq .title)
+                  fi
+                  echo "Meeting issue #$number: $title"
+                  echo "number=$number" >> "$GITHUB_OUTPUT"
+                  {
+                      echo "title<<EOF_ISSUE_TITLE"
+                      echo "$title"
+                      echo "EOF_ISSUE_TITLE"
+                  } >> "$GITHUB_OUTPUT"
+            - name: Generate transcript
+              run: npm run generate:transcript
+              env:
+                  TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+                  ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+                  ISSUE_TITLE: ${{ steps.issue.outputs.title }}
+            - name: Resolve transcript/notes paths
+              id: paths
+              run: node ./scripts/resolve-notes-paths.js | tee -a "$GITHUB_OUTPUT"
+              env:
+                  ISSUE_TITLE: ${{ steps.issue.outputs.title }}
+            # Save the transcript before the agent runs so the committed copy is
+            # always exactly what was pulled from Discord.
+            - name: Save transcript
+              env:
+                  OUTPUT_DIR: ${{ runner.temp }}/meeting-output
+                  TRANSCRIPT_PATH: ${{ steps.paths.outputs.transcript_path }}
+              run: |
+                  if [ ! -s "$TRANSCRIPT_PATH" ]; then
+                      echo "::error::Transcript was not generated at $TRANSCRIPT_PATH"
+                      exit 1
+                  fi
+                  mkdir -p "$OUTPUT_DIR/$(dirname "$TRANSCRIPT_PATH")"
+                  cp "$TRANSCRIPT_PATH" "$OUTPUT_DIR/$TRANSCRIPT_PATH"
+            - name: Generate meeting notes
+              env:
+                  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+                  GH_TOKEN: ${{ github.token }}
+                  MEETING_ACTIONS_PATH: ${{ runner.temp }}/meeting-actions.json
+                  TRANSCRIPT_PATH: ${{ steps.paths.outputs.transcript_path }}
+                  NOTES_PATH: ${{ steps.paths.outputs.notes_path }}
+                  NOTES_DATE: ${{ steps.paths.outputs.notes_date }}
+              run: |
+                  npx flue run .flue/agents/meeting-notes.mjs --message "Write the notes for the ESLint TSC meeting on $NOTES_DATE.
+                  Transcript path: $TRANSCRIPT_PATH
+                  Notes path: $NOTES_PATH"
+            - name: Check agent output
+              env:
+                  NOTES_PATH: ${{ steps.paths.outputs.notes_path }}
+                  ACTIONS_PATH: ${{ runner.temp }}/meeting-actions.json
+              run: |
+                  if ! grep -q "^## Topics" "$NOTES_PATH" 2>/dev/null; then
+                      echo "::error::Meeting notes were not written to $NOTES_PATH"
+                      exit 1
+                  fi
+                  if ! node ./scripts/apply-meeting-resolutions.js --validate; then
+                      echo "::error::The agent did not record valid actions for every resolved topic"
+                      exit 1
+                  fi
+                  echo "Recorded actions:"
+                  cat "$ACTIONS_PATH"
+            - name: Collect output files
+              env:
+                  OUTPUT_DIR: ${{ runner.temp }}/meeting-output
+                  NOTES_PATH: ${{ steps.paths.outputs.notes_path }}
+              run: |
+                  cp "$NOTES_PATH" "$OUTPUT_DIR/$NOTES_PATH"
+                  cp "$RUNNER_TEMP/meeting-actions.json" "$OUTPUT_DIR/meeting-actions.json"
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: meeting-notes
+                  path: ${{ runner.temp }}/meeting-output
+                  if-no-files-found: error
+
+    publish:
+        name: Open PR and apply resolutions
+        needs: generate
+        runs-on: ubuntu-latest
+        timeout-minutes: 15
+        permissions:
+            contents: write
+            pull-requests: write
+        env:
+            DRY_RUN: ${{ inputs.dry_run == true }}
+            ISSUE_NUMBER: ${{ needs.generate.outputs.issue_number }}
+            NOTES_DATE: ${{ needs.generate.outputs.notes_date }}
+            NOTES_PATH: ${{ needs.generate.outputs.notes_path }}
+            TRANSCRIPT_PATH: ${{ needs.generate.outputs.transcript_path }}
+        steps:
+            - uses: actions/checkout@v7
+            - name: Setup Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version: "lts/*"
+            - uses: actions/download-artifact@v8
+              with:
+                  name: meeting-notes
+                  path: ${{ runner.temp }}/meeting-output
+            - name: Copy notes into repository
+              run: |
+                  mkdir -p "$(dirname "$NOTES_PATH")"
+                  cp "$RUNNER_TEMP/meeting-output/$TRANSCRIPT_PATH" "$TRANSCRIPT_PATH"
+                  cp "$RUNNER_TEMP/meeting-output/$NOTES_PATH" "$NOTES_PATH"
+            - name: Create pull request
+              id: pr
+              if: env.DRY_RUN != 'true'
+              uses: peter-evans/create-pull-request@v8
+              with:
+                  branch: meeting-notes/${{ env.NOTES_DATE }}
+                  delete-branch: true
+                  add-paths: |
+                      ${{ env.TRANSCRIPT_PATH }}
+                      ${{ env.NOTES_PATH }}
+                  commit-message: Add ${{ env.NOTES_DATE }} TSC meeting notes
+                  title: Add ${{ env.NOTES_DATE }} TSC meeting notes
+                  labels: automation
+                  body: |
+                      Transcript and notes for the ${{ env.NOTES_DATE }} TSC meeting (${{ github.repository }}#${{ env.ISSUE_NUMBER }}).
+
+                      Generated by [${{ github.workflow }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+            - name: Apply resolutions to discussed issues/PRs
+              run: node ./scripts/apply-meeting-resolutions.js
+              env:
+                  GITHUB_TOKEN: ${{ secrets.ESLINT_ORG_TOKEN }}
+                  ACTIONS_PATH: ${{ runner.temp }}/meeting-output/meeting-actions.json
+                  FOOTER: "> Generated by [${{ github.workflow }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for ${{ github.repository }}#${{ needs.generate.outputs.issue_number }}"
