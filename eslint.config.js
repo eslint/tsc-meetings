@@ -12,7 +12,8 @@ module.exports = defineConfig([
 		},
 	},
 	{
-		files: [".flue/**/*.mjs"],
+		// eslint-config-eslint/cjs sets `sourceType: "commonjs"` for all files
+		files: ["**/*.mjs"],
 		languageOptions: {
 			sourceType: "module",
 		},
