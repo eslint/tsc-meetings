@@ -18,7 +18,8 @@
 
 **nzakas:** This RFC has been open for a while and I think it's time to push forward
 
-**nzakas:** > @eslint/eslint-tsc please review this so we can discuss at the meeting.
+**nzakas:**
+> @eslint/eslint-tsc please review this so we can discuss at the meeting.
 > 
 > **TSC Summary:** This RFC proposes an eslint-community org managed by a separate team but overseen by the TSC. This org would be a repository for important ESLint ecosystem projects and would be able to step on to maintain those projects I’d they fall out of maintenance.
 > 

@@ -100,7 +100,8 @@ I also worked on the compat utility and published the post for that. Then, conti
 
 **nzakas:** All right, next item:
 
-**nzakas:** > Along the same lines, I'm finding that I need to re-ping the TSC multiple times on issues where I'm looking for feedback, sometimes over the course of multiple weeks. How can we tighten up the feedback loop?
+**nzakas:**
+> Along the same lines, I'm finding that I need to re-ping the TSC multiple times on issues where I'm looking for feedback, sometimes over the course of multiple weeks. How can we tighten up the feedback loop?
 
 **mdjermanovic:** There's a lot of context switching in this kind of project, and when switching between tasks, it takes a lot of energy to get back to the context to be able to provide some meaningful thinking. I usually start with tasks that feel like a high priority or look like they could be resolved quickly so that they don't pile up. But then new tasks that seem like a higher priority pop up and push the remaining ones down the waiting queue, so some end up waiting too long.
 
@@ -180,7 +181,8 @@ I also worked on the compat utility and published the post for that. Then, conti
 
 **nzakas:** All right, next item:
 
-**nzakas:** > It seems like we are getting more reports of people being blocked on migrating to v9. Either they can't figure out how to migrate, or they're stuck by something in the ecosystem. What else can we do to help aid migration?
+**nzakas:**
+> It seems like we are getting more reports of people being blocked on migrating to v9. Either they can't figure out how to migrate, or they're stuck by something in the ecosystem. What else can we do to help aid migration?
 
 **nzakas:** As I mentioned, I think it's probably time to look at a migration tool. I'm not sure how effective it can be, but even if it gets things 80% of the way there, that seems like an improvement from the situation now.
  * 👍 @mdjermanovic, @fasttime

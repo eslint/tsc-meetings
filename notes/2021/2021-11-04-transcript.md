@@ -163,7 +163,9 @@
 
 **mdjermanovic:** 👍
 
-**nzakas:** 1. Sara has started working on the new site. I have a call with her on Tuesday to go over things.
+**nzakas:**
+
+1. Sara has started working on the new site. I have a call with her on Tuesday to go over things.
 
 **nzakas:** I've also setup a couple of repos for her to work in: one for the marketing site and one for the docs site. These are intended to be temporary before we move the files into their final resting places.
 
@@ -173,7 +175,9 @@
 
 **btmills:** that all sounds good
 
-**nzakas:** 2. Flat config - basically, I have `Linter` updated and working. I'm just going through and porting all existing tests to work with flat config at this point. This has been a good exercise because doing so has uncovered two bugs thusfar. It's just long and boring, but I'll get through it. 🙂
+**nzakas:**
+
+2. Flat config - basically, I have `Linter` updated and working. I'm just going through and porting all existing tests to work with flat config at this point. This has been a good exercise because doing so has uncovered two bugs thusfar. It's just long and boring, but I'll get through it. 🙂
  * 🎉 @mdjermanovic
  * 👏 @btmills
 

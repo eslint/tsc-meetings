@@ -90,7 +90,8 @@ config file should be used, but it wasn;t found -> return something else?
 
 **nzakas:** Okay, items from the issue
 
-**nzakas:** > Shall we add some additional fields to the triage board for Priority (P1-P5?) and Impact (Low-High)? This might make it easier to see where to focus our time.
+**nzakas:**
+> Shall we add some additional fields to the triage board for Priority (P1-P5?) and Impact (Low-High)? This might make it easier to see where to focus our time.
 
 **mdjermanovic:** Yes, sounds like a good idea to me
 
@@ -111,7 +112,8 @@ config file should be used, but it wasn;t found -> return something else?
 
 **nzakas:** Next item:
 
-**nzakas:** > Do we want to add PRs to the triage board? If we rename the "Pull Request Opened" column to "Implementing", I think the rest of the process would work as-is.
+**nzakas:**
+> Do we want to add PRs to the triage board? If we rename the "Pull Request Opened" column to "Implementing", I think the rest of the process would work as-is.
 
 **mdjermanovic:** I'm already adding PRs that don't address an issue so that they can go through Triaging -> Feedback needed etc. like issues
 

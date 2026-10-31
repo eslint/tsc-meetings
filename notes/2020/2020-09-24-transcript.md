@@ -24,7 +24,8 @@
 
 **nzakas:** First item:
 
-**nzakas:** > Agenda item: Let's discuss the changes we'll be making to how we manage Tidelift payments and ensure everyone is signed up.
+**nzakas:**
+> Agenda item: Let's discuss the changes we'll be making to how we manage Tidelift payments and ensure everyone is signed up.
 
 **nzakas:** So I guess the first question: is everyone signed up?
 
@@ -47,7 +48,8 @@
 
 **nzakas:** All right, next item:
 
-**nzakas:** > Agenda item: It's like to revisit the discussion around a community manager. My thinking has changed a bit (mostly about the title and also about how many people we'd want), and want to run my latest thinking by the team to see if we want to move forward.
+**nzakas:**
+> Agenda item: It's like to revisit the discussion around a community manager. My thinking has changed a bit (mostly about the title and also about how many people we'd want), and want to run my latest thinking by the team to see if we want to move forward.
 
 **nzakas:** So yeah, we've been talking off and on about this community manager position for a while, and now I'm thinking we'd be better off creating a "triage team" with two people on it instead of having just one person.
 

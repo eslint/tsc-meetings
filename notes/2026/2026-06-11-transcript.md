@@ -35,7 +35,8 @@ June 22 - @fasttime
 
 **nzakas:** First item: https://github.com/eslint/rewrite/pull/457
 
-**nzakas:** > **TSC Summary**: This PR is mainly about the future of the `@eslint/migrate-config` package, since `@eslint/v8-to-v9-config`, which has been verified in [eslint/eslint#20442](https://github.com/eslint/eslint/issues/20442) and is ready for a blog announcement, could replace it. This PR also changes the implementation to use `includeIgnoreFile` from the `eslint/config` subpath import. Since this feature was added in ESLint v10.4.0, it would break the existing v8-to-v9 migration tooling. This change need to be added in the next major version of `@eslint/migrate-config` instead, so it doesn’t break the current migration solution.
+**nzakas:**
+> **TSC Summary**: This PR is mainly about the future of the `@eslint/migrate-config` package, since `@eslint/v8-to-v9-config`, which has been verified in [eslint/eslint#20442](https://github.com/eslint/eslint/issues/20442) and is ready for a blog announcement, could replace it. This PR also changes the implementation to use `includeIgnoreFile` from the `eslint/config` subpath import. Since this feature was added in ESLint v10.4.0, it would break the existing v8-to-v9 migration tooling. This change need to be added in the next major version of `@eslint/migrate-config` instead, so it doesn’t break the current migration solution.
 > 
 > **TSC Question**: Given that the v8-to-v9 and v9-to-v10 codemods could cover the `migrate-config` package, should this package be deprecated and frozen for new feature requests, with all codemods unified in the codemods repo moving forward? Or do we plan to maintain both packages?
 
@@ -85,7 +86,8 @@ June 22 - @fasttime
 
 **nzakas:** Next item: https://github.com/eslint/markdown/pull/648
 
-**nzakas:** > **TSC Summary**: This PR is seeking consensus on the current approach to mitigating type compatibility issues with ESLint v9.x for the Markdown, JSON, and CSS language plugins, as mentioned in [eslint/json#213](https://github.com/eslint/json/issues/213).
+**nzakas:**
+> **TSC Summary**: This PR is seeking consensus on the current approach to mitigating type compatibility issues with ESLint v9.x for the Markdown, JSON, and CSS language plugins, as mentioned in [eslint/json#213](https://github.com/eslint/json/issues/213).
 > 
 > **TSC Question**: This PR includes only typing changes and no runtime behavior changes. Is the current change acceptable? If so, would it be fine to mark [eslint/json#213](https://github.com/eslint/json/issues/213) and this PR as accepted and move forward with JSON and CSS using this approach?
 
@@ -127,7 +129,8 @@ June 22 - @fasttime
 **nzakas:** Next item:
 https://github.com/eslint/eslint/issues/20590
 
-**nzakas:** > **TSC Summary**: This issue is seeking consensus on exporting common glob patterns for certain languages, such as `**/*.{mjs,cjs,js,jsx,mts,cts,ts,tsx}` for JavaScript.
+**nzakas:**
+> **TSC Summary**: This issue is seeking consensus on exporting common glob patterns for certain languages, such as `**/*.{mjs,cjs,js,jsx,mts,cts,ts,tsx}` for JavaScript.
 > 
 > **TSC Question**: There is currently no definitive consensus on the design of the glob patterns, where to place them, or how to treat them across the language plugins. Should we seek consensus on this approach, or do we need an RFC for this issue?
 

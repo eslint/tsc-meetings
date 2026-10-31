@@ -169,7 +169,8 @@ https://github.com/eslint/eslint/issues/20518
 **nzakas:** Next item:
 https://github.com/eslint/eslint/issues/19920
 
-**nzakas:** > **TSC Summary:** ESLint recently had to fix a regression in the v9.x line related to TypeScript compatibility ([#20495](https://github.com/eslint/eslint/issues/20495)). To reduce the risk of similar issues during the v10.x cycle, it would be helpful to define a minimum supported TypeScript version for `eslint` and for the dependencies used in type definitions.
+**nzakas:**
+> **TSC Summary:** ESLint recently had to fix a regression in the v9.x line related to TypeScript compatibility ([#20495](https://github.com/eslint/eslint/issues/20495)). To reduce the risk of similar issues during the v10.x cycle, it would be helpful to define a minimum supported TypeScript version for `eslint` and for the dependencies used in type definitions.
 > 
 > **TSC Question:** Should we set the minimum supported TypeScript version to 5.3, as proposed in the current issue?
 > 

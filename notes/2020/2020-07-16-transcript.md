@@ -64,7 +64,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/13299
 
-**nzakas:** > **TSC Summary:** The proposal here is to add a new option to `no-void` that will allow the form `() => void foo;`, which currently emits a warning. Our policy says [we have frozen stylistic rules](https://eslint.org/blog/2020/05/changes-to-rules-policies#what-are-the-changes) and there are other ways to accomplish the same thing (creating a custom rule, using `no-restricted-syntax`, etc.).
+**nzakas:**
+> **TSC Summary:** The proposal here is to add a new option to `no-void` that will allow the form `() => void foo;`, which currently emits a warning. Our policy says [we have frozen stylistic rules](https://eslint.org/blog/2020/05/changes-to-rules-policies#what-are-the-changes) and there are other ways to accomplish the same thing (creating a custom rule, using `no-restricted-syntax`, etc.).
 > 
 > **TSC Question:** Should we accept this proposal?
 
@@ -106,7 +107,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Now that eslint/rfcs#9 has been merged, I'd like to suggest we close https://github.com/eslint/rfcs/pull/5, https://github.com/eslint/rfcs/pull/14, https://github.com/eslint/rfcs/pull/21, and https://github.com/eslint/rfcs/pull/54. These all have to do with changing how configuration works, and given that we're heading in a new direction, it seems that we should be able to close these.
+**nzakas:**
+> Now that eslint/rfcs#9 has been merged, I'd like to suggest we close https://github.com/eslint/rfcs/pull/5, https://github.com/eslint/rfcs/pull/14, https://github.com/eslint/rfcs/pull/21, and https://github.com/eslint/rfcs/pull/54. These all have to do with changing how configuration works, and given that we're heading in a new direction, it seems that we should be able to close these.
 
 **nzakas:** This is kind of a followup to our discussion last week about how to deal with RFCs that are aimed at solving the same problem
 
@@ -137,7 +139,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > There are several RFCs for parallel linting: https://github.com/eslint/rfcs/pull/4, https://github.com/eslint/rfcs/pull/11, and https://github.com/eslint/rfcs/pull/42. None of these take into account the new configuration system or the `ESLint` class. As https://github.com/eslint/rfcs/pull/42 is the most recent, we could decide to leave that open and close the others, or close all three depending on @mysticatea's interest in updating his RFC.
+**nzakas:**
+> There are several RFCs for parallel linting: https://github.com/eslint/rfcs/pull/4, https://github.com/eslint/rfcs/pull/11, and https://github.com/eslint/rfcs/pull/42. None of these take into account the new configuration system or the `ESLint` class. As https://github.com/eslint/rfcs/pull/42 is the most recent, we could decide to leave that open and close the others, or close all three depending on @mysticatea's interest in updating his RFC.
 
 **nzakas:** Based on the roadmap discussions, I'm going to assume @mysticatea would prefer to continue working on the latest RFC.
 

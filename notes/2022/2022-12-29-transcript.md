@@ -14,7 +14,8 @@
 
 **nzakas:** Okay, first item: https://github.com/eslint/eslint/issues/16537
 
-**nzakas:** > **TSC Summary:** The one capability flat config doesn't currently have that eslintrc does is the ability to implement `extends: "eslint:recommended"`. This is the last compatibility piece for flat config to address before we move on to the next phase. This issue presents three options for how to move forward.
+**nzakas:**
+> **TSC Summary:** The one capability flat config doesn't currently have that eslintrc does is the ability to implement `extends: "eslint:recommended"`. This is the last compatibility piece for flat config to address before we move on to the next phase. This issue presents three options for how to move forward.
 > 
 > **TSC Question:** How do we want to support this use case in flat config?
 

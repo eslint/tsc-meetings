@@ -32,7 +32,8 @@
 
 **nzakas:** First item:
 
-**nzakas:** > >I'd like to talk a bit about our current sponsorship picture and some opportunities to make a little bit more money for the project. Specific topics include:
+**nzakas:**
+> >I'd like to talk a bit about our current sponsorship picture and some opportunities to make a little bit more money for the project. Specific topics include:
 > >
 > > * State of current sponsorships
 > > * Tidelift
@@ -159,7 +160,8 @@
 
 **nzakas:** Next:
 
-**nzakas:** > Item: I’d like to discuss cutting down on the amount of changes we do related to rules. This is the majority of our work and it’s unsustainable at the current rate. Specifically I suggest:
+**nzakas:**
+> Item: I’d like to discuss cutting down on the amount of changes we do related to rules. This is the majority of our work and it’s unsustainable at the current rate. Specifically I suggest:
 > 
 > 1. No new rules unless they are related to new syntax. (New syntax meaning the syntax is stage 4 within the last 12 months.) This is the only way a new rule has enough value to validate the maintenance cost. 
 > 2. No new rules that just disallow a syntax. The no-restricted-syntax rule should be used instead. 
@@ -170,7 +172,8 @@
 
 **btmills:** Switched from 1-based to 0-based indexing halfway through
 
-**kaicataldo:** > No further changes to stylistic rules. We can’t keep implementing everyone’s strange preferences.
+**kaicataldo:**
+> No further changes to stylistic rules. We can’t keep implementing everyone’s strange preferences.
 
 My only caveat here is that we should still implement bug fixes. I think that was your intention, but just want to be clear.
 

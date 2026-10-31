@@ -29,13 +29,21 @@ December 16: @fasttime
 
 **mdjermanovic:** Some observations:
 
-**mdjermanovic:** 1. Per the "Multiple Individual Files" test made for that PR, the config caching problem introduced in v9.12.0 has been fixed in v9.14.0.
+**mdjermanovic:**
 
-**mdjermanovic:** 2. Interestingly, on the other hand, all of our standard performance tests, which are Loading, Single File (one big file), and Multi Files (450 files matched by a glob) show notable performance improvements in v9.12.0. This was unexpected, but welcome 🙂
+1. Per the "Multiple Individual Files" test made for that PR, the config caching problem introduced in v9.12.0 has been fixed in v9.14.0.
 
-**mdjermanovic:** 3. Surprisingly, the effects of Node.js compile cache, enabled in ESLint v9.13.0, aren't noticeable in test results.
+**mdjermanovic:**
 
-**mdjermanovic:** 4. There seems to be a small but noticeable degradation in Loading and Multiple Individual Files tests in v9.15.0
+2. Interestingly, on the other hand, all of our standard performance tests, which are Loading, Single File (one big file), and Multi Files (450 files matched by a glob) show notable performance improvements in v9.12.0. This was unexpected, but welcome 🙂
+
+**mdjermanovic:**
+
+3. Surprisingly, the effects of Node.js compile cache, enabled in ESLint v9.13.0, aren't noticeable in test results.
+
+**mdjermanovic:**
+
+4. There seems to be a small but noticeable degradation in Loading and Multiple Individual Files tests in v9.15.0
 
 **fasttime:** I thought the compile cache was only enabled when launching eslint from the CLI
 

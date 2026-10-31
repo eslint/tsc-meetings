@@ -14,7 +14,8 @@
 
 **nzakas:** Let's jump right in
 
-**nzakas:** > Agenda item: should team members also get $300 per tutorial or case study? I think we should treat all non-critical blog posts (not releases, sponsorships, financials, announcements, etc.) this way regardless of who writes them.
+**nzakas:**
+> Agenda item: should team members also get $300 per tutorial or case study? I think we should treat all non-critical blog posts (not releases, sponsorships, financials, announcements, etc.) this way regardless of who writes them.
 
 **mdjermanovic:** I agree
 
@@ -24,7 +25,8 @@
 
 **nzakas:** Next:
 
-**nzakas:** > Agenda item: should we move the playground into the eslint.org repo? The original plan was for it to be on a separate domain, but since we changed that, I don’t know that it makes sense to have a separate repo. The current repo just has an Eleventy wrapper that embeds the React app. We could eliminate duplication of things like the header by moving it into the eslint.org repo. Plus, this would allow us to easily produce translated versions of the playground.
+**nzakas:**
+> Agenda item: should we move the playground into the eslint.org repo? The original plan was for it to be on a separate domain, but since we changed that, I don’t know that it makes sense to have a separate repo. The current repo just has an Eleventy wrapper that embeds the React app. We could eliminate duplication of things like the header by moving it into the eslint.org repo. Plus, this would allow us to easily produce translated versions of the playground.
 
 **mdjermanovic:** One less repo to sync the same things sounds good to me
 
@@ -37,7 +39,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: should we set up a new website team? We have a bunch of folks who are contributing just to the website, so not necessarily appropriate to be committers, but perhaps a new team at the same level of pay would make sense?
+**nzakas:**
+> Agenda item: should we set up a new website team? We have a bunch of folks who are contributing just to the website, so not necessarily appropriate to be committers, but perhaps a new team at the same level of pay would make sense?
 
 **btmills:** would be great to give them room to work on it 👍
  * 👍 @mdjermanovic
@@ -46,7 +49,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: Now that we have the new website up (and I have more time to deal with stuff), I'd like to revisit hiring some folks for various positions:
+**nzakas:**
+> Agenda item: Now that we have the new website up (and I have more time to deal with stuff), I'd like to revisit hiring some folks for various positions:
 > 
 >     1. Project manager - I'd like to see if we can hire someone who could help us stay on top of issues and PRs. They would be responsible for triaging everything, and then also following up when issues/PRs haven't received attention and are just sitting around.
 > 

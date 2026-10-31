@@ -18,7 +18,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/14026
 
-**nzakas:** > **TSC Summary:** This proposal seeks a way to disable a plugin that has been included by a shared config. Essentially, a way to say "I want the shared config _except_ for this plugin it's including." Disabling the plugin would mean disabling all rules, unregistering processors, removing environments, etc.
+**nzakas:**
+> **TSC Summary:** This proposal seeks a way to disable a plugin that has been included by a shared config. Essentially, a way to say "I want the shared config _except_ for this plugin it's including." Disabling the plugin would mean disabling all rules, unregistering processors, removing environments, etc.
 > 
 > **TSC Question:** Shall we accept this proposal?
 
@@ -53,7 +54,8 @@
 
 **nzakas:** All right, next item: https://github.com/eslint/rfcs/pull/42
 
-**nzakas:** > **TSC Summary**: ESLint assumes that each rule and source file can be processed independently. `typescript-eslint` (ref [#42 (comment)](https://github.com/eslint/rfcs/pull/42#issuecomment-561296926)) and `eslint-plugin-import` (ref [#42 (comment)](https://github.com/eslint/rfcs/pull/42#issuecomment-536586884)) need to do upfront initialization work beyond the scope of a single rule and source file, specifically loading type information and tracing a module graph. Lacking a first-class API, they have inserted these initialization steps into the regular rule linting flow.
+**nzakas:**
+> **TSC Summary**: ESLint assumes that each rule and source file can be processed independently. `typescript-eslint` (ref [#42 (comment)](https://github.com/eslint/rfcs/pull/42#issuecomment-561296926)) and `eslint-plugin-import` (ref [#42 (comment)](https://github.com/eslint/rfcs/pull/42#issuecomment-536586884)) need to do upfront initialization work beyond the scope of a single rule and source file, specifically loading type information and tracing a module graph. Lacking a first-class API, they have inserted these initialization steps into the regular rule linting flow.
 > 
 > If we were to ship parallel linting without supporting this use case, the duplicated initialization could make parallel linting _slower_ than single-threaded linting with these plugins. The large number of ESLint users who also use one of these plugins would not benefit from parallel linting.
 > 
@@ -148,7 +150,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/10415
 
-**nzakas:** > TSC Summary: This issue proposes to introduce something like `coveralls`, to check test coverage changes.
+**nzakas:**
+> TSC Summary: This issue proposes to introduce something like `coveralls`, to check test coverage changes.
 > 
 > TSC Question: Shall we accept it?
 
@@ -193,7 +196,8 @@
 
 **nzakas:** Okay, next item:
 
-**nzakas:** > Agenda item: should we consider switching to [conventional commits](https://www.conventionalcommits.org/)? Doing so would allow us to adopt already-available tooling for releases rather than maintain our own. For example [Release-please](https://github.com/googleapis/release-please) would solve our problem around major releases. This would be a bunch of work, but could allow us to move off of Jenkins.
+**nzakas:**
+> Agenda item: should we consider switching to [conventional commits](https://www.conventionalcommits.org/)? Doing so would allow us to adopt already-available tooling for releases rather than maintain our own. For example [Release-please](https://github.com/googleapis/release-please) would solve our problem around major releases. This would be a bunch of work, but could allow us to move off of Jenkins.
 
 **nzakas:** Oops, that first link got messed up: https://www.conventionalcommits.org/en/v1.0.0/
 
@@ -216,7 +220,8 @@
 
 **nzakas:** Next:
 
-**nzakas:** > 
+**nzakas:**
+> 
 > Agenda item: There are some very old issues opened on `eslint-plugin-markdown`. Do we intend to address them or should we close them?
 
 **nzakas:** I discovered these while trying to get our issues into the Triage project 🙂
@@ -231,7 +236,8 @@
 
 **nzakas:** Last item:
 
-**nzakas:** > > Agenda item: let’s followup on the new triage process and see what changes, if any, we should make to get things going.
+**nzakas:**
+> > Agenda item: let’s followup on the new triage process and see what changes, if any, we should make to get things going.
 
 **nzakas:** Not sure how much people have tried it yet, but if so, I was curious about the experience.
 

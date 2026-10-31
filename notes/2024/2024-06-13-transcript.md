@@ -31,7 +31,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/15560
 
-**nzakas:** > **TSC Summary:** This issue tracks converting the `eslint` repo to ESM. This was opened in 2022, and since then, we've decided to rewrite the core (in ESM) in a separate repo.
+**nzakas:**
+> **TSC Summary:** This issue tracks converting the `eslint` repo to ESM. This was opened in 2022, and since then, we've decided to rewrite the core (in ESM) in a separate repo.
 > 
 > **TSC Question:** Do we still want to pursue converting the `eslint` repo to ESM?
 
@@ -50,7 +51,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > **Agenda item:** Let's review our sponsorships and spending. This past month, we spent $6,000 more than we brought in. While we're okay for now thanks to our reserves, we should keep an eye on spending going forward and still be seeking new sponsors.
+**nzakas:**
+> **Agenda item:** Let's review our sponsorships and spending. This past month, we spent $6,000 more than we brought in. While we're okay for now thanks to our reserves, we should keep an eye on spending going forward and still be seeking new sponsors.
 
 **nzakas:** As I noted, I think it's important to flag this. This is the first time in ESLint's history where we have consistently spent more than we brought in for several months in a row.
 

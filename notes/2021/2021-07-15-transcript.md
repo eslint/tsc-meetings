@@ -16,7 +16,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/14800
 
-**nzakas:** > **TSC Summary:** This issue requests to add a physicalFilename option to RuleTester to help with testing code blocks. There is already an RFC for enabling processors in RuleTester ([eslint/rfcs#31](https://github.com/eslint/rfcs/pull/31)) that may be more appropriate.
+**nzakas:**
+> **TSC Summary:** This issue requests to add a physicalFilename option to RuleTester to help with testing code blocks. There is already an RFC for enabling processors in RuleTester ([eslint/rfcs#31](https://github.com/eslint/rfcs/pull/31)) that may be more appropriate.
 > 
 > **TSC Question:** How do we want to proceed here?
 
@@ -55,7 +56,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/team/issues/27
 
-**nzakas:** > 
+**nzakas:**
+> 
 > 
 > **TSC summary**: Above, I’ve identified several of the most widely-used ecosystem projects that accept sponsorships or that have maintainers who accept sponsorships.
 > 
@@ -63,7 +65,8 @@
 
 **btmills:** I also included links to download charts if you want an approximate comparison point for usage
 
-**nzakas:** - [typescript-eslint](https://opencollective.com/typescript-eslint) ([chart](https://npm-stat.com/charts.html?package=eslint&package=%40typescript-eslint%2Feslint-plugin&from=2020-06-25&to=2021-06-25)) is on Open Collective.
+**nzakas:**
+- [typescript-eslint](https://opencollective.com/typescript-eslint) ([chart](https://npm-stat.com/charts.html?package=eslint&package=%40typescript-eslint%2Feslint-plugin&from=2020-06-25&to=2021-06-25)) is on Open Collective.
 - [ljharb](https://github.com/sponsors/ljharb) ([chart](https://npm-stat.com/charts.html?package=eslint&package=eslint-plugin-import&package=eslint-plugin-react&package=eslint-config-airbnb&from=2020-06-25&to=2021-06-25)) maintains many plugins, including [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import), [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react), and [`eslint-config-airbnb`](https://github.com/airbnb/javascript).
 - [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier) ([chart](https://npm-stat.com/charts.html?package=eslint&package=eslint-plugin-prettier&from=2020-06-25&to=2021-06-25)) would be covered under the [Prettier](https://opencollective.com/prettier) Open Collective.
 - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) ([chart](https://npm-stat.com/charts.html?package=eslint&package=eslint-plugin-jsx-a11y&from=2020-06-25&to=2021-06-25)) does not have a project sponsorship program, but the maintainer, [jessebeach](https://github.com/sponsors/jessebeach), does.
@@ -142,7 +145,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint-scope/pull/71
 
-**nzakas:** > **TSC Summary:** This PR switches eslint-scope to be an ESM package. We had originally planned on removing access to APIs under `lib/`, but that will break `@babel/eslint-parser`.
+**nzakas:**
+> **TSC Summary:** This PR switches eslint-scope to be an ESM package. We had originally planned on removing access to APIs under `lib/`, but that will break `@babel/eslint-parser`.
 > 
 > **TSC Question:** How shall we proceed?
 > 

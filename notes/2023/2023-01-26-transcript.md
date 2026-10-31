@@ -14,7 +14,8 @@
 
 **nzakas:** First item: https://github.com/eslint/rfcs/pull/99
 
-**nzakas:** > **TSC Summary:** This RFC currently expects languages to provide their own matching engine similar to `esquery` and only JavaScript would use `esquery`.
+**nzakas:**
+> **TSC Summary:** This RFC currently expects languages to provide their own matching engine similar to `esquery` and only JavaScript would use `esquery`.
 > 
 > **TSC Questions:**
 > 
@@ -63,7 +64,8 @@
 
 **nzakas:** All right, next item:
 
-**nzakas:** > Agenda item: Do we want to try using [release-please](https://github.com/marketplace/actions/release-please-action) on some of our repos to start moving off of Jenkins? I think the main `eslint` repo is still too complicated for this, but I think the others would work fine.
+**nzakas:**
+> Agenda item: Do we want to try using [release-please](https://github.com/marketplace/actions/release-please-action) on some of our repos to start moving off of Jenkins? I think the main `eslint` repo is still too complicated for this, but I think the others would work fine.
 
 **mdjermanovic:** Sounds good to me
 

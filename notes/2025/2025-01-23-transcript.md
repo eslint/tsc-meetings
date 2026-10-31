@@ -54,7 +54,8 @@ Feb 3 -  @nzakas
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/19337
 
-**nzakas:** > **TSC Summary:** This issue proposes that we change inactive flags to emit warnings instead of errors in these situations:
+**nzakas:**
+> **TSC Summary:** This issue proposes that we change inactive flags to emit warnings instead of errors in these situations:
 > 
 >     * An unstable flag becomes inactive because the feature is now enabled by default.
 >     * A stable flag becomes inactive because the feature is now enabled by default.
@@ -66,9 +67,13 @@ Feb 3 -  @nzakas
 >     1. Should we accept this proposal?
 >     2. Should inactive flags ever be removed?
 
-**mdjermanovic:** 1. I'm in favor 👍
+**mdjermanovic:**
 
-**mdjermanovic:** 2. I think we should be removing inactive flags in major versions
+1. I'm in favor 👍
+
+**mdjermanovic:**
+
+2. I think we should be removing inactive flags in major versions
  * 👍 @nzakas
 
 **fasttime:** I also think it's good idea to raise warning when a flag becomes inactive
@@ -114,7 +119,8 @@ Feb 3 -  @nzakas
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/19173
 
-**nzakas:** > **TSC Summary:** This issue proposes starting to make ESLint core rules TypeScript-aware in order to eliminate duplication with typescript-eslint.
+**nzakas:**
+> **TSC Summary:** This issue proposes starting to make ESLint core rules TypeScript-aware in order to eliminate duplication with typescript-eslint.
 > 
 > **TSC Question:** Do we want to accept this proposal?
 

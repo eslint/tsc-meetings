@@ -91,7 +91,9 @@
 
 **mdjermanovic:** I can prepare a draft to upgrade eslintrc
 
-**btmills:** 1. Release `@eslint/eslintrc`
+**btmills:**
+
+1. Release `@eslint/eslintrc`
 2. Bump the `@eslint/eslintrc` dependency
 3. Minor release `@eslint/js` to 8.34.0
 4. Minor release `@eslint/js` to 8.35.0

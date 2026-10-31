@@ -13,7 +13,8 @@
 
 **nzakas:** First item: https://github.com/eslint/rfcs/pull/99
 
-**nzakas:** > **TSC Summary:** The language plugins RFC is now complete, which gives ESLint the ability to lint other file types besides JavaScript.
+**nzakas:**
+> **TSC Summary:** The language plugins RFC is now complete, which gives ESLint the ability to lint other file types besides JavaScript.
 > 
 > **TSC Question:** Shall we move to final commenting?
 
@@ -30,7 +31,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda Item: We've now implemented release-please for `generator-eslint` and `@eslint/create-config`. Shall we roll out to other repos now as well?
+**nzakas:**
+> Agenda Item: We've now implemented release-please for `generator-eslint` and `@eslint/create-config`. Shall we roll out to other repos now as well?
 
 **mdjermanovic:** We discussed that in the last meeting. The idea is to have a few successful releases of `@eslint/create-config` and then copy & paste to other repos
 
@@ -38,7 +40,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: We don't currently have a documentation-specific license, so it defaults to all rights reserved. I'd like to propose we license the documentation as [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+**nzakas:**
+> Agenda item: We don't currently have a documentation-specific license, so it defaults to all rights reserved. I'd like to propose we license the documentation as [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 **mdjermanovic:** I thought that the license we have in the repo covers the docs too
 

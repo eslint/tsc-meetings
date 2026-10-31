@@ -22,7 +22,8 @@
 
 **nzakas:** All right, first agenda item:
 
-**nzakas:** > Agenda item: I'd like to suggest we add a couple new columns to the Triage board to help deal with PRs. Right now, all open PRs end up in the "Implementing" column, even though they may not all be in the same state. I propose adding "Additional Review Needed" for PRs where there is one approval but that person would like another review before merging, and "Merge Candidate" for PRs we believe are ready for merge but just want a double-check. We could then review these two columns before each release to check which ones might be ready.
+**nzakas:**
+> Agenda item: I'd like to suggest we add a couple new columns to the Triage board to help deal with PRs. Right now, all open PRs end up in the "Implementing" column, even though they may not all be in the same state. I propose adding "Additional Review Needed" for PRs where there is one approval but that person would like another review before merging, and "Merge Candidate" for PRs we believe are ready for merge but just want a double-check. We could then review these two columns before each release to check which ones might be ready.
 
 **mdjermanovic:** Makes sense to me 👍
 
@@ -36,7 +37,8 @@
 
 **nzakas:** next item:
 
-**nzakas:** > Agenda item: We have the repo set up so that PR approvals are not removed when new commits are pushed, which is confusing. Sometimes I've approved a PR and then there are several more commits that I haven't seen, but our settings make it seem like I've approved. GitHub has a setting that removes approvals when new commits are pushed. Shall we enable it?
+**nzakas:**
+> Agenda item: We have the repo set up so that PR approvals are not removed when new commits are pushed, which is confusing. Sometimes I've approved a PR and then there are several more commits that I haven't seen, but our settings make it seem like I've approved. GitHub has a setting that removes approvals when new commits are pushed. Shall we enable it?
 
 **mdjermanovic:** Shall we require all reviewers to approve again?
 
@@ -82,7 +84,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/pull/18167
 
-**nzakas:** > **TSC Summary:** As part of this work, we are moving the AST traversal from `Linter` into `SourceCode`. For normal AST traversal, this works exactly the same way; for code path analysis, there is actually a difference. With the traversal in `Linter`, the code paths are incomplete during the traversal and are only completed upon complete traversal of the AST. That means `CodePathSegment` fields like `nextSegments` and `prevSegments` would be empty when `onCodePathSegment` is called with `Linter` traversal, whereas they would be filled with `SourceCode` traversal. Rules relying on the `Linter`-based traversal of incomplete code path data might not work correctly when all data is present.
+**nzakas:**
+> **TSC Summary:** As part of this work, we are moving the AST traversal from `Linter` into `SourceCode`. For normal AST traversal, this works exactly the same way; for code path analysis, there is actually a difference. With the traversal in `Linter`, the code paths are incomplete during the traversal and are only completed upon complete traversal of the AST. That means `CodePathSegment` fields like `nextSegments` and `prevSegments` would be empty when `onCodePathSegment` is called with `Linter` traversal, whereas they would be filled with `SourceCode` traversal. Rules relying on the `Linter`-based traversal of incomplete code path data might not work correctly when all data is present.
 > 
 > In our codebase we have three rules that broke: `no-useless-returns`, `no-this-before-super`, and `super-constructor`.
 > 

@@ -25,7 +25,8 @@
 
 **nzakas:** First:
 
-**nzakas:** > Agenda item: [eslint/rfcs#91](https://github.com/eslint/rfcs/pull/91) needs finalization. One of the open items is if we should pay the maintainers of eslint-community as members of the team (like committers). Let’s decide on that.
+**nzakas:**
+> Agenda item: [eslint/rfcs#91](https://github.com/eslint/rfcs/pull/91) needs finalization. One of the open items is if we should pay the maintainers of eslint-community as members of the team (like committers). Let’s decide on that.
 
 **nzakas:** So I'm of the mind that if the eslint-community GitHub organization is going to be overseen in some way by the TSC, then I think we should pay the maintainers from our funds.
 
@@ -38,7 +39,8 @@
 
 **nzakas:** All right, second item:
 
-**nzakas:** > > Agenda item: I’d like to propose a new approach to flat config development. I’d like to commit an incomplete version of FlatESLint (no caching, some glob-related bugs) soon to avoid getting too far behind main. That would allow us to get some early feedback from people. I’d focus on documenting flat config, writing up some introductory blog posts, and then circling back to finish the implementation.
+**nzakas:**
+> > Agenda item: I’d like to propose a new approach to flat config development. I’d like to commit an incomplete version of FlatESLint (no caching, some glob-related bugs) soon to avoid getting too far behind main. That would allow us to get some early feedback from people. I’d focus on documenting flat config, writing up some introductory blog posts, and then circling back to finish the implementation.
 
 **btmills:** I'm a fan of incremental changes 👍
 

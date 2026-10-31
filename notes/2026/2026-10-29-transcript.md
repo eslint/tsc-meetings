@@ -46,7 +46,8 @@ Nov 9 - @Nicholas C. Zakas
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/21223
 
-**nzakas:** > 21\. So the gap described here is real and it is not what [#17609](https://github.com/eslint/eslint/issues/17609) / the v9.23.0 circular-fix warning covered. This is a core behavior change and would be a semver-minor release. Per our issue process, that needs a TSC decision before it can be accepted.
+**nzakas:**
+> 21\. So the gap described here is real and it is not what [#17609](https://github.com/eslint/eslint/issues/17609) / the v9.23.0 circular-fix warning covered. This is a core behavior change and would be a semver-minor release. Per our issue process, that needs a TSC decision before it can be accepted.
 >          **TSC Summary:**
 >          Autofix stops after 10 passes. If pass 10 still changes the file and fixable problems remain, ESLint stays silent. Circular fixes already warn. Fixable-error counts show that problems remain, and only a stats run can hint that the pass limit was the reason. The request is to report that limit explicitly.
 >          [@DMartens](https://github.com/DMartens) prefers a formatter hint over a new warning. There are no team +1s, and [#21288](https://github.com/eslint/eslint/pull/21288) was closed until this issue is accepted.

@@ -30,7 +30,8 @@ Nov 24 - @fasttime
 
 **nzakas:** Okay, we've got a bunch of agenda items. Let's start with the non-v10 ones and then we'll move on to the v10 ones.
 
-**nzakas:** > Agenda item: Let's review recent sponsorship and spending data. Right now, we are receiving $10,737.04 in recurring monthly sponsorships. For the month of October, we paid out nearly $22,000 just for maintenance and development (we haven't yet done Contributor Pool for October). While we have the reserves to cover this, we need to watch this closely going forward as spending over $10,000 more per month than we're bringing in isn't sustainable.
+**nzakas:**
+> Agenda item: Let's review recent sponsorship and spending data. Right now, we are receiving $10,737.04 in recurring monthly sponsorships. For the month of October, we paid out nearly $22,000 just for maintenance and development (we haven't yet done Contributor Pool for October). While we have the reserves to cover this, we need to watch this closely going forward as spending over $10,000 more per month than we're bringing in isn't sustainable.
 
 **nzakas:** So our reserve balance right now is $156,432.03, but I believe there are still a couple of expenses left to be paid.
 
@@ -172,11 +173,17 @@ https://github.com/eslint/eslint/pull/19563#issuecomment-3308792275
 
 **fasttime:** We want to decide how to update the `no-redeclare` rule to support TypeScript syntax. We have some options here:
 
-**fasttime:** 1. Report types and values with identical names, as `@typescript-eslint/no-redeclare` does, but without the bulk of options of the original rule (which are mostly used to report cases already covered by TypeScript).
+**fasttime:**
 
-**fasttime:** 2. This was suggested by Kirk Waiblinger: adding an option to indicate whether values and types with the same name should be reported in cases where TypeScript allows them (e.g. function and interface).
+1. Report types and values with identical names, as `@typescript-eslint/no-redeclare` does, but without the bulk of options of the original rule (which are mostly used to report cases already covered by TypeScript).
 
-**fasttime:** 3. Diverge from the original rule and make our rule as permissive as possible.
+**fasttime:**
+
+2. This was suggested by Kirk Waiblinger: adding an option to indicate whether values and types with the same name should be reported in cases where TypeScript allows them (e.g. function and interface).
+
+**fasttime:**
+
+3. Diverge from the original rule and make our rule as permissive as possible.
 
 **fasttime:** I think 2. is a good compromise, but yes, that PR has been open for quite a while, I'd be happy to see this settled in any direction.
 
@@ -250,7 +257,8 @@ https://github.com/eslint/eslint/pull/19563#issuecomment-3308792275
 
 **nzakas:** Next: https://github.com/eslint/eslint/pull/20125
 
-**nzakas:** > **TSC Summary**: This PR aims to disallow specifying `"errors"` and `"output"` properties on `valid` test case objects. The original issue, which has been accepted for ESLint v10.0.0, does not mention the `"output"` property and we didn't discuss it.
+**nzakas:**
+> **TSC Summary**: This PR aims to disallow specifying `"errors"` and `"output"` properties on `valid` test case objects. The original issue, which has been accepted for ESLint v10.0.0, does not mention the `"output"` property and we didn't discuss it.
 > 
 > **TSC Question**: Do we want to include disallowing the `"output"` property on valid test case objects in ESLint v10.0.0?
 
@@ -271,9 +279,13 @@ https://github.com/eslint/eslint/pull/19563#issuecomment-3308792275
 
 1. Check if the Node.js upgrade on Jenkins is correct.
 
-**mdjermanovic:** 2. Update and merge this as it was announced for alpha.0: https://github.com/eslint/eslint/pull/20086
+**mdjermanovic:**
 
-**mdjermanovic:** 3. Release eslint/rewrite packages and update deps to them in `eslint`
+2. Update and merge this as it was announced for alpha.0: https://github.com/eslint/eslint/pull/20086
+
+**mdjermanovic:**
+
+3. Release eslint/rewrite packages and update deps to them in `eslint`
 
 **mdjermanovic:** (3. depends on 2.)
 

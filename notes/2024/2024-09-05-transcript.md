@@ -199,7 +199,8 @@ September: 23: @fasttime
 
 **nzakas:** Next item:
 
-**nzakas:** > Do we want to create official language plugins for YAML and CSS? These, along with Markdown and JSON, were the top-four most requested languages to support when I asked on Twitter/Mastodon.
+**nzakas:**
+> Do we want to create official language plugins for YAML and CSS? These, along with Markdown and JSON, were the top-four most requested languages to support when I asked on Twitter/Mastodon.
 
 **nzakas:** Similar to JSON and Markdown, it seems like the ecosystem is spotted with existing plugins that don't quite work the way people expect for YAML and CSS. My thinking is that the ecosystem would benefit from a stable core for these languages to build upon.
 

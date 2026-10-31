@@ -103,7 +103,9 @@
 1. Create a monorepo and move things like Espree, eslint-scope, etc. into it as separate packages.
 2. Create a regular repo where `@eslint/js` is the only package and it exports the parser via `@eslint/js/parser`, `eslint-visitor-keys` as `@eslint/js/visitor-keys`, etc.
 
-**mdjermanovic:** 2. probably makes more sense given the direction of language plugins, though some of those packages are used for non-eslint purposes as well
+**mdjermanovic:**
+
+2. probably makes more sense given the direction of language plugins, though some of those packages are used for non-eslint purposes as well
 
 **mdjermanovic:** For example, I believe `webpack` is using `eslint-scope`
 
