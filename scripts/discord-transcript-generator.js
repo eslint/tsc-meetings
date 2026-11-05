@@ -49,10 +49,11 @@ async function generateContent(messages, date, name) {
 		await Promise.all(
 			messages.map(async message => {
 				// Headings, blockquotes, list items, and code fences must start on a new line.
-				// Ordered list items that don't start at 1. additionally need a blank line before them.
+				// Ordered list items additionally need a blank line before them:
+				// lists that don't start at 1. only render correctly if preceded by a blank line.
 				let separator;
 
-				if (/^(?:#{1,3} |>|[-*] |```)/u.test(message.content)) {
+				if (/^(?:#{1,3} |> |[-*] |```)/u.test(message.content)) {
 					separator = "\n";
 				} else if (/^\d+\. /u.test(message.content)) {
 					separator = "\n\n";
