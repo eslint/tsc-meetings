@@ -212,9 +212,7 @@
 3. Issue triage
 4. Discussion reviews
 
-**btmills:**
-
-5. Implementation?
+**btmills:** 5. Implementation?
 
 **nzakas:** 🤣 Who needs that?
  * 😅 @btmills, @mdjermanovic

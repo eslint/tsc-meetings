@@ -47,13 +47,9 @@ July 21 - @mdjermanovic
 >     2. Change its type to `unknown` (with a note that ESLint itself uses boolean).
 >     3. Use a union type to allow any value for `recommended` in configs.
 
-**fasttime:**
+**fasttime:** 1. will require both us and typescript-eslint to extend the base rule in order to define a `meta.docs.recommended` property.
 
-1. will require both us and typescript-eslint to extend the base rule in order to define a `meta.docs.recommended` property.
-
-**fasttime:**
-
-2. seems easier.
+**fasttime:** 2. seems easier.
 
 **fasttime:** From my perspective, it's fine to be lenient in `meta.docs` types since plugins may use these differently than we do.
 

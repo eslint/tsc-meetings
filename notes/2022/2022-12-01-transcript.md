@@ -49,9 +49,7 @@
 
 **nzakas:** Some misc updates
 
-**nzakas:**
-
-1. I updated the permissions of the website-team on the main ESLint repo so they can merge stuff in the `docs` directory. Basically, we setup a CODEOWNERS file that gives website-team approval power over `docs` and then set the repo such that every PR needs at least one approval from a code owner.
+**nzakas:** 1. I updated the permissions of the website-team on the main ESLint repo so they can merge stuff in the `docs` directory. Basically, we setup a CODEOWNERS file that gives website-team approval power over `docs` and then set the repo such that every PR needs at least one approval from a code owner.
 
 **nzakas:** So basically, if they approve something in `docs` they can also merge it, but they can't approve something elsewhere to merge.
  * 👍 @mdjermanovic
@@ -64,9 +62,7 @@
 
 **nzakas:** Yes, good question!
 
-**nzakas:**
-
-2. Ben is making good progress on the docs. I'm glad to get some sunlight on the docs through the process as some of those pages haven't been touched in a very long time. Excited to start getting into the user guide soon.
+**nzakas:** 2. Ben is making good progress on the docs. I'm glad to get some sunlight on the docs through the process as some of those pages haven't been touched in a very long time. Excited to start getting into the user guide soon.
  * 👍 @mdjermanovic
 
 **mdjermanovic:** I'll also take a look at the RFC over the weekend

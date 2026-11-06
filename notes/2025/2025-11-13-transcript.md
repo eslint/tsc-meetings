@@ -173,17 +173,11 @@ https://github.com/eslint/eslint/pull/19563#issuecomment-3308792275
 
 **fasttime:** We want to decide how to update the `no-redeclare` rule to support TypeScript syntax. We have some options here:
 
-**fasttime:**
+**fasttime:** 1. Report types and values with identical names, as `@typescript-eslint/no-redeclare` does, but without the bulk of options of the original rule (which are mostly used to report cases already covered by TypeScript).
 
-1. Report types and values with identical names, as `@typescript-eslint/no-redeclare` does, but without the bulk of options of the original rule (which are mostly used to report cases already covered by TypeScript).
+**fasttime:** 2. This was suggested by Kirk Waiblinger: adding an option to indicate whether values and types with the same name should be reported in cases where TypeScript allows them (e.g. function and interface).
 
-**fasttime:**
-
-2. This was suggested by Kirk Waiblinger: adding an option to indicate whether values and types with the same name should be reported in cases where TypeScript allows them (e.g. function and interface).
-
-**fasttime:**
-
-3. Diverge from the original rule and make our rule as permissive as possible.
+**fasttime:** 3. Diverge from the original rule and make our rule as permissive as possible.
 
 **fasttime:** I think 2. is a good compromise, but yes, that PR has been open for quite a while, I'd be happy to see this settled in any direction.
 
@@ -279,13 +273,9 @@ https://github.com/eslint/eslint/pull/19563#issuecomment-3308792275
 
 1. Check if the Node.js upgrade on Jenkins is correct.
 
-**mdjermanovic:**
+**mdjermanovic:** 2. Update and merge this as it was announced for alpha.0: https://github.com/eslint/eslint/pull/20086
 
-2. Update and merge this as it was announced for alpha.0: https://github.com/eslint/eslint/pull/20086
-
-**mdjermanovic:**
-
-3. Release eslint/rewrite packages and update deps to them in `eslint`
+**mdjermanovic:** 3. Release eslint/rewrite packages and update deps to them in `eslint`
 
 **mdjermanovic:** (3. depends on 2.)
 

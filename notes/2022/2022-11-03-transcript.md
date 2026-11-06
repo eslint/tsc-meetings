@@ -25,9 +25,7 @@
 
 **nzakas:** This comment describes that second point: https://github.com/eslint/eslint/pull/16315#issuecomment-1248750725
 
-**mdjermanovic:**
-
-1. Yes, that shouldn't be a problem. I'm not sure that release scripts should be under the `build:` namespace (e.g., `build:release`), but we can discuss that on the PR.
+**mdjermanovic:** 1. Yes, that shouldn't be a problem. I'm not sure that release scripts should be under the `build:` namespace (e.g., `build:release`), but we can discuss that on the PR.
  * 👍 @nzakas
 
 **btmills:**
@@ -35,9 +33,7 @@
 1. Also yes, consistency sounds nice
 2. I'd also like to separate lint and test
 
-**mdjermanovic:**
-
-2. I'd prefer that the well-known command `npm test` ensures that the repository is in a "good state", which includes linting. But if you both think that it shouldn't include linting, I'll agree.
+**mdjermanovic:** 2. I'd prefer that the well-known command `npm test` ensures that the repository is in a "good state", which includes linting. But if you both think that it shouldn't include linting, I'll agree.
 
 **nzakas:** I think we had this discussion already around the standards and decided on separating linting and testing. At least, that's what we have documented: https://eslint.org/docs/latest/developer-guide/package-json-conventions#test
 

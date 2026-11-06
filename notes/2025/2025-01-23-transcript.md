@@ -67,13 +67,9 @@ Feb 3 -  @nzakas
 >     1. Should we accept this proposal?
 >     2. Should inactive flags ever be removed?
 
-**mdjermanovic:**
+**mdjermanovic:** 1. I'm in favor 👍
 
-1. I'm in favor 👍
-
-**mdjermanovic:**
-
-2. I think we should be removing inactive flags in major versions
+**mdjermanovic:** 2. I think we should be removing inactive flags in major versions
  * 👍 @nzakas
 
 **fasttime:** I also think it's good idea to raise warning when a flag becomes inactive

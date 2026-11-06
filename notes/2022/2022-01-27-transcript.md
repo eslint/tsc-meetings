@@ -29,36 +29,24 @@
 
 **nzakas:** I'm going to list each of the "big ideas" one by one. Add a thumbs up or thumbs down to indicate your support, and we can discuss questions along the way. The goal here is just to see if there's general support for a direction, not to discuss implementation details.
 
-**nzakas:**
-
-1. Switch the ESLint repo to ESM
+**nzakas:** 1. Switch the ESLint repo to ESM
  * 👍 @nzakas, @btmills, @mdjermanovic
 
-**nzakas:**
-
-2. Allow async parsers
+**nzakas:** 2. Allow async parsers
  * 👍 @nzakas, @btmills, @mdjermanovic
 
 **nzakas:** (We can talk about prioritization and assignments at the end, btw)
 
-**nzakas:**
-
-3. Allow async rules
+**nzakas:** 3. Allow async rules
  * 👍 @nzakas, @btmills, @mdjermanovic
 
-**nzakas:**
-
-4. Enable typechecking (via `tsc` and JSDoc comments) in our repos, and expose types from our npm packages.
+**nzakas:** 4. Enable typechecking (via `tsc` and JSDoc comments) in our repos, and expose types from our npm packages.
  * 👍 @nzakas, @btmills, @mdjermanovic
 
-**nzakas:**
-
-5. Allow easier linting of non-JS languages (CSS, Markdown, etc.)
+**nzakas:** 5. Allow easier linting of non-JS languages (CSS, Markdown, etc.)
  * 👍 @nzakas, @btmills, @mdjermanovic
 
-**nzakas:**
-
-6. Create an <eslint-editor> web component (like the editor on the demo, just portable)
+**nzakas:** 6. Create an <eslint-editor> web component (like the editor on the demo, just portable)
  * 👍 @nzakas, @btmills, @mdjermanovic
 
 **btmills:** for the web component, would the goal be to have a self-contained implementation for our demo, or are there other consumers we'd be trying to support as well?

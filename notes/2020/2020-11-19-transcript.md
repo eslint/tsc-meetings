@@ -172,9 +172,7 @@
 
 **nzakas:** I'd like to figure out a way to pay committers, as well, I just don't think the on-your-honor, per-hour approach is a good model for people we don't know that well yet.
 
-**btmills:**
-
-1. My follow-up question was going to be whether they'd finally gotten back to you with quotes 2. Yeah, long term I'd love to expand once we figure out a working system. So definitely same page 👍
+**btmills:** 1. My follow-up question was going to be whether they'd finally gotten back to you with quotes 2. Yeah, long term I'd love to expand once we figure out a working system. So definitely same page 👍
 
 **nzakas:** A random idea I just thought up: what if we set aside $500/month, and at the end of each month we review contributions from committers and new contributors, and just award some portion of that to the people who made the biggest contributions?
 
