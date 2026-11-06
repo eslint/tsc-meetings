@@ -50,7 +50,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/17966
 
-**nzakas:** > **TSC Summary:** We've made several bug fixes to flat config in the v9 branch that aren't in the v8 branch, which makes it difficult for plugins to support both v8 and v9 at the same time. This issue requests backporting those changes into v8 and then doing one last release in v8. At the moment, we don't have a way to release from any branch other than `main`, and we generate other artifacts (docs, release notes, blog posts) that all assume on branch.
+**nzakas:**
+> **TSC Summary:** We've made several bug fixes to flat config in the v9 branch that aren't in the v8 branch, which makes it difficult for plugins to support both v8 and v9 at the same time. This issue requests backporting those changes into v8 and then doing one last release in v8. At the moment, we don't have a way to release from any branch other than `main`, and we generate other artifacts (docs, release notes, blog posts) that all assume on branch.
 > 
 > **TSC Question:** Do we want to backport flat config fixes into v8? If so, how can we go about this in the least disruptive way possible?
 
@@ -76,7 +77,8 @@
 
 **mdjermanovic:** We'd retrieve the tags in a way that eslint-release thinks that a 9.0.0-alpha release is the latest
 
-**nzakas:** ```
+**nzakas:**
+```
 --merged [<commit>]
 
     Only list tags whose commits are reachable from the specified commit (HEAD if not specified).

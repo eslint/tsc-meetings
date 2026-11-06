@@ -39,7 +39,8 @@ July 21 - @mdjermanovic
 
 **nzakas:** First one: https://github.com/eslint/rewrite/issues/234
 
-**nzakas:** > **TSC Summary:** This issue reports that the internal type for rule.meta.docs.recommended in ESLint is too restrictive—it is typed as `boolean | undefined`, but some plugins (notably typescript-eslint) use other values (like strings or objects) for config generation. This causes TypeScript type errors when using `defineConfig()`, even though it works at runtime.
+**nzakas:**
+> **TSC Summary:** This issue reports that the internal type for rule.meta.docs.recommended in ESLint is too restrictive—it is typed as `boolean | undefined`, but some plugins (notably typescript-eslint) use other values (like strings or objects) for config generation. This causes TypeScript type errors when using `defineConfig()`, even though it works at runtime.
 > 
 > **TSC Question:** What do we want to do here? Some options:
 >     1. Omit the `recommended` field from the type definition.

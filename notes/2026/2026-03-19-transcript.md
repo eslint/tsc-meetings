@@ -79,7 +79,8 @@ March 30 - @fasttime
 
 **nzakas:** https://github.com/eslint/rewrite/issues/329
 
-**nzakas:** > I can see how ignoring files listed in .gitignore using the same resolution rules as git would be useful. Personally, I wouldn't be opposed to adding this feature. I'm just not sure whether it belongs in @eslint/compat or in another package such as @eslint/config-helpers. Leaving this here for others to evaluate.
+**nzakas:**
+> I can see how ignoring files listed in .gitignore using the same resolution rules as git would be useful. Personally, I wouldn't be opposed to adding this feature. I'm just not sure whether it belongs in @eslint/compat or in another package such as @eslint/config-helpers. Leaving this here for others to evaluate.
 
 **nzakas:** (from @fasttime )
 

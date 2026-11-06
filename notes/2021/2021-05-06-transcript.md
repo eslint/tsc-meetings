@@ -144,7 +144,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Do we want to start converting other repos to ESM?
+**nzakas:**
+> Do we want to start converting other repos to ESM?
 
 **nzakas:** And by this I mean, should we start opening issues for the repos other than `eslint` to start getting them all converted?
 
@@ -185,7 +186,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Do we want to remove CLIEngine from the exported API in v8.0.0?
+**nzakas:**
+> Do we want to remove CLIEngine from the exported API in v8.0.0?
 
 **nzakas:** I was thinking that if we are going to change what's exported, this is probably a good time to stop exporting CLIEngine too
 
@@ -249,7 +251,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > do we want to donate to support the debug module and lint-staged module?
+**nzakas:**
+> do we want to donate to support the debug module and lint-staged module?
  * 👍 @btmills, @mdjermanovic
 
 **nzakas:** These both have Open Collectives and I'd like to spread some love. 🙂

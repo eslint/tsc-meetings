@@ -28,7 +28,8 @@ August 1 7 - @nzakas
 
 **nzakas:** First item: https://github.com/eslint/markdown/issues/683
 
-**nzakas:** > **TSC Summary**: This issue proposes adding a `no-emphasis-as-heading` rule to report standalone bold or italic text used in place of Markdown headings. Similar rules exist in `markdownlint` and `remark-lint`, and the rule would improve document structure and accessibility.
+**nzakas:**
+> **TSC Summary**: This issue proposes adding a `no-emphasis-as-heading` rule to report standalone bold or italic text used in place of Markdown headings. Similar rules exist in `markdownlint` and `remark-lint`, and the rule would improve document structure and accessibility.
 > 
 > **TSC Question**: Should we accept this proposal and add the rule to `@eslint/markdown`, or leave this pattern unreported?
 
@@ -40,7 +41,8 @@ August 1 7 - @nzakas
 
 **nzakas:** Next item: https://github.com/eslint/create-config/issues/257
 
-**nzakas:** > **TSC Summary**: This issue proposes adding `"exports": {}` to `@eslint/create-config` in v3 to prevent consumers from importing undocumented internal modules. Since the package is intended only as a CLI and does not expose a public API, this would formalize that boundary, but it would be a breaking change for users currently relying on subpath imports.
+**nzakas:**
+> **TSC Summary**: This issue proposes adding `"exports": {}` to `@eslint/create-config` in v3 to prevent consumers from importing undocumented internal modules. Since the package is intended only as a CLI and does not expose a public API, this would formalize that boundary, but it would be a breaking change for users currently relying on subpath imports.
 > 
 > **TSC Question**: Should we accept this breaking change for `create-config` v3 and block all subpath imports by adding `"exports": {}`, or should we leave internal modules accessible as they are today?
 
@@ -52,7 +54,8 @@ August 1 7 - @nzakas
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/20736
 
-**nzakas:** > **TSC Summary**: This issue is seeking consensus on removing redundant array literals in `defineConfig()` examples, but there isn’t definitive consensus yet.
+**nzakas:**
+> **TSC Summary**: This issue is seeking consensus on removing redundant array literals in `defineConfig()` examples, but there isn’t definitive consensus yet.
 > 
 > **TSC Question**: Should we accept it, or if not, is it better to keep the current existing patterns?
 
@@ -67,7 +70,8 @@ August 1 7 - @nzakas
 
 **nzakas:** next item: https://github.com/eslint/eslint/issues/20730
 
-**nzakas:** > **TSC Summary**: This issue proposes ignoring files marked with attributes such as `linguist-generated` in `.gitattributes`. The discussion so far suggests that this should not be default ESLint behavior, but there is support for providing a helper similar to `includeIgnoreFile()`.
+**nzakas:**
+> **TSC Summary**: This issue proposes ignoring files marked with attributes such as `linguist-generated` in `.gitattributes`. The discussion so far suggests that this should not be default ESLint behavior, but there is support for providing a helper similar to `includeIgnoreFile()`.
 > 
 > **TSC Question**: Should ESLint provide an official helper for ignoring files based on attributes specified in `.gitattributes`, or should this remain a userland concern?
 

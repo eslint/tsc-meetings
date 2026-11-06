@@ -54,7 +54,8 @@ Jan 26 - @fasttime
 **nzakas:** We'll go through agenda items first then talk v10 and then do contributor pool for December.
  * 👍 @mdjermanovic, @fasttime
 
-**nzakas:** > Agenda item: We lost another sponsor this past month, let's discuss what changes (if any) we want to make to our spending. Some proposals to reduce costs:
+**nzakas:**
+> Agenda item: We lost another sponsor this past month, let's discuss what changes (if any) we want to make to our spending. Some proposals to reduce costs:
 >     1. Set 40 as the maximum number of hours any contributor can invoice for (saves roughly $6500/month based on prior three months)
 >     2. Set 5 as the maximum number of hours any contributor can invoice for eslint-community work. We don't have a lot of this but it would be good to set this as proportional to the amount of donations received.
 >     3. Reduce sponsorships of other projects from $150/month to $100/month (saves $375/month) -- right now, we are spending 13% of monthly income here.
@@ -98,7 +99,8 @@ Jan 26 - @fasttime
 **nzakas:** First item:
 https://github.com/eslint/eslint/pull/20411
 
-**nzakas:** > **TSC Summary:** This issue proposes migrating from `find-up` v5 to the latest version, `find-up` v8, which is ESM-only now. The team hasn't reached a definitive consensus on this change.
+**nzakas:**
+> **TSC Summary:** This issue proposes migrating from `find-up` v5 to the latest version, `find-up` v8, which is ESM-only now. The team hasn't reached a definitive consensus on this change.
 > 
 > **TSC Question:** Due to the updated Node.js version support range in ESLint v10, we can now use `require(ESM)` by default. The question is: what scope does this new feature apply to — only our internal packages, or can external packages use it as well?
 
@@ -144,7 +146,8 @@ It seems like that should be documented on the README for clarity?
 **nzakas:** Next item:
 https://github.com/eslint/eslint/issues/20355
 
-**nzakas:** > **TSC Summary:** This issue proposes adding checkboxes to issue and PR templates to better indicate if and how a contribution was AI generated. There is currently no definitive consensus from the team about this change.
+**nzakas:**
+> **TSC Summary:** This issue proposes adding checkboxes to issue and PR templates to better indicate if and how a contribution was AI generated. There is currently no definitive consensus from the team about this change.
 > 
 > **TSC Question:** Should this proposal be accepted?
 
@@ -160,7 +163,8 @@ https://github.com/eslint/eslint/issues/20355
 
 **nzakas:** Next: https://github.com/eslint/eslint/issues/20294
 
-**nzakas:** > **TSC Summary:** This issue proposes adding a new rule that warns when deprecated rules scheduled for removal are used. The author suggests warning when the following configuration appears in a configuration file:
+**nzakas:**
+> **TSC Summary:** This issue proposes adding a new rule that warns when deprecated rules scheduled for removal are used. The author suggests warning when the following configuration appears in a configuration file:
 > 
 > rules: {
 >     semi: ['error', 'always', { 'omitLastInOneLineBlock': true }], // Warning here
@@ -197,7 +201,8 @@ https://github.com/eslint/eslint/issues/20355
 
 **nzakas:** Next: https://github.com/eslint/eslint/issues/20212
 
-**nzakas:** > **TSC Summary:** A proposal to simplify maintenance by transitioning specific ESLint packages from dual ESM/CJS formats to ESM-only.
+**nzakas:**
+> **TSC Summary:** A proposal to simplify maintenance by transitioning specific ESLint packages from dual ESM/CJS formats to ESM-only.
 > 
 > **TSC Question:** Does the TSC approve this change in principle? Since the required Node version already supports `require(ESM)`, is it necessary to consider it a breaking change?
 
@@ -237,7 +242,8 @@ https://github.com/eslint/eslint/issues/20355
 **nzakas:** All right, next:
 https://github.com/eslint/json/pull/136
 
-**nzakas:** > **TSC Summary**: The blocker for this PR is deciding how to handle comments in JSONC/JSON5 files when auto-fixing sorting. There is currently no definitive team consensus on this change.
+**nzakas:**
+> **TSC Summary**: The blocker for this PR is deciding how to handle comments in JSONC/JSON5 files when auto-fixing sorting. There is currently no definitive team consensus on this change.
 > 
 > **TSC Question**: Which option should we choose from the following, and what common design convention was used when implementing auto-fix in JavaScript rules such as [`sort-vars`](https://eslint.org/docs/latest/rules/sort-vars) or [`sort-imports`](https://eslint.org/docs/latest/rules/sort-imports)?
 >     1. Keep current behavior - Accept that comments become misleading after sorting

@@ -58,7 +58,8 @@
 
 **nzakas:** For the benefit of the transcript:
 
-**nzakas:** > Team members may merge a pull request immediately if it:
+**nzakas:**
+> Team members may merge a pull request immediately if it:
 > 
 >     Makes a small documentation change
 >     Is a chore

@@ -13,7 +13,8 @@
 
 **nzakas:** All right, looks like we don't have any issues labeled for today but I did add a couple of agenda items.
 
-**nzakas:** > Agenda item: Let's see where we are on the integration with outside plugins/configs listed on this issue: [eslint/eslint#13481](https://github.com/eslint/eslint/issues/13481)
+**nzakas:**
+> Agenda item: Let's see where we are on the integration with outside plugins/configs listed on this issue: [eslint/eslint#13481](https://github.com/eslint/eslint/issues/13481)
 
 **nzakas:** On my end, I've opened PRs for each of the projects. None have been merged yet.
 
@@ -75,7 +76,8 @@
 
 **nzakas:** All right, let's move on to the next item.
 
-**nzakas:** > Agenda item: Let's discuss where we are with the release-please rollout.
+**nzakas:**
+> Agenda item: Let's discuss where we are with the release-please rollout.
 
 **nzakas:** Are all repos aside from eslint/eslint now switched over?
 

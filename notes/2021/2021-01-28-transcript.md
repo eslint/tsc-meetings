@@ -18,7 +18,8 @@
 
 **nzakas:** First: https://github.com/eslint/eslint/pull/14014
 
-**nzakas:** > **TSC Summary:** This documents a new issue triage process.
+**nzakas:**
+> **TSC Summary:** This documents a new issue triage process.
 > 
 > **TSC Question:** Shall we adopt this process and start using it going forward?
 
@@ -41,7 +42,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/pull/14012
 
-**nzakas:** > **TSC Summary:** `no-unused-expressions` currently doesn't report JSX expressions. This might be an unintentional regression introduced in v7.5.0, when we switched from maintaining a list of nodes that shouldn't be reported to maintaining a list of nodes that should be reported. On the other hand, the actual behavior (not reporting JSX) is in line with our policy of not assuming any semantics for JSX, per which we can't know whether or not JSX is side-effect free.
+**nzakas:**
+> **TSC Summary:** `no-unused-expressions` currently doesn't report JSX expressions. This might be an unintentional regression introduced in v7.5.0, when we switched from maintaining a list of nodes that shouldn't be reported to maintaining a list of nodes that should be reported. On the other hand, the actual behavior (not reporting JSX) is in line with our policy of not assuming any semantics for JSX, per which we can't know whether or not JSX is side-effect free.
 > 
 > This PR aims to add an option for JSX expressions to the `no-unused-expressions` rule. Default value retains the current v7.18.0 behavior (not reporting JSX). When set, it restores pre-v7.5.0 behavior (reporting JSX).
 > 
@@ -59,7 +61,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/pull/14010
 
-**nzakas:** > **TSC Summary:** This PR aims to change filename extensions of YAML config files that `eslint --init` creates. The new extension would be `.yaml`, as recommended in [yaml.org FAQ](https://yaml.org/faq.html):
+**nzakas:**
+> **TSC Summary:** This PR aims to change filename extensions of YAML config files that `eslint --init` creates. The new extension would be `.yaml`, as recommended in [yaml.org FAQ](https://yaml.org/faq.html):
 > 
 > > Is there an official extension for YAML files?
 > 
@@ -73,7 +76,8 @@
 
 **btmills:** I do not care in the slightest to debate a single-character non-functional change
 
-**btmills:** > the new config system will anyway not support YAML
+**btmills:**
+> the new config system will anyway not support YAML
 Given this, should we just say we're not changing the existing config system anymore?
  * 👍 @nzakas, @mdjermanovic
 
@@ -86,7 +90,8 @@ Given this, should we just say we're not changing the existing config system any
 
 **nzakas:** Next item: https://github.com/eslint/eslint/pull/13963
 
-**nzakas:** > **TSC Summary:** this PR fixes a slight bug in space-infix-ops. Per our policy, this rule is frozen so we are no longer making changes to it.
+**nzakas:**
+> **TSC Summary:** this PR fixes a slight bug in space-infix-ops. Per our policy, this rule is frozen so we are no longer making changes to it.
 > 
 > **TSC Question:** Should we close this PR without merging?
 
@@ -206,7 +211,8 @@ Given this, should we just say we're not changing the existing config system any
 
 **nzakas:** All right, next item: https://github.com/eslint/rfcs/pull/72
 
-**nzakas:** > **TSC Summary:** this RFC proposes switching Espree to be written in ESM and published as a dual-use package with both ESM and CommonJS.
+**nzakas:**
+> **TSC Summary:** this RFC proposes switching Espree to be written in ESM and published as a dual-use package with both ESM and CommonJS.
 > 
 > **TSC Question:** shall we accept this RFC?
 

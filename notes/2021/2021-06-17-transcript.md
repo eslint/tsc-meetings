@@ -256,7 +256,8 @@
 
 **nzakas:** (These are all listed on the agenda, but I thought this would be easier.)
 
-**nzakas:** * Eliminate limits on payments: so TSC/Reviewers would be flat $60/hour without hour limits and no decrease in hourly rate for extra hours worked; commiters $30/hour also with no limits.
+**nzakas:**
+* Eliminate limits on payments: so TSC/Reviewers would be flat $60/hour without hour limits and no decrease in hourly rate for extra hours worked; commiters $30/hour also with no limits.
  * 👍 @snitin315, @btmills, @mdjermanovic
 
 **btmills:** (are we open for discussion on these?)

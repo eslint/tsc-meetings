@@ -32,7 +32,8 @@ June 23 - @fasttime
 **nzakas:** Okay, I flagged one issue for today: 
 https://github.com/eslint/eslint/issues/19834
 
-**nzakas:** > **TSC Summary:** The issue is requesting an enhancement to the no-duplicate-imports rule to better support TypeScript syntax. The current rule flags an error when TypeScript type imports are used alongside regular imports from the same module. Currently, the rule reports an error when a file includes both a value import and a type import from the same module.
+**nzakas:**
+> **TSC Summary:** The issue is requesting an enhancement to the no-duplicate-imports rule to better support TypeScript syntax. The current rule flags an error when TypeScript type imports are used alongside regular imports from the same module. Currently, the rule reports an error when a file includes both a value import and a type import from the same module.
 > 
 > **TSC Question:** Do we want to add the proposed option `allowSeparateTypeImports` that would allow separate import statements for types from the same module without triggering the "duplicate imports" rule error?
 

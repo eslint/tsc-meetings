@@ -65,7 +65,9 @@
 
 **nzakas:** So here's my take on prioritization, let me know what you think:
 
-**nzakas:** 1. Allow async parsers
+**nzakas:**
+
+1. Allow async parsers
 2. Enable typechecking (via tsc and JSDoc comments) in our repos, and expose types from our npm packages.
 3. Switch the ESLint repo to ESM
 4. Create an <eslint-editor> web component (like the editor on the demo, just portable)

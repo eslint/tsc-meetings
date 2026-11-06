@@ -32,7 +32,8 @@ May 26 - @mdjermanovic
 
 **nzakas:** First is the `basePath` RFC: https://github.com/eslint/rfcs/pull/131
 
-**nzakas:** > Because this issue of `basePath` in `extends` is the only thing left to resolve, let's go back to @mdjermanovic's original suggestion:
+**nzakas:**
+> Because this issue of `basePath` in `extends` is the only thing left to resolve, let's go back to @mdjermanovic's original suggestion:
 > 
 > > to avoid confusion in expectations, defineConfig() should throw an error if it encounters basePath in extended configs?
 > 
@@ -54,7 +55,8 @@ May 26 - @mdjermanovic
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/19719
 
-**nzakas:** > The [`func-style`](https://eslint.org/docs/latest/rules/func-style) rule is currently frozen, meaning we aren't making any further changes to it and we'd need the [@eslint/eslint-tsc](https://github.com/orgs/eslint/teams/eslint-tsc) to override that. I believe the intent here is to make `func-style` TypeScript-aware, which seems like it goes along with our ongoing work to make ESLint as a whole more TypeScript-aware. As a result, I'm 👍 to overriding the frozen status of this rule for this particular purpose.
+**nzakas:**
+> The [`func-style`](https://eslint.org/docs/latest/rules/func-style) rule is currently frozen, meaning we aren't making any further changes to it and we'd need the [@eslint/eslint-tsc](https://github.com/orgs/eslint/teams/eslint-tsc) to override that. I believe the intent here is to make `func-style` TypeScript-aware, which seems like it goes along with our ongoing work to make ESLint as a whole more TypeScript-aware. As a result, I'm 👍 to overriding the frozen status of this rule for this particular purpose.
 
 **mdjermanovic:** If the question is does making core rules TypeScript-aware override frozen status, I'd say yes when a rule is buggy in TS code or doesn't seem to support certain aspect of TS syntax well.
 

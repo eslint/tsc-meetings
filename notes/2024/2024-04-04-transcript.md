@@ -25,7 +25,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/18255
 
-**nzakas:** > **TSC Summary:** This issue seeks to add a `--inspect-config` CLI option that will launch the config inspector (similar to `--init` does with `@eslint/create-config`).
+**nzakas:**
+> **TSC Summary:** This issue seeks to add a `--inspect-config` CLI option that will launch the config inspector (similar to `--init` does with `@eslint/create-config`).
 > 
 > **TSC Question:** Shall we accept this proposal?
 
@@ -38,7 +39,8 @@
 
 **nzakas:** Next item is from eslint-plugin-markdown: https://github.com/eslint/eslint-plugin-markdown/issues/245
 
-**nzakas:** > **TSC Summary:** This change seeks to use recognizable filename extensions for common code block types like `node`, `javascript`, `ecmascript` to `.js`, `markdown` to `.md`, and `typescript` to `.ts`. Currently, the plugin would use the code block type as the filename extension, so `javascript` becomes `0.javascript`, which is a bit confusing.
+**nzakas:**
+> **TSC Summary:** This change seeks to use recognizable filename extensions for common code block types like `node`, `javascript`, `ecmascript` to `.js`, `markdown` to `.md`, and `typescript` to `.ts`. Currently, the plugin would use the code block type as the filename extension, so `javascript` becomes `0.javascript`, which is a bit confusing.
 > 
 > **TSC Question:** This represents a breaking change, do we want to accept this and publish a new major version?
 
@@ -82,7 +84,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/17881
 
-**nzakas:** > **TSC Summary:** This issue requests to formalize the ability of ESLint rules to make changes to files other than the file currently being linted. This can happen when a plugin is managing a separate file, such as `eslint-plugin-expect-type`, which generates type information and stores it in a snapshot file.
+**nzakas:**
+> **TSC Summary:** This issue requests to formalize the ability of ESLint rules to make changes to files other than the file currently being linted. This can happen when a plugin is managing a separate file, such as `eslint-plugin-expect-type`, which generates type information and stores it in a snapshot file.
 > 
 > **TSC Question:** Is this something we want to explore?
 
@@ -106,7 +109,8 @@
 
 **nzakas:** That's not at all how I read this last comment: https://github.com/eslint/eslint/issues/17881#issuecomment-1883593657
 
-**nzakas:** > > dangerous use case -- one of the implicit guarantees of ESLint is that rules won't have side effects
+**nzakas:**
+> > dangerous use case -- one of the implicit guarantees of ESLint is that rules won't have side effects
 > 
 > Agreed. I think in my mind the danger of being able to write to separate files is worth it in these cases. But maybe there are ways to make a relatively safer way for rules to do this?
 >     * Limiting this option to `suggestions`, not fixes?
@@ -138,7 +142,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/17681
 
-**nzakas:** > **TSC Summary:** This issue seeks to deprecate two additional rules, `multiline-comment-style` and `line-comment-position`, and allow `@stylistic` to take over maintenance in the plugin.
+**nzakas:**
+> **TSC Summary:** This issue seeks to deprecate two additional rules, `multiline-comment-style` and `line-comment-position`, and allow `@stylistic` to take over maintenance in the plugin.
 > 
 > **TSC Question:** Shall we do so?
 

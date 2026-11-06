@@ -48,7 +48,23 @@ async function generateContent(messages, date, name) {
 	const generatedMessages = (
 		await Promise.all(
 			messages.map(async message => {
-				let content = `**${message.author.username}:** ${message.content}`;
+				// Headings, blockquotes, list items, and code fences must start on a new line.
+				// Ordered list items additionally need a blank line before them:
+				// lists that don't start at 1. only render correctly if preceded by a blank line.
+				// Ordered lists are handled only if they contain multiple items.
+				let separator;
+
+				if (/^(?:#{1,3} |> |[-*] |```)/u.test(message.content)) {
+					separator = "\n";
+				} else if (
+					/^\d+\. .*\n *(?:[-*]|\d+\.) /u.test(message.content)
+				) {
+					separator = "\n\n";
+				} else {
+					separator = " ";
+				}
+
+				let content = `**${message.author.username}:**${separator}${message.content}`;
 
 				if (message.reactions.cache.size) {
 					const reactions = (

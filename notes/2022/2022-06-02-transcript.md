@@ -16,7 +16,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint-plugin-markdown/pull/203
 
-**nzakas:** > **TSC summary**: `eslint-plugin-markdown` currently tests against [ESLint 6+ and Node 8+](https://github.com/eslint/eslint-plugin-markdown/blob/87c2b536fd80b15e134766d92b90048ae45cbe1f/.github/workflows/ci.yml#L32-L33). This pull request would drop support for end-of-life versions of Node.js. Normally, we drop support for EOL engines as part of regular major releases. However, we have no other breaking changes queued up for this package.
+**nzakas:**
+> **TSC summary**: `eslint-plugin-markdown` currently tests against [ESLint 6+ and Node 8+](https://github.com/eslint/eslint-plugin-markdown/blob/87c2b536fd80b15e134766d92b90048ae45cbe1f/.github/workflows/ci.yml#L32-L33). This pull request would drop support for end-of-life versions of Node.js. Normally, we drop support for EOL engines as part of regular major releases. However, we have no other breaking changes queued up for this package.
 > 
 > **TSC question**: Should we do a semver-major release just to drop support for EOL Node.js versions?
 
@@ -40,7 +41,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/create-config/pull/31
 
-**nzakas:** > TSC summary: Airbnb config enables some core rules that don't work well with TypeScript code. Those rules should be either replaced with [extension rules](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#extension-rules), or disabled in favor of builtin tsc checks.
+**nzakas:**
+> TSC summary: Airbnb config enables some core rules that don't work well with TypeScript code. Those rules should be either replaced with [extension rules](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#extension-rules), or disabled in favor of builtin tsc checks.
 > 
 > Question: do we want to remove Airbnb from the list of style guides when the answer to `"Does your project use TypeScript"` was Yes.
 
@@ -57,7 +59,8 @@
 
 **nzakas:** Next:
 
-**nzakas:** > Agenda Item: For the new docs site, I'd like to propose we change from `/docs/` to `/docs/latest/` for the most recent version of the documentation. This will allow us to more easily support multiple different documentation versions (like `/docs/v7.x/` and `/docs/head/`).
+**nzakas:**
+> Agenda Item: For the new docs site, I'd like to propose we change from `/docs/` to `/docs/latest/` for the most recent version of the documentation. This will allow us to more easily support multiple different documentation versions (like `/docs/v7.x/` and `/docs/head/`).
  * 👍 @btmills, @mdjermanovic
 
 **btmills:** Will `/docs/` redirect to `/docs/latest/`?

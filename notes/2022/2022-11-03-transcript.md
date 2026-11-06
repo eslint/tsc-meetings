@@ -14,7 +14,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/pull/16315
 
-**nzakas:** > **TSC Summary:** This PR reformats our npm scripts to follow the standard we have already checked in.
+**nzakas:**
+> **TSC Summary:** This PR reformats our npm scripts to follow the standard we have already checked in.
 > 
 > **TSC Questions:**
 > 
@@ -27,7 +28,9 @@
 **mdjermanovic:** 1. Yes, that shouldn't be a problem. I'm not sure that release scripts should be under the `build:` namespace (e.g., `build:release`), but we can discuss that on the PR.
  * 👍 @nzakas
 
-**btmills:** 1. Also yes, consistency sounds nice
+**btmills:**
+
+1. Also yes, consistency sounds nice
 2. I'd also like to separate lint and test
 
 **mdjermanovic:** 2. I'd prefer that the well-known command `npm test` ensures that the repository is in a "good state", which includes linting. But if you both think that it shouldn't include linting, I'll agree.
@@ -42,7 +45,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: I’m getting concerned about the low participation rate of the team. We are getting down to the point where most of the time we only have two consistently active people (me and mdjermanovic). We are missing discussions and issues and PRs are taking longer and longer to merge. This isn’t sustainable. Let’s talk about how we can improve the situation.
+**nzakas:**
+> Agenda item: I’m getting concerned about the low participation rate of the team. We are getting down to the point where most of the time we only have two consistently active people (me and mdjermanovic). We are missing discussions and issues and PRs are taking longer and longer to merge. This isn’t sustainable. Let’s talk about how we can improve the situation.
 
 **nzakas:** FWIW, this was not targeted at you @btmills . This is a larger issue with the entire team.
 

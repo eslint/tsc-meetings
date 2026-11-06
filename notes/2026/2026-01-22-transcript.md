@@ -51,7 +51,8 @@ February 2 - @nzakas
 **nzakas:** Next item:
 https://github.com/eslint/js/issues/671
 
-**nzakas:** > **TSC Summary:** [ESLint v11 is planning to drop support for formatting rules](https://github.com/eslint/eslint/issues/20097), so this PR seeks feedback on introducing Prettier as the dedicated formatter for the JS (`eslint/js`) repository. There is currently no definitive team consensus on this change.
+**nzakas:**
+> **TSC Summary:** [ESLint v11 is planning to drop support for formatting rules](https://github.com/eslint/eslint/issues/20097), so this PR seeks feedback on introducing Prettier as the dedicated formatter for the JS (`eslint/js`) repository. There is currently no definitive team consensus on this change.
 > 
 > **TSC Questions:**
 >     1. Would it be acceptable to introduce Prettier into the JS (`eslint/js`) repository?
@@ -83,7 +84,8 @@ https://github.com/eslint/js/issues/671
 **nzakas:** Next item:
 https://github.com/eslint/markdown/issues/331
 
-**nzakas:** > **TSC Summary:** This issue proposes adding a `math` option to `languageOptions` to support math blocks using `$...$` or `$$...$$` syntax. The team has not yet reached a definitive consensus on this change.
+**nzakas:**
+> **TSC Summary:** This issue proposes adding a `math` option to `languageOptions` to support math blocks using `$...$` or `$$...$$` syntax. The team has not yet reached a definitive consensus on this change.
 > 
 > **TSC Question:** Should this proposal be accepted?
 
@@ -97,7 +99,8 @@ https://github.com/eslint/markdown/issues/331
 **nzakas:** Next item:
 https://github.com/eslint/eslint/issues/17881
 
-**nzakas:** > **TSC Summary:** This issue suggests expanding suggestions to be able to apply changes to other files. It provides several use cases that cannot be handled by existing systems in ESLint or Git.
+**nzakas:**
+> **TSC Summary:** This issue suggests expanding suggestions to be able to apply changes to other files. It provides several use cases that cannot be handled by existing systems in ESLint or Git.
 > 
 > **TSC Question:** Would ESLint be interested in an RFC proposing how to solve this?
 
@@ -144,7 +147,8 @@ https://github.com/eslint/eslint/issues/17881
 **nzakas:** Last item:
 https://github.com/eslint/eslint/issues/16578
 
-**nzakas:** > **TSC Summary:** When we did our documentation update, we filed this issue to update headings.
+**nzakas:**
+> **TSC Summary:** When we did our documentation update, we filed this issue to update headings.
 > 
 > **TSC Agenda:** Do we want to move forward with this or close it?
 

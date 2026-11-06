@@ -200,7 +200,9 @@
 
 **nzakas:** Leftover from last week, here were some budget item ideas I'll throw out for thoughts:
 
-**nzakas:** 1. Website redesign
+**nzakas:**
+
+1. Website redesign
 2. Pay people to write blog posts
 3. Have a t-shirt design contest
 
@@ -285,7 +287,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > do we want to continue to support generator-eslint? It hasn’t been updated in a while and there are a bunch of open PRs.
+**nzakas:**
+> do we want to continue to support generator-eslint? It hasn’t been updated in a while and there are a bunch of open PRs.
 
 **btmills:** I'd say archive the repository
 

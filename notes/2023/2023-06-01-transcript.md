@@ -11,7 +11,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/17225
 
-**nzakas:** > **TSC Summary:** This issue outlines the steps needed to fix our documentation license issue.
+**nzakas:**
+> **TSC Summary:** This issue outlines the steps needed to fix our documentation license issue.
 > 
 > **TSC Question:** What is the plan for making these changes? Should it be done before, with, or after the release?
 

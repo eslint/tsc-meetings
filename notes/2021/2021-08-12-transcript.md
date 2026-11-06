@@ -42,7 +42,8 @@
 
 **nzakas:** Next: https://github.com/eslint/eslint/issues/14806
 
-**nzakas:** > **TSC Summary:** This proposal seeks to add a check for `yield` into `no-unsafe-finally`
+**nzakas:**
+> **TSC Summary:** This proposal seeks to add a check for `yield` into `no-unsafe-finally`
 > 
 > **TSC Question:** shall we accept this proposal?
 
@@ -50,7 +51,8 @@
 
 **nzakas:** To quote me:
 
-**nzakas:** > I'm not sure if yield is unsafe in this situation. Unlike break, continue, return, and throw, yield doesn't actually exit the normal control flow of the function -- it just pauses and then picks up again after that. I'm not sure @hax's example is a problem, because it is the break statement that is preventing the second console.log() from firing
+**nzakas:**
+> I'm not sure if yield is unsafe in this situation. Unlike break, continue, return, and throw, yield doesn't actually exit the normal control flow of the function -- it just pauses and then picks up again after that. I'm not sure @hax's example is a problem, because it is the break statement that is preventing the second console.log() from firing
 
 **nzakas:** But I'm still having trouble wrapping my brain around it
 

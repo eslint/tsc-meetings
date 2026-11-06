@@ -25,7 +25,8 @@
 
 **nzakas:** Okay, let's start with https://github.com/eslint/eslint/issues/13482
 
-**nzakas:** > **TSC Summary:** This issue was used for brainstorming roadmap features going forward. It seems that the ones we can agree on doing are:
+**nzakas:**
+> **TSC Summary:** This issue was used for brainstorming roadmap features going forward. It seems that the ones we can agree on doing are:
 > 
 > * Simple Config (est: 6 months, lead: @nzakas) eslint/rfcs#9
 > * Google Season of Docs (est: 3 months, lead: @kaicataldo )
@@ -62,7 +63,8 @@
 
 **nzakas:** Okay, next item is from @mdjermanovic , and I think we may need a bit more context:
 
-**nzakas:** > > It would be nice to define semver policy for bug fixes in rule schemas, specifically for those fixes that can cause schema validation errors in existing configs (if the rule was misconfigured in user's config, but the schema was incorrect/incomplete and didn't catch that).
+**nzakas:**
+> > It would be nice to define semver policy for bug fixes in rule schemas, specifically for those fixes that can cause schema validation errors in existing configs (if the rule was misconfigured in user's config, but the schema was incorrect/incomplete and didn't catch that).
 > > 
 > > ref [eslint/eslint#13166](https://github.com/eslint/eslint/pull/13166)
 > > 
@@ -186,7 +188,8 @@
 
 **nzakas:** All right. Let's move on to the next item:
 
-**nzakas:** > Agenda item: Let's discuss what types of companies and organizations we want to accept donations from. For example, we probably don't want to accept donations from any of the following:
+**nzakas:**
+> Agenda item: Let's discuss what types of companies and organizations we want to accept donations from. For example, we probably don't want to accept donations from any of the following:
 > 
 > 1. Online gambling sites
 > 2. Political groups

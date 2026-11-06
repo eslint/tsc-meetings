@@ -20,7 +20,8 @@
 
 **nzakas:** Looks like we don't have a lot to discuss so this may be quick.
 
-**nzakas:** > Agenda item: can we start using pull request drafts instead of the “do not merge” label? I think it better indicates the status of the PR and prevents accidental merging.
+**nzakas:**
+> Agenda item: can we start using pull request drafts instead of the “do not merge” label? I think it better indicates the status of the PR and prevents accidental merging.
 
 **nzakas:** As a little background, it seems like sometimes when people are working on pull requests that aren't ready for review, we end up with a "do not merge" label on them.
 
@@ -72,7 +73,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: as part of our donations to other projects, I’d like to suggest we start a monthly donation of $100 to Eleventy and Sindre Sorhus (we use several of his modules).
+**nzakas:**
+> Agenda item: as part of our donations to other projects, I’d like to suggest we start a monthly donation of $100 to Eleventy and Sindre Sorhus (we use several of his modules).
  * 👍 @kaicataldo, @btmills, @mdjermanovic
 
 **nzakas:** As background, we have set aside $500/month to donate to our dependencies. We are already supporting Ajv for $100/month.

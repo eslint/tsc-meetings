@@ -18,7 +18,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/13803
 
-**nzakas:** > **TSC Summary:** This proposal seeks to allow a way to save custom configs to be selected as part of `--init`. This would involve a way to specify which configs to include and then display them when `--init` is used. This would require an RFC before implementation.
+**nzakas:**
+> **TSC Summary:** This proposal seeks to allow a way to save custom configs to be selected as part of `--init`. This would involve a way to specify which configs to include and then display them when `--init` is used. This would require an RFC before implementation.
 > 
 > **TSC Question:** Shall we accept this proposal?
 
@@ -38,7 +39,8 @@
 
 **nzakas:** Next item is another `--init` one: https://github.com/eslint/eslint/issues/13645
 
-**nzakas:** > **TSC Summary:** This proposal seeks to add a question to `--init` asking if dependencies should be installed with npm or yarn.
+**nzakas:**
+> **TSC Summary:** This proposal seeks to add a question to `--init` asking if dependencies should be installed with npm or yarn.
 > 
 > **TSC Question:** Shall we accept this proposal?
 
@@ -69,7 +71,8 @@
 
 **nzakas:** Okay, next item: https://github.com/eslint/eslint/issues/13752
 
-**nzakas:** > **TSC Summary:** This proposal seeks to add three checks into `no-constant-condition`:
+**nzakas:**
+> **TSC Summary:** This proposal seeks to add three checks into `no-constant-condition`:
 > 
 >     1. Consider short circuiting operations (`||` , `&&`) to be conditions
 > 
@@ -118,7 +121,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/13776
 
-**nzakas:** > **TSC Summary:** This proposal seeks to have `no-constant-condition` follow the value of identifiers and consider that value as part of it's evaluation. This would allow us to capture more errors when identifiers are assigned a value once and then used in a condition. Optionally, it might make sense to build this into `eslint-scope` to allow other rules to use the same functionality.
+**nzakas:**
+> **TSC Summary:** This proposal seeks to have `no-constant-condition` follow the value of identifiers and consider that value as part of it's evaluation. This would allow us to capture more errors when identifiers are assigned a value once and then used in a condition. Optionally, it might make sense to build this into `eslint-scope` to allow other rules to use the same functionality.
 > 
 > **TSC Question:** Shall we accept this proposal?
 
@@ -149,7 +153,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: I'd like to propose we extend the TSC $50/hour up to 20 hours each month to reviewers. I think that this would incentivize people to continue working towards reviewer status and would also allow for TSC members to revert back to reviewer status without giving up the ability to be paid for their contributions.
+**nzakas:**
+> Agenda item: I'd like to propose we extend the TSC $50/hour up to 20 hours each month to reviewers. I think that this would incentivize people to continue working towards reviewer status and would also allow for TSC members to revert back to reviewer status without giving up the ability to be paid for their contributions.
 
 **mdjermanovic:** Sounds good to me
 

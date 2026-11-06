@@ -91,7 +91,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/15010
 
-**nzakas:** > **TSC Summary:** We currently output a linter warning when a file is passed on the command line that is ignored due to an ignore file. Because it's reported as a linter warning, it counts towards the limit set by `--max-warnings`, which can in turn cause the process to exit with code 1.
+**nzakas:**
+> **TSC Summary:** We currently output a linter warning when a file is passed on the command line that is ignored due to an ignore file. Because it's reported as a linter warning, it counts towards the limit set by `--max-warnings`, which can in turn cause the process to exit with code 1.
 > 
 > **TSC Question:** Should we change this warning in some way? We could just output it to `stderr` so it doesn't count as a linter warning, but then that information will not be available to formatters.
 
@@ -171,7 +172,8 @@
 
 **nzakas:** Next (and related): https://github.com/eslint/eslint/issues/14881
 
-**nzakas:** > **TSC Summary:** This issue proposes passing the maximum warning limit into formatters. Right now, we output max warning problems directly to `stderr`, which means formatters don't have access to this information.
+**nzakas:**
+> **TSC Summary:** This issue proposes passing the maximum warning limit into formatters. Right now, we output max warning problems directly to `stderr`, which means formatters don't have access to this information.
 > 
 > **TSC Questions:**
 > 
@@ -224,7 +226,8 @@
 
 **nzakas:** Last: https://github.com/eslint/website/issues/867
 
-**nzakas:** > **TSC Summary:** This issue proposes splitting up the website into three sites:
+**nzakas:**
+> **TSC Summary:** This issue proposes splitting up the website into three sites:
 > 
 >     1. The marketing site (homepage, blog, sponsors, about) to be stored in the `website` repo.
 > 

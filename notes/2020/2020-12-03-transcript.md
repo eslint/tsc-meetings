@@ -20,7 +20,8 @@
 
 **nzakas:** First item
 
-**nzakas:** > Agenda item: We have several open issues on Espree that would be breaking changes:
+**nzakas:**
+> Agenda item: We have several open issues on Espree that would be breaking changes:
 > 
 >     1. [eslint/espree#457](https://github.com/eslint/espree/issues/457)
 > 
@@ -156,7 +157,8 @@
 
 **nzakas:** Next agenda item
 
-**nzakas:** > Agenda item: let's review community contributions for November to determine who should receive the community contributions stipends.
+**nzakas:**
+> Agenda item: let's review community contributions for November to determine who should receive the community contributions stipends.
 > 
 > https://github.com/eslint/eslint/pulse/monthly
 > https://github.com/eslint/espree/pulse/monthly

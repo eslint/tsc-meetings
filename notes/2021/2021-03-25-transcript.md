@@ -14,7 +14,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/14023
 
-**nzakas:** > **TSC Summary:** Node.JS 10 is EOL at the end of April and Node.JS 13 EOL is the end of June.
+**nzakas:**
+> **TSC Summary:** Node.JS 10 is EOL at the end of April and Node.JS 13 EOL is the end of June.
 > 
 > **TSC Question:** How do we want to handle these? Should we plan on a major release to coincide with one or both?
 
@@ -178,7 +179,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > I've been having trouble getting people to review my pull requests. It seems that people are checking the chat at lot less frequently, to the point where I often need to ask several times over the course of two weeks before I can get anyone to review my pull requests. I've tried to post directly in the chat when a PR is ready to let people know. I'd like to see if we can resolve this because the longer feedback loop has really slowed me down lately. Perhaps we can prioritize team members' PRs going forward? Other ideas?
+**nzakas:**
+> I've been having trouble getting people to review my pull requests. It seems that people are checking the chat at lot less frequently, to the point where I often need to ask several times over the course of two weeks before I can get anyone to review my pull requests. I've tried to post directly in the chat when a PR is ready to let people know. I'd like to see if we can resolve this because the longer feedback loop has really slowed me down lately. Perhaps we can prioritize team members' PRs going forward? Other ideas?
 
 **btmills:** I was planning to mention at the end that I've had a couple markdown PRs ready for review for a while as well. Seems in non-core repositories things take longer to get to. Is there a good way to get those in the review queue beyond adding them to the Triage project?
 
