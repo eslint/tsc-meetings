@@ -56,7 +56,9 @@ async function generateContent(messages, date, name) {
 
 				if (/^(?:#{1,3} |> |[-*] |```)/u.test(message.content)) {
 					separator = "\n";
-				} else if (/^\d+\. .*\n *(?:[-*]|\d+\.) /u.test(message.content)) {
+				} else if (
+					/^\d+\. .*\n *(?:[-*]|\d+\.) /u.test(message.content)
+				) {
 					separator = "\n\n";
 				} else {
 					separator = " ";
