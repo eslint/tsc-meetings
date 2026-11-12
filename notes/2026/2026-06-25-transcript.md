@@ -69,7 +69,8 @@ July 6 - @nzakas
 **nzakas:** Next "tsc waiting" is a PR:
 https://github.com/eslint/eslint/pull/20965
 
-**nzakas:** > Okay, here's how it currently works in ESLint:
+**nzakas:**
+> Okay, here's how it currently works in ESLint:
 >     1. If, for example, files `foo?.js`, `foo1.js`, and `foo2.js` all exist, running `eslint "foo?.js"` will match only `foo?.js`, because we always check first if an exact match exists, regardless of whether the passed argument is glob-like.
 >     2. If `foo1.js` and `foo2.js` exist, but `foo?.js` does not, `eslint "foo?.js"` will not match anything, and therefore result in `NoFilesFoundError: No files matching 'foo?.js' were found.` error. This is because `is-glob` returns `false` for `"foo?.js"`.
 >     3. However, in the previous case, `eslint "foo?.js*"` matches `foo1.js` and `foo2.js`, because `is-glob` returns `true` due to the added `*`, and then `minimatch` inteprets `?` as matching any single character.

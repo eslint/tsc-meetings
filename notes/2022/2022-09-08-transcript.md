@@ -14,7 +14,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/16265
 
-**nzakas:** > **TSC Summary:** Flat config was originally designed to include dot files by default when using glob patterns on the command line. The current behavior is that it doesn’t include dot files.
+**nzakas:**
+> **TSC Summary:** Flat config was originally designed to include dot files by default when using glob patterns on the command line. The current behavior is that it doesn’t include dot files.
 > 
 > **TSC Question:** Should we keep the current behavior? Shell expansion for terminals typically does not include dot files, so we are only able to change for quotes globs passed to ESLint, so would it be too confusing to have a different behavior between the two?
 
@@ -38,7 +39,8 @@
 
 **nzakas:** Next item would be better if Milos was here, but might as well get the ball rolling:
 
-**nzakas:** > Agenda item: Can we agree to check in on Discord at least once per day during the week? It seems like my messages mostly go unresponded to for several days recently, which makes it difficult to make progress on some things.
+**nzakas:**
+> Agenda item: Can we agree to check in on Discord at least once per day during the week? It seems like my messages mostly go unresponded to for several days recently, which makes it difficult to make progress on some things.
 
 **btmills:** I can do almost every day, certainly. I wish Discord would send mobile notifications for at least a subset of channels, but it says it doesn't support that
 

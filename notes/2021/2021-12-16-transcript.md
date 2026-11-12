@@ -34,7 +34,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/pull/15279
 
-**nzakas:** > **TSC Summary:** This PR seeks to add suggestions to no-misleading-character-class, specifically adding the “u” flag if it would result in a valid regular expression. Both nzakas and btmills have approved the PR, mdjermanovic has concerns about the side effects of the suggestions. We do allow side effects in suggestions in core rules.
+**nzakas:**
+> **TSC Summary:** This PR seeks to add suggestions to no-misleading-character-class, specifically adding the “u” flag if it would result in a valid regular expression. Both nzakas and btmills have approved the PR, mdjermanovic has concerns about the side effects of the suggestions. We do allow side effects in suggestions in core rules.
 > 
 > **TSC Question:** Do we want to change our expectations around suggestions? (https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions) Can we merge this?
 

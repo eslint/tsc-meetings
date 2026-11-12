@@ -8,7 +8,8 @@
 
 **nzakas:** First agenda item: https://github.com/eslint/eslint/pull/17644
 
-**nzakas:** > **TSC Summary:** This PR changes the default behavior of the ESLint CLI when no file arguments are passed in. In eslintrc mode, the CLI now reports an error; in flat config mode, the CLI now assumes `.` as the file argument. This may cause a problem for people trying to use the CLI as part of a [precommit check](https://github.com/eslint/eslint/issues/14308#issuecomment-1571995912). Before this change, the CLI would exit with a zero exit code when no file arguments were present, after this change, it will either error or lint every file, neither of which seems desirable.
+**nzakas:**
+> **TSC Summary:** This PR changes the default behavior of the ESLint CLI when no file arguments are passed in. In eslintrc mode, the CLI now reports an error; in flat config mode, the CLI now assumes `.` as the file argument. This may cause a problem for people trying to use the CLI as part of a [precommit check](https://github.com/eslint/eslint/issues/14308#issuecomment-1571995912). Before this change, the CLI would exit with a zero exit code when no file arguments were present, after this change, it will either error or lint every file, neither of which seems desirable.
 > 
 > **TSC Questions:**
 > 

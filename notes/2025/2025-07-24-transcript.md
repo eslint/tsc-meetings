@@ -49,7 +49,8 @@ August 11: @fasttime
 
 **nzakas:** First up: https://github.com/eslint/eslint/issues/19118
 
-**nzakas:** > **TSC Summary:** Users reported that ESLint's flat config does not match files outside the current working directory, causing issues in monorepo and build tool setups. The discussion led to a proposal for a `--base-path` CLI option, allowing users to explicitly set the root directory for file matching. This approach was seen as a flexible, non-breaking solution that avoids confusing changes to glob pattern semantics.
+**nzakas:**
+> **TSC Summary:** Users reported that ESLint's flat config does not match files outside the current working directory, causing issues in monorepo and build tool setups. The discussion led to a proposal for a `--base-path` CLI option, allowing users to explicitly set the root directory for file matching. This approach was seen as a flexible, non-breaking solution that avoids confusing changes to glob pattern semantics.
 > 
 > **TSC Question:** Shall we move forward with this solution?
 

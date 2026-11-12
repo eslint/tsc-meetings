@@ -18,7 +18,8 @@
 **nzakas:** We have one issue flagged for today, which is this: 
 https://github.com/eslint/eslint/issues/14575
 
-**nzakas:** > **TSC Summary:** This accepted proposal is to allow all inline directives in line comments in addition to block comments. When we tried to implement this, the result was fairly disruptive to the ecosystem. This issue has say open for over a year without any progress.
+**nzakas:**
+> **TSC Summary:** This accepted proposal is to allow all inline directives in line comments in addition to block comments. When we tried to implement this, the result was fairly disruptive to the ecosystem. This issue has say open for over a year without any progress.
 > 
 > **TSC Question:** Should we close that as "won't fix" now that we know the result when we tried to do this last?
 

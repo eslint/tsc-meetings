@@ -21,7 +21,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/16875
 
-**nzakas:** > **TSC Summary:** We haven't yet implemented caching for object parsers or processors. To do this, we need a way to identify these objects uniquely. The proposal is to ask parsers to implement some identifying properties, such as:
+**nzakas:**
+> **TSC Summary:** We haven't yet implemented caching for object parsers or processors. To do this, we need a way to identify these objects uniquely. The proposal is to ask parsers to implement some identifying properties, such as:
 > 
 > ```js
 > parser = {
@@ -58,7 +59,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/16828
 
-**nzakas:** > **TSC Summary:** This proposal asks for a `defaultConfigFile` option to the API (`ESLint`/`FlatESLint`) that would allow an API user to specify a default config file to use if none is found through the normal lookup.
+**nzakas:**
+> **TSC Summary:** This proposal asks for a `defaultConfigFile` option to the API (`ESLint`/`FlatESLint`) that would allow an API user to specify a default config file to use if none is found through the normal lookup.
 > 
 > **TSC Question:** Do we want to accept this proposal?
 
@@ -82,7 +84,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/15726
 
-**nzakas:** > **TSC Summary:** This issue proposes setting up Renovate on ESLint repos. Renovate prefers to pin all dependencies and send pull requests to update each dependency individually. It can be a bit noisy, but it would ensure that we are regularly updating dependencies, which is something we don't do very well right now.
+**nzakas:**
+> **TSC Summary:** This issue proposes setting up Renovate on ESLint repos. Renovate prefers to pin all dependencies and send pull requests to update each dependency individually. It can be a bit noisy, but it would ensure that we are regularly updating dependencies, which is something we don't do very well right now.
 > 
 > **TSC Agenda:** Should we enable Renovate on the org?
 
@@ -111,7 +114,8 @@
 
 **nzakas:** https://github.com/eslint/eslint/issues/16820
 
-**nzakas:** > **TSC Summary:** This issue proposes that we bundle part or all of our JavaScript files upon publishing of each version. Doing so would 1) speed up startup time by reducing file system access and 2) make it easier to create a Rust CLI wrapper around ESLint. My suggestion is to bundle `api.js` without external dependencies and publish that during the release while also adding a process to bundle the entire CLI, including external dependencies, into one file to ease the Rust CLI development.
+**nzakas:**
+> **TSC Summary:** This issue proposes that we bundle part or all of our JavaScript files upon publishing of each version. Doing so would 1) speed up startup time by reducing file system access and 2) make it easier to create a Rust CLI wrapper around ESLint. My suggestion is to bundle `api.js` without external dependencies and publish that during the release while also adding a process to bundle the entire CLI, including external dependencies, into one file to ease the Rust CLI development.
 > 
 > **TSC Question:** Do we want to accept this proposal?
 
@@ -145,7 +149,8 @@
 
 **nzakas:** We've got three more items, and I don't know if we can squeeze them all in. I think we can probably handle contributor pool outside of this meeting to save some time.
 
-**nzakas:** > Let's discuss https://marvinh.dev/blog/speeding-up-javascript-ecosystem-part-3/ and what are the immediate next steps. There is already a [PR](https://github.com/estools/esquery/pull/134) implementing the changes mentioned, so this might be a good time to discuss formally forking esquery and incorporating those changes.
+**nzakas:**
+> Let's discuss https://marvinh.dev/blog/speeding-up-javascript-ecosystem-part-3/ and what are the immediate next steps. There is already a [PR](https://github.com/estools/esquery/pull/134) implementing the changes mentioned, so this might be a good time to discuss formally forking esquery and incorporating those changes.
 
 **nzakas:** I guess first: has everyone read this post? If not, we can defer discussion.
 
@@ -165,7 +170,8 @@
 
 **nzakas:** Next:
 
-**nzakas:** > Agenda item: With regards to the rewrite, it might be helpful to put together a survey to gather more information from ESLint users. Especially as it seems fewer and fewer people are using Espree as their parser and there are a lot of questions over ESM vs. CJS, it might be good to get some actual data to make decisions.
+**nzakas:**
+> Agenda item: With regards to the rewrite, it might be helpful to put together a survey to gather more information from ESLint users. Especially as it seems fewer and fewer people are using Espree as their parser and there are a lot of questions over ESM vs. CJS, it might be good to get some actual data to make decisions.
 
 **nzakas:** Basically, just looks for a 👍 or 👎 to this idea right now. I can put together a doc with suggested questions if we think this is a good idea.
 
@@ -180,7 +186,8 @@
 
 **nzakas:** Last one:
 
-**nzakas:** > We're once again in a situation where issues and PRs are piling up. Let's talk about how things are working right now and where the holdups are. It might also be time to regularly estimate how much time we have to give to ESLint over each two week period so we know when coverage will be tight.
+**nzakas:**
+> We're once again in a situation where issues and PRs are piling up. Let's talk about how things are working right now and where the holdups are. It might also be time to regularly estimate how much time we have to give to ESLint over each two week period so we know when coverage will be tight.
 
 **nzakas:** Realizing this is a bit of a meaty one, but it just seems like our processes have been breaking down.
 
@@ -212,7 +219,9 @@
 
 **nzakas:** So maybe:
 
-**nzakas:** 1. RFC reviews
+**nzakas:**
+
+1. RFC reviews
 2. PR reviews
 3. Implementation
 4. Issue triage

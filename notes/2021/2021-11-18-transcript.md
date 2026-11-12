@@ -35,7 +35,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/15327
 
-**nzakas:** > > **TSC Summary:*** In v8.0, we changed the behavior of ecmaVersion:3 to forbid reserved words. IE 6 actually allows some (or all) reserved words to be used. This request is to provide a looser ES3 variant for such purposes.
+**nzakas:**
+> > **TSC Summary:*** In v8.0, we changed the behavior of ecmaVersion:3 to forbid reserved words. IE 6 actually allows some (or all) reserved words to be used. This request is to provide a looser ES3 variant for such purposes.
 > > 
 > > **TSC Question:** How do we want to address this?
 
@@ -85,7 +86,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda Item: I'd like to discuss setting up an eslint-community organization on GitHub to provide a place for high-value ESLint ecosystem projects to live. With `eslint-plugin-security` going dark, this seems to highlight the need to have a place where important packages can exist such that if they ever go dark, they can be easily revived. The idea is to make this organization a place where project owners can apply to be part of. When they join, they agree to some basic standards (like 2FA, having a code of conduct, etc.) but otherwise run their projects as they would like. (Obviously details need to be more fleshed out, but let's discuss if we want to head in this direction.)
+**nzakas:**
+> Agenda Item: I'd like to discuss setting up an eslint-community organization on GitHub to provide a place for high-value ESLint ecosystem projects to live. With `eslint-plugin-security` going dark, this seems to highlight the need to have a place where important packages can exist such that if they ever go dark, they can be easily revived. The idea is to make this organization a place where project owners can apply to be part of. When they join, they agree to some basic standards (like 2FA, having a code of conduct, etc.) but otherwise run their projects as they would like. (Obviously details need to be more fleshed out, but let's discuss if we want to head in this direction.)
 
 **btmills:** There’s already precedent for this in webpack-community, so 👍
  * 👍 @mdjermanovic
@@ -101,7 +103,8 @@
 
 **nzakas:** Speaking of config work
 
-**nzakas:** > Agenda item: I’ve had several PRs waiting for reviews in the past 7 days and they’ve received zero comments. What can we do to get each other’s PRs more attention? It’s hard to make progress when the feedback loop is this long. It also seems like folks aren’t checking Discord that often so my asks for reviews in there don’t seem to have any effect.
+**nzakas:**
+> Agenda item: I’ve had several PRs waiting for reviews in the past 7 days and they’ve received zero comments. What can we do to get each other’s PRs more attention? It’s hard to make progress when the feedback loop is this long. It also seems like folks aren’t checking Discord that often so my asks for reviews in there don’t seem to have any effect.
 
 **nzakas:** I think in general this falls under a category of processes breaking down, for whatever reason
 

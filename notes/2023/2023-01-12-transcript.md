@@ -16,7 +16,8 @@
 
 **nzakas:** First item:
 
-**nzakas:** > Now that people can report security vulnerabilities through GitHub, can we shut down our Hacker One account?
+**nzakas:**
+> Now that people can report security vulnerabilities through GitHub, can we shut down our Hacker One account?
 
 **btmills:** yes please
 
@@ -30,7 +31,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Should we retire the mailing list? It seems like we have much better options now (Discussions, Discord, etc.).
+**nzakas:**
+> Should we retire the mailing list? It seems like we have much better options now (Discussions, Discord, etc.).
 
 **nzakas:** This is the eslint@googlegroups.com list
 

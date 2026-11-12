@@ -112,7 +112,8 @@
 
 **nzakas:** First:
 
-**nzakas:** > **Should people open an issue first?** Right now we both have people opening issues unaware that they'll need an RFC, and people who just open RFCs directly. It seems like it would useful to have a single entrypoint to the RFC process. I'd like to suggest that we start the RFC process by asking people to open an issue and gather initial feedback. Assuming the feedback goes well, then they would progress to the RFC writing phase. This has the added benefit of giving us an issue to submit a PR against.
+**nzakas:**
+> **Should people open an issue first?** Right now we both have people opening issues unaware that they'll need an RFC, and people who just open RFCs directly. It seems like it would useful to have a single entrypoint to the RFC process. I'd like to suggest that we start the RFC process by asking people to open an issue and gather initial feedback. Assuming the feedback goes well, then they would progress to the RFC writing phase. This has the added benefit of giving us an issue to submit a PR against.
 
 **kaicataldo:** I support this. In general, I think it's more respectful of people's time as well, since the barrier for entry for writing up an issue is lower.
 
@@ -124,7 +125,8 @@
 
 **nzakas:** Second point:
 
-**nzakas:** > **Competing RFCs** I'd like to suggest that if there are two or more RFCs aiming to solve the same problem, that those RFCs should be considered together and a direction decided on that approves one and declines the others. I don't want to end up in another situation like with simple config, where I wrote an RFC and then several other competing RFCs were written and approved before we had decided on which direction to go (a new config system vs. incremental changes).
+**nzakas:**
+> **Competing RFCs** I'd like to suggest that if there are two or more RFCs aiming to solve the same problem, that those RFCs should be considered together and a direction decided on that approves one and declines the others. I don't want to end up in another situation like with simple config, where I wrote an RFC and then several other competing RFCs were written and approved before we had decided on which direction to go (a new config system vs. incremental changes).
 
 **btmills:** If we'd had this rule in place at the time you wrote your simple config RFC, how for example might that have changed the discussion on the other RFCs? Would we e.g. have declined to implement them in favor of only doing the simple config RFC?
 
@@ -150,7 +152,8 @@
 
 **nzakas:** (Again, I'll update the README)
 
-**nzakas:** > **Time limit for decisions** I'd also like to suggest that after 120 days, the TSC must decide whether to move forward with an RFC or not. Once again, simple config being an example of the process gone wrong. I don't think we should expect people to continue to defend and respond to comments for an entire year. If someone has put in the time to produce an RFC, we certainly should be able to figure out if it's a direction we want to head in (even with some further feedback and modifications) or not.
+**nzakas:**
+> **Time limit for decisions** I'd also like to suggest that after 120 days, the TSC must decide whether to move forward with an RFC or not. Once again, simple config being an example of the process gone wrong. I don't think we should expect people to continue to defend and respond to comments for an entire year. If someone has put in the time to produce an RFC, we certainly should be able to figure out if it's a direction we want to head in (even with some further feedback and modifications) or not.
 
 **nzakas:** And 120 days is a somewhat arbitrary suggestion, just felt like around 90 or 120 days would make sense so we could review everything once per quarter
 
@@ -192,7 +195,8 @@
 
 **nzakas:** Excellent, last point:
 
-**nzakas:** > **Prototype pull requests** We have a range of what people are doing with respect to prototyping their RFCs and sending pull requests, so I'd like to decide what we want the rule to be. My preference would be to not have people send pull requests with their prototypes because it creates noise in an already noisy area of the repo. Instead, I'd rather see the prototype branch (or fork) referenced directly in the RFC if one is available. That way, those who are interested can try the prototype and we don't mix in prototypes with active development in the pull request list.
+**nzakas:**
+> **Prototype pull requests** We have a range of what people are doing with respect to prototyping their RFCs and sending pull requests, so I'd like to decide what we want the rule to be. My preference would be to not have people send pull requests with their prototypes because it creates noise in an already noisy area of the repo. Instead, I'd rather see the prototype branch (or fork) referenced directly in the RFC if one is available. That way, those who are interested can try the prototype and we don't mix in prototypes with active development in the pull request list.
 
 **kaicataldo:** 👍
 

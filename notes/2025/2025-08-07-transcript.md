@@ -251,7 +251,8 @@ https://github.com/eslint/tsc-meetings/pull/607
 
 **nzakas:** I'll run this through ChatGPT and see what we come up with.
 
-**nzakas:** # 💰 Contributor Payouts – July 2025
+**nzakas:**
+# 💰 Contributor Payouts – July 2025
 
 ## Top Tier  
 **TKDev7** (6 PRs)  

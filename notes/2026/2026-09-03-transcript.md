@@ -58,7 +58,8 @@ Sept 14 - @fasttime
 
 **nzakas:** We've got a couple of things on the agenda for today
 
-**nzakas:** > Agenda item: We have a couple of popular plugins that are refusing to update for v10: [jsx-eslint/eslint-plugin-jsx-a11y#1075](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1075) [jsx-eslint/eslint-plugin-react#3956](https://github.com/jsx-eslint/eslint-plugin-react/issues/3956)
+**nzakas:**
+> Agenda item: We have a couple of popular plugins that are refusing to update for v10: [jsx-eslint/eslint-plugin-jsx-a11y#1075](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1075) [jsx-eslint/eslint-plugin-react#3956](https://github.com/jsx-eslint/eslint-plugin-react/issues/3956)
 > 
 > This causes a lot of confusion and frustration, and the author seems unwilling to do anything to resolve it.
 > 

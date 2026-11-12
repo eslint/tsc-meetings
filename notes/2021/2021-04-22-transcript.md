@@ -18,7 +18,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/14312
 
-**nzakas:** > **TSC Summary:** This issue outlines that we have documented a `meta.docs.suggestions` property in rules that appears to originally have been created to indicate when a rule has suggestions much like the `meta.fixable` property indicates if a rule is fixable. However, we don't rely on `meta.docs.suggestions` in any way, and do not enforce its usage to provide suggestions from rules. Additionally, all other current `meta.docs.*` properties are all optional, so this one seems out of place. There are several options but the most straightforward seems to be to create a new `meta.suggestions` property that, when set to `true`, enables rules to provide suggestions in the same way `meta.fixable` allows rules to provide fixes. This would be a breaking change but would ensure that both humans and tooling can easily tell when a rule provides suggestions.
+**nzakas:**
+> **TSC Summary:** This issue outlines that we have documented a `meta.docs.suggestions` property in rules that appears to originally have been created to indicate when a rule has suggestions much like the `meta.fixable` property indicates if a rule is fixable. However, we don't rely on `meta.docs.suggestions` in any way, and do not enforce its usage to provide suggestions from rules. Additionally, all other current `meta.docs.*` properties are all optional, so this one seems out of place. There are several options but the most straightforward seems to be to create a new `meta.suggestions` property that, when set to `true`, enables rules to provide suggestions in the same way `meta.fixable` allows rules to provide fixes. This would be a breaking change but would ensure that both humans and tooling can easily tell when a rule provides suggestions.
 > 
 > **TSC Question:** How do we want to proceed here? And do we want to include this in v8.0.0 (somewhat related to #13349)?
 
@@ -57,7 +58,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/14231
 
-**nzakas:** > **TSC Summary:** This issue suggests moving to conventional commits for all ESLint projects, which would allow us to adopt more conventional tooling for managing projects.
+**nzakas:**
+> **TSC Summary:** This issue suggests moving to conventional commits for all ESLint projects, which would allow us to adopt more conventional tooling for managing projects.
 > 
 > **TSC Question:** Shall we accept this proposal?
 
@@ -74,7 +76,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/pull/12397
 
-**nzakas:** > **TSC Summary**: This PR implements the warning originally described in [eslint/rfcs#34](https://github.com/eslint/rfcs/pull/34). This functionality was removed prior to finalizing the RFC. Initially, this was a first step to warn people of directive-like comments that were not currently supported before ultimately supporting them.
+**nzakas:**
+> **TSC Summary**: This PR implements the warning originally described in [eslint/rfcs#34](https://github.com/eslint/rfcs/pull/34). This functionality was removed prior to finalizing the RFC. Initially, this was a first step to warn people of directive-like comments that were not currently supported before ultimately supporting them.
 > 
 > **TSC Question**: Do we want to merge this PR or just go straight to implementing [eslint/rfcs#34](https://github.com/eslint/rfcs/pull/34)?
 

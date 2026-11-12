@@ -29,7 +29,8 @@ March 17 - @nzakas
 
 **nzakas:** Hmm, according to the notes:
 
-**nzakas:** > 
+**nzakas:**
+> 
 >     This week (Feb 17) - @fasttime
 >     Feb 24 - @nzakas
 >     Mar 3 - @mdjermanovic

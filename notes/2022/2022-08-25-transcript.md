@@ -24,7 +24,8 @@
 
 **nzakas:** Looks like we don't have any issues flagged, so I'll dive into the other items.
 
-**nzakas:** > Agenda item: To set up the eslint-community repo, I think it would be nice to get a custom logo and blog graphic (for updates) designed. Can we allocate budget for this?
+**nzakas:**
+> Agenda item: To set up the eslint-community repo, I think it would be nice to get a custom logo and blog graphic (for updates) designed. Can we allocate budget for this?
 
 **btmills:** Makes sense. Back to same artist who did the other graphics?
 
@@ -38,7 +39,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: Shall we pay $300 to tech writers who applied for the position via guest blog post even if we don’t end up publishing the post?
+**nzakas:**
+> Agenda item: Shall we pay $300 to tech writers who applied for the position via guest blog post even if we don’t end up publishing the post?
 
 **btmills:** I'd say yes
  * 👍 @nzakas, @mdjermanovic

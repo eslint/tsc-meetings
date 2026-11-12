@@ -17,7 +17,8 @@
 
 **nzakas:** Awesome. So it looks like we don't have any issues or PRs flagged for this meeting already, so I'll dig into the agenda items on the meeting issue to start.
 
-**nzakas:** > I'd like to review the TSC/reviewer payment structure we have and see what people think now that we've been paying people for just about a year. I'm mostly interested in the limits: does the 20 hour per month limit still make sense? Does $50/hour still make sense? Is there anything we want to tweak at this point?
+**nzakas:**
+> I'd like to review the TSC/reviewer payment structure we have and see what people think now that we've been paying people for just about a year. I'm mostly interested in the limits: does the 20 hour per month limit still make sense? Does $50/hour still make sense? Is there anything we want to tweak at this point?
 
 **nzakas:** I've personally never come close to the hour limit, so definitely interested to hear what others think about that.
 
@@ -88,7 +89,8 @@
 
 **nzakas:** Okay, next item
 
-**nzakas:** > What parts of our process are slowing/breaking down right now? It seems that everyone isn't around as much as previously, so it might be a good time to talk about how that's affecting the project.
+**nzakas:**
+> What parts of our process are slowing/breaking down right now? It seems that everyone isn't around as much as previously, so it might be a good time to talk about how that's affecting the project.
 
 **nzakas:** This includes me, my health hasn't been great the past six weeks or so, and I've not been able to do as much.
 
@@ -146,7 +148,8 @@
 
 **nzakas:** All right, let's move on to the next item:
 
-**nzakas:** > let’s talk about why we don’t use lock files in the repos and whether it makes sense.
+**nzakas:**
+> let’s talk about why we don’t use lock files in the repos and whether it makes sense.
 
 **nzakas:** As far as I can tell, we are pretty unique in the fact that we aren't using a lock file. I think I wasn't around when this decision was made, so just curious if there's a reason why we don't?
 
@@ -217,7 +220,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: I've been attending monthly TC39 tools outreach discussions for about a year now. The time commitment is about 2 hours between pre-reading discussion topics, the meeting itself, and sending out notes to our team.
+**nzakas:**
+> Agenda item: I've been attending monthly TC39 tools outreach discussions for about a year now. The time commitment is about 2 hours between pre-reading discussion topics, the meeting itself, and sending out notes to our team.
 > 
 >     * Should we continue having a team member attend?
 > 

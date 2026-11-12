@@ -24,7 +24,8 @@
 
 **nzakas:** This is the big docs reorg
 
-**nzakas:** > **TSC Summary:** The last point to address here is how to move forward with URL structure. Possible options are 1) persona/action such as users/configure, 2) use case/action such as use/configure, 3) using/configuring
+**nzakas:**
+> **TSC Summary:** The last point to address here is how to move forward with URL structure. Possible options are 1) persona/action such as users/configure, 2) use case/action such as use/configure, 3) using/configuring
 > 
 > **TSC Question:** Which format do we want to use?
 

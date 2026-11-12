@@ -32,7 +32,8 @@ May 25 - @nzakas
 
 https://github.com/eslint/code-explorer/issues/378
 
-**nzakas:** > **TSC Summary**:
+**nzakas:**
+> **TSC Summary**:
 >     * Node.js 20 reached End-of-Life on April 30, 2026, but web apps such as `code-explorer` and `eslint.org` are still depending on it.
 > 
 > **TSC Question**:

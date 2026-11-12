@@ -20,7 +20,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/11815
 
-**nzakas:** > TSC Summary: This proposal proposes to make the `--report-unused-disable-directives` warnings fixable(runing `eslint ---fix`).
+**nzakas:**
+> TSC Summary: This proposal proposes to make the `--report-unused-disable-directives` warnings fixable(runing `eslint ---fix`).
 > 
 > TSC Question: Shall we accept this proposal? Is a RFC required?
 

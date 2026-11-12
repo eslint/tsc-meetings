@@ -61,7 +61,8 @@ Oct 26 - @fasttime
 **nzakas:** Okay, we have one issue flagged for today:
 https://github.com/eslint/eslint/issues/21242
 
-**nzakas:** > **TSC Summary**: ESLint’s Tidelift link redirects to a generic SonarSource page. The suggested alternative targets maintainers, while a generic support link was also proposed. Tidelift’s commercial support availability remains unclear, and no resolution has been agreed upon.
+**nzakas:**
+> **TSC Summary**: ESLint’s Tidelift link redirects to a generic SonarSource page. The suggested alternative targets maintainers, while a generic support link was also proposed. Tidelift’s commercial support availability remains unclear, and no resolution has been agreed upon.
 > **TSC Question**: Should we replace the Tidelift links, and with which URL, or remove the references?
 
 **mdjermanovic:** Those links have been broken for a long time

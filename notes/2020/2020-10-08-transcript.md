@@ -23,7 +23,8 @@
 
 **nzakas:** Okay, first issue: https://github.com/eslint/eslint/issues/13654
 
-**nzakas:** > **TSC Summary:** This proposal seeks to add an `exports` field to `package.json` that specifically identifies which files are part of the public API. Despite our consistently saying people should not be accessing files directly in the `eslint` package, people still are, and then complain when we make a change. For new Node.js versions, including `exports` would ensure our internal file structure isn't exposed publicly.
+**nzakas:**
+> **TSC Summary:** This proposal seeks to add an `exports` field to `package.json` that specifically identifies which files are part of the public API. Despite our consistently saying people should not be accessing files directly in the `eslint` package, people still are, and then complain when we make a change. For new Node.js versions, including `exports` would ensure our internal file structure isn't exposed publicly.
 > 
 > **TSC Question:** Shall we accept this proposal and add it to the public roadmap (for v8.0.0).
  * 👍 @nzakas, @btmills, @mdjermanovic
@@ -74,7 +75,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Would it be possible to discuss what we want to do with eslint-canary?
+**nzakas:**
+> Would it be possible to discuss what we want to do with eslint-canary?
 > 
 > Should it be archived, maintained with no roadmap, or maintained with a roadmap in mind? (Or some other option I didn't specify?)
 
@@ -103,7 +105,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > should we participate in Hacktoberfest formally? (ref: eslint/eslint#13743)
+**nzakas:**
+> should we participate in Hacktoberfest formally? (ref: eslint/eslint#13743)
 
 **nzakas:** As some background: due to a ton of spam, Hacktoberfest switched to being an opt-in program.
 
@@ -140,7 +143,8 @@
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: in order to move forward with the triage team idea, it occurs to me that we need a better way of defining our process for triaging issues and pull requests. I think the easiest way to do this would be to use a GitHub project to manage the process instead of relying on labels. That way, we'd be able to more easily tell at a glance which issues and pull requests need more attention.
+**nzakas:**
+> Agenda item: in order to move forward with the triage team idea, it occurs to me that we need a better way of defining our process for triaging issues and pull requests. I think the easiest way to do this would be to use a GitHub project to manage the process instead of relying on labels. That way, we'd be able to more easily tell at a glance which issues and pull requests need more attention.
 > 
 > I tried putting together a project here: https://github.com/orgs/eslint/projects/2
 > 

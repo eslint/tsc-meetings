@@ -52,7 +52,8 @@ Next week: @mdjermanovic
 
 **nzakas:** Okay, here's the item:
 
-**nzakas:** > Now that we have `@eslint/json` and `@eslint/markdown`, should we start thinking about creating a `plugins.eslint.org` that we can use to host documentation for them? We've talked about this in passing before in terms of improving discoverability for plugins. I'm not sure we have the bandwidth to create something that will be generally open to all plugins at this point, but maybe we could start small and just focus on our plugins for now?
+**nzakas:**
+> Now that we have `@eslint/json` and `@eslint/markdown`, should we start thinking about creating a `plugins.eslint.org` that we can use to host documentation for them? We've talked about this in passing before in terms of improving discoverability for plugins. I'm not sure we have the bandwidth to create something that will be generally open to all plugins at this point, but maybe we could start small and just focus on our plugins for now?
 
 **fasttime:** Makes sense to me 👍
 

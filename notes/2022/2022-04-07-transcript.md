@@ -16,7 +16,8 @@
 
 **nzakas:** First item: https://github.com/eslint/espree/issues/542
 
-**nzakas:** > **TSC Summary:** This issue proposes exporting the internal TokenTranslator class that we use to translate Acorn tokens into Espree tokens.
+**nzakas:**
+> **TSC Summary:** This issue proposes exporting the internal TokenTranslator class that we use to translate Acorn tokens into Espree tokens.
 > 
 > **TSC Question:** Do we want to export this class?
 

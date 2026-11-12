@@ -23,7 +23,8 @@
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/15631
 
-**nzakas:** > **TSC Summary:** This issue proposes adding a way for fine-grained disabling of inline directives on a per-rule basis. We currently have `noInlineConfig` that disables all inline configuration, but this request is for configuring based on rule name, so you could allow inline configuration of some rules but not others.
+**nzakas:**
+> **TSC Summary:** This issue proposes adding a way for fine-grained disabling of inline directives on a per-rule basis. We currently have `noInlineConfig` that disables all inline configuration, but this request is for configuring based on rule name, so you could allow inline configuration of some rules but not others.
 > 
 > **TSC Question:** Do we want to support this idea and go to the next step of creating an RFC?
 
@@ -52,7 +53,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/15586
 
-**nzakas:** > **TSC Summary:** This issue requests that we deprecated `no-restricted-imports` in favor of a plugin rule. This rule doesn't currently exist in another plugin but `eslint-plugin-import` would be willing to take it if we would like to deprecate it. We have previously deprecated `no-restricted-modules` in favor of moving it into `eslint-plugin-node` as we removed CommonJS support in the core.
+**nzakas:**
+> **TSC Summary:** This issue requests that we deprecated `no-restricted-imports` in favor of a plugin rule. This rule doesn't currently exist in another plugin but `eslint-plugin-import` would be willing to take it if we would like to deprecate it. We have previously deprecated `no-restricted-modules` in favor of moving it into `eslint-plugin-node` as we removed CommonJS support in the core.
 > 
 > **TSC Question:** Do we want to deprecate `no-restricted-imports`?
 
@@ -92,7 +94,8 @@
 
 **nzakas:** Next item: https://github.com/eslint/eslint/issues/15576
 
-**nzakas:** > **TSC Summary:** This issue seeks to either remove `no-inner-declaration` from `eslint:recommended` or change the default behavior of `no-inner-declaration` based on how ES6+ works with inner declarations.
+**nzakas:**
+> **TSC Summary:** This issue seeks to either remove `no-inner-declaration` from `eslint:recommended` or change the default behavior of `no-inner-declaration` based on how ES6+ works with inner declarations.
 > 
 > **TSC Question:** Do we want to make any change now? Do we want to make any changes in the next major release?
 
@@ -112,7 +115,8 @@
 
 **nzakas:** This part?
 
-**nzakas:** > I think there's a value in reporting block-level functions in:
+**nzakas:**
+> I think there's a value in reporting block-level functions in:
 > 
 > *     non-strict code regardless of ecmaVersion, because they have a confusing legacy behavior.
 >  *   ecmaVersion: 5 code regardless of strict, because it's either the same confusing legacy behavior or a SyntaxError in most ES5 engines.

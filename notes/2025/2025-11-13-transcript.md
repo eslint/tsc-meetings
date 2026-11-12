@@ -30,7 +30,8 @@ Nov 24 - @fasttime
 
 **nzakas:** Okay, we've got a bunch of agenda items. Let's start with the non-v10 ones and then we'll move on to the v10 ones.
 
-**nzakas:** > Agenda item: Let's review recent sponsorship and spending data. Right now, we are receiving $10,737.04 in recurring monthly sponsorships. For the month of October, we paid out nearly $22,000 just for maintenance and development (we haven't yet done Contributor Pool for October). While we have the reserves to cover this, we need to watch this closely going forward as spending over $10,000 more per month than we're bringing in isn't sustainable.
+**nzakas:**
+> Agenda item: Let's review recent sponsorship and spending data. Right now, we are receiving $10,737.04 in recurring monthly sponsorships. For the month of October, we paid out nearly $22,000 just for maintenance and development (we haven't yet done Contributor Pool for October). While we have the reserves to cover this, we need to watch this closely going forward as spending over $10,000 more per month than we're bringing in isn't sustainable.
 
 **nzakas:** So our reserve balance right now is $156,432.03, but I believe there are still a couple of expenses left to be paid.
 
@@ -250,7 +251,8 @@ https://github.com/eslint/eslint/pull/19563#issuecomment-3308792275
 
 **nzakas:** Next: https://github.com/eslint/eslint/pull/20125
 
-**nzakas:** > **TSC Summary**: This PR aims to disallow specifying `"errors"` and `"output"` properties on `valid` test case objects. The original issue, which has been accepted for ESLint v10.0.0, does not mention the `"output"` property and we didn't discuss it.
+**nzakas:**
+> **TSC Summary**: This PR aims to disallow specifying `"errors"` and `"output"` properties on `valid` test case objects. The original issue, which has been accepted for ESLint v10.0.0, does not mention the `"output"` property and we didn't discuss it.
 > 
 > **TSC Question**: Do we want to include disallowing the `"output"` property on valid test case objects in ESLint v10.0.0?
 

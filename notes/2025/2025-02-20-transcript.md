@@ -26,7 +26,8 @@ Mar 3 - @mdjermanovic
 
 **nzakas:** First item: https://github.com/eslint/eslint/issues/19173
 
-**nzakas:** > **TSC Summary:** In this issue, we agreed to start making some core rules TypeScript syntax-aware.
+**nzakas:**
+> **TSC Summary:** In this issue, we agreed to start making some core rules TypeScript syntax-aware.
 > 
 > **TSC Question:** Should we add something into the rule `meta` to reflect this? If so, what should it be? And should we take into account that rules may be aware of other languages and/or types as well?
 
@@ -118,7 +119,8 @@ Mar 3 - @mdjermanovic
 
 **nzakas:** Next item:
 
-**nzakas:** > Agenda item: While CSSTree is an excellent parser, it appears to be maintained by just one person and the turnaround time on fixes is very long. Should we fork CSSTree and use that for `@eslint/css` by default? The intention is to continue to push on CSSTree to implement the changes we need by submitting PRs back upstream. Ideally, most of these changes would be transparent to rules and when they're not, hopefully we can get some feedback on proposed API changes.
+**nzakas:**
+> Agenda item: While CSSTree is an excellent parser, it appears to be maintained by just one person and the turnaround time on fixes is very long. Should we fork CSSTree and use that for `@eslint/css` by default? The intention is to continue to push on CSSTree to implement the changes we need by submitting PRs back upstream. Ideally, most of these changes would be transparent to rules and when they're not, hopefully we can get some feedback on proposed API changes.
 
 **fasttime:** Sounds good to me.
 
