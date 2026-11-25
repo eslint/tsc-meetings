@@ -24,7 +24,7 @@
     "valibot": "^1.5.0"
   },
   "devDependencies": {
-    "@flue/cli": "^2.3.0",
+    "@flue/cli": "^2.3.1",
     "eslint": "^10.15.0",
     "eslint-config-eslint": "^14.0.0",
     "prettier": "3.10.1"
